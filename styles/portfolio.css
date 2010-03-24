@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background: #FFF url('/aereal.github.com/images/95.gif');
+	background: #FFF url('../images/95.gif');
 	font-family: "Lucida Grande", Arial, sans-serif;
 	color: #344333; 
 }
