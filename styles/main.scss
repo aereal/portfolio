@@ -42,24 +42,27 @@ a:hover,a:focus {
 div.body {
 	width: 96%;
 	margin: 0 auto;
+
+	div.section {
+		padding: 10px;
+		border: solid 1px transparent;
+		border-top: none;
+		-moz-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+		background-color: #fff;
+		font-size: 130%;
+	}
 }
 
-div.body > div.section {
-	padding: 10px;
-	border: solid 1px transparent;
-	border-top: none;
-	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5);
-	background-color: #fff;
-	font-size: 130%;
-}
-
-#profile > dl > dt {
-	float: right;
-	width: 70%;
-}
-
-#profile > dl > dd {
-	width: 30%;
+#profile {
+	dl {
+		dt {
+			float: right;
+			width: 70%;
+		}
+		dd {
+			width: 30%;
+		}
+	}
 }
 
