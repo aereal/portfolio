@@ -37,8 +37,9 @@ h3 {
 :visited {
   color: #6a2e31;
 }
-.section {
-  margin-top: 10%;
+section {
+  display: block;
+  margin: 10% 0 0;
 }
 .body {
   margin: 0 auto;
