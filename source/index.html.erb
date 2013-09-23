@@ -28,7 +28,7 @@
     <meta name="twitter:site" content="@aereal">
     <link rel="author" href="https://plus.google.com/114610297083378091526" />
 
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<%= url_for '/stylesheets/style.css' %>">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="canonical" href="http://aereal.org/">
 
@@ -36,6 +36,7 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <script src="<%= url_for '/javascripts/app.js' %>" async></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36542486-1']);
@@ -227,15 +228,5 @@
         </address>
       </footer>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script>
-    $(function(){
-      $.stellar({
-        horizontalScrolling: false,
-        verticalOffset: 40
-      });
-    });
-    </script>
   </body>
 </html>
