@@ -1,0 +1,53 @@
+---
+- :name: Microjson
+  :itemtype: http://schema.org/WebApplication
+  :url: http://microjson.herokuapp.com/
+  :time: 2013-09-06
+  :description: Convert Microdata included markup into JSON
+- :name: Template::Context::SourceMap
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/Template-Context-SourceMap
+  :time: 2013-07-14
+  :description: Template::Toolkit plugin that annotates other templates inclusion
+    like source map.
+- :name: ltsv.io
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/ltsv.io
+  :time: 2013-02-11
+  :description: The parser for Labled Tab-separated Values (LTSV).
+- :name: Japanesque.itermcolors
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/dotfiles/blob/master/colors/Japanesque/Japanesque.itermcolors
+  :time: 2013-01-02
+  :description: The color scheme for iTerm 2 inspired by Japanese traditional colors.
+- :name: ambiguous.rb
+  :itemtype: http://schema.org/Code
+  :url: https://gist.github.com/aereal/4216115
+  :time: 2012-12-06
+  :description: Simple script that detects ambiguous symbols and helps refactoring.
+- :name: Gestopft
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/gestopft
+  :time: 2011-03-17
+  :description: Framework for CLI Application.
+- :name: rubygems-auto-rehash
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/rubygems-auto-rehash
+  :time: 2011-12-11
+  :description: A plugin for RubyGems that automatically execute rehash and/or rbenv
+    rehash for rbenv and Zsh.
+- :name: Padrino::Validation::HTML5
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/padrino-validation-html5
+  :time: 2011-11-09
+  :description: The HTML5 client-side form validations supports for Padrino.
+- :name: Hated
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/hated
+  :time: 2011-10-27
+  :description: An tiny clone of Hatena::Diary for writing themes of it.
+- :name: swaf
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/swaf
+  :time: 2011-06-03
+  :description: More user-friendly interface for swf_ruby.
