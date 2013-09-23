@@ -6,4 +6,5 @@ gem 'therubyracer'
 
 group :development do
   gem 'foreman'
+  gem 'nokogiri'
 end
