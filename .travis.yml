@@ -12,4 +12,8 @@ branches:
     - devel
 env:
   global:
+    - GIT_COMMITTER_NAME=aereal
+    - GIT_COMMITTER_EMAIL=aereal@aereal.org
+    - GIT_AUTHOR_NAME=aereal
+    - GIT_AUTHOR_EMAIL=aereal@aereal.org
     - secure: "gyVpGiWc+4Zh+BKYIJkA87GVTOKPcoZaWJJU9g+N9SNZwOAlOkLCt+SsRZ41i6rWBdkwRf4chLicLuGAPEWfTpSCW4nNueDU5F00/TwKb9ul+brGtUFA2h+GMsaGh/QlHpa9q3Djah7jgYX5G9R24rBWzC+HNfA+YGiXKNbNh28="
