@@ -1,0 +1,15 @@
+---
+language: ruby
+rvm:
+  - 2.0.0
+before_install:
+  - gem update --system
+  - gem --version
+  - gem install bundler --pre
+script: bundle exec rake publish
+branches:
+  only:
+    - devel
+env:
+  global:
+    - secure: "gyVpGiWc+4Zh+BKYIJkA87GVTOKPcoZaWJJU9g+N9SNZwOAlOkLCt+SsRZ41i6rWBdkwRf4chLicLuGAPEWfTpSCW4nNueDU5F00/TwKb9ul+brGtUFA2h+GMsaGh/QlHpa9q3Djah7jgYX5G9R24rBWzC+HNfA+YGiXKNbNh28="
