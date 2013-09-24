@@ -22,7 +22,7 @@ task :commit do
   sha1 = current_source_sha1
   Dir.chdir DEST_DIR do
     sh 'git', 'add', '-A'
-    sh 'git', 'commit', '--quiet', '--message', "Update to #{sha1}"
+    sh 'git', 'commit', '--allow-empty', '--quiet', '--message', "'Update to #{sha1}'"
   end
 end
 
