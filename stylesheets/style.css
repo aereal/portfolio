@@ -635,6 +635,10 @@ p {
 .section .description code {
   font-family: 'Palatino', 'Palatino Linotype', serif;
 }
+.section .published {
+  display: block;
+  font-style: italic;
+}
 /* List */
 .list {
   list-style-type: none;
@@ -680,12 +684,16 @@ p {
   }
   .header {
     background-image: url('../images/bg-photo-mobile.jpg');
+    background-position: center !important;
   }
   .header .header-content {
     padding: 150px 0;
   }
   .header .header-description {
     font-size: 85%;
+  }
+  .row {
+    margin-left: 0;
   }
   .span4 {
     display: block;
