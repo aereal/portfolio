@@ -99,7 +99,7 @@
       </section>
       <section class="section">
         <h1>Activities</h1>
-        <% data.activities.each do |activity| %>
+        <% data.activities.sort_by {|a| a[:startDate] }.reverse.each do |activity| %>
           <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
             <h3 class="name" itemprop="name"><%= activity[:name] %></h3>
             <p>
