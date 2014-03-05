@@ -1,4 +1,10 @@
 ---
+-
+  :name: Hatena::Bookmark::Restful
+  :itemtype: http://schema.org/Code
+  :url: https://github.com/aereal/hatena-bookmark-restful
+  :time: 2014-01-04
+  :description: A client library for Hatena::Bookmark RESTful API
 - :name: Microjson
   :itemtype: http://schema.org/WebApplication
   :url: http://microjson.herokuapp.com/
