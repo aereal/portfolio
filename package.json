@@ -1,0 +1,19 @@
+{
+  "name": "aereal.org",
+  "version": "0.0.0",
+  "description": "My portfolio that published as [aereal.org](http://aereal.org).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aereal/aereal.github.com.git"
+  },
+  "author": "aereal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aereal/aereal.github.com/issues"
+  },
+  "homepage": "https://github.com/aereal/aereal.github.com"
+}
