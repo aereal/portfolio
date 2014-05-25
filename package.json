@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/aereal/aereal.github.com",
   "dependencies": {
-    "gulp": "^3.6.2"
+    "event-stream": "^3.1.5",
+    "gulp": "^3.6.2",
+    "handlebars": "^2.0.0-alpha.4"
   }
 }
