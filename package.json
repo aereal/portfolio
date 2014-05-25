@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aereal/aereal.github.com/issues"
   },
-  "homepage": "https://github.com/aereal/aereal.github.com"
+  "homepage": "https://github.com/aereal/aereal.github.com",
+  "dependencies": {
+    "gulp": "^3.6.2"
+  }
 }

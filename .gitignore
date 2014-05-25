@@ -21,3 +21,4 @@
 
 # Foreman
 .env
+/node_modules
