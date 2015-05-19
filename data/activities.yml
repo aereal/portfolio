@@ -19,3 +19,8 @@
   :url: http://this.aereal.org/entry/2014/05/04/000139
   :startDate: 2014-05-03
   :performanceTitle: Introduce browserify
+-
+  :name: テンプレートエンジンNight
+  :url: http://this.aereal.org/entry/2014/10/20/100301
+  :startDate: 2014-10-17
+  :performanceTitle: テンプレートの静的解析とリファクタリング
