@@ -7,36 +7,151 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>aereal.org</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>aereal's portfolio - aereal.org</title>
-
-    <meta name="description" content="aereal's portfolio" />
-    <meta name="keywords" content="aereal,アオキハナエ" />
-    <meta name="viewport" content="width=device-width">
     <meta itemprop="url" content="http://aereal.org/">
-
-    <meta property="og:title" content="aereal's portfolio - aereal.org">
-    <meta property="og:description" content="aereal's portfolio" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://aereal.org/" />
-    <meta property="og:image" content="http://aereal.org/images/og-image.jpg" />
-    <meta property="og:site_name" content="aereal's portfolio" />
-
+    <meta property="og:title" content="aereal.org">
+    <meta property="og:description" content="aereal's portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://aereal.org/">
+    <meta property="og:image" content="http://aereal.org/images/og-image.jpg">
+    <meta property="og:site_name" content="aereal.org">
     <meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="588890224485471" />
-    <meta property="article:publisher" content="https://www.facebook.com/ryota.nkzw" />
+    <meta property="article:publisher" content="https://www.facebook.com/ryota.nkzw">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@aereal">
-    <link rel="author" href="https://plus.google.com/114610297083378091526" />
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="canonical" href="http://aereal.org/">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Lato', YuGothic, sans-serif;
+        background-color: rgb(253, 250, 250);
+      }
+      section {
+        margin-top: 4rem;
+      }
+      section p {
+        margin-bottom: 1.5rem;
+      }
+      .container {
+        max-width: 800px;
+      }
+      .icon {
+        width: 2em;
+        height: 2em;
+        padding: 0.2em;
+        border-radius: 1.2em;
+      }
+      .twitter {
+        background-color: rgb(85, 172, 328);
+      }
+      .github {
+        background-color: rgb(51, 51, 51);
+      }
+      .instagram  {
+        background-color: rgb(0, 72, 121);
+      }
+      .lastfm {
+        background-color: rgb(206, 30, 36);
+      }
+      .hatena {
+        background-color: rgb(0, 113, 197);
+      }
+      #social ul,
+      #talks ul {
+        list-style: none;
+      }
+      #talks li {
+        position: relative;
+      }
+      #talks li > a,
+      #talks li > span,
+      #talks li > time {
+        display: block;
+      }
+      #talks li > a,
+      #talks li > span {
+        padding-right: 4rem;
+      }
+      #talks li > span,
+      #talks li > time {
+        color: rgb(130, 130, 130);
+      }
+      #talks li > time {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      #social ul > li {
+        float: left;
+        text-align: center;
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 itemprop="name">aereal</h1>
 
-    <!--[if IE]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      <section>
+        <ul>
+          <li>Software Developer</li>
+          <li>Hobby player of Guitar and Piano</li>
+        </ul>
 
-    <script src="javascripts/app.js" async></script>
+        <p>... from <span itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope><span itemprop="addressRegion">Kyoto</span></span>.</p>
+      </section>
+
+      <section id="talks">
+        <h2>Talks</h2>
+        <ul>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://developer.hatenastaff.com/entry/2015/04/01/120317" itemprop="url">Build CI for Smartphone apps dev. at Hatena</a>
+            <span itemprop="name">【DeployGate x はてな】スマートフォンアプリ開発最前線</span>
+            <time itemprop="startDate" datetime="2015-04-13">2015</time>
+          </li>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://this.aereal.org/entry/2014/10/20/100301" itemprop="url">テンプレートの静的解析とリファクタリング</a>
+            <span itemprop="name">テンプレートエンジンNight</span>
+            <time itemprop="startDate" datetime="2014-10-17">2014</time>
+          </li>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://this.aereal.org/entry/2014/05/04/000139" itemprop="url">Introduce Browserify</a>
+            <span itemprop="name">Kyoto.なんか</span>
+            <time itemprop="startDate" datetime="2014-05-03">2014</time>
+          </li>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://developer.hatenastaff.com/entry/2013/11/27/143648" itemprop="url">Vagrant と Chef でつくるはてなブックマークの開発環境</a>
+            <span itemprop="name">Hatena Engineer Seminar #2</span>
+            <time itemprop="startDate" datetime="2013-11-25">2013</time>
+          </li>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://yapcasia.org/2013/talk/show/6d9a81f8-ea36-11e2-ba88-5f716aeab6a4" itemprop="url">Vagrant と Chef でプログラマブルな開発環境をつくる</a>
+            <span itemprop="name">YAPC::Asia Tokyo 2013</span>
+            <time itemprop="startDate" datetime="2013-09-21">2013</time>
+          </li>
+          <li itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
+            <a href="http://this.aereal.org/entry/2011/11/14/223859" itemprop="url">Padrino::Validation::HTML5</a>
+            <span itemprop="name">関西闇RubyKaigi</span>
+            <time itemprop="startDate" datetime="2011-11-13">2011</time>
+          </li>
+        </ul>
+      </section>
+
+      <section id="social">
+        <ul>
+          <li><a href="http://profile.hatena.ne.jp/aereal/"><img class="icon hatena" src="images/vendor/drawic/hatena.svg" alt="Hatena id:aereal"></a></li>
+          <li><a href="https://github.com/aereal"><img class="icon github" src="images/vendor/drawic/github.svg" alt="GitHub @aereal"></a></li>
+          <li><a href="https://twitter.com/aereal"><img class="icon twitter" src="images/vendor/drawic/twitter.svg" alt="Twitter @aereal"></a></li>
+          <li><a href="https://last.fm/users/chloe_valens"><img class="icon lastfm" src="images/vendor/drawic/lastfm.svg" alt="Last.fm @chloe_valens"></a></li>
+          <li><a href="https://instagram.com/aereal"><img class="icon instagram" src="images/vendor/drawic/instagram.svg" alt="Instagram @aereal"></a></li>
+        </ul>
+      </section>
+    </main>
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36542486-1']);
@@ -48,253 +163,5 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-  </head>
-  <body>
-    <header class="header section" data-stellar-background-ratio="0.5">
-      <div class="header-content">
-        <h1 class="title">aereal.org</h1>
-        <h2 class="header-description">
-          <span class="larger" itemprop="name">Hanae AOKI</span>
-          (アオキハナエ), <span itemprop="jobTitle">Application engineer</span> from
-          <span itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope>
-            <span itemprop="addressRegion">Kyoto</span>
-          </span>
-        </h2>
-      </div>
-      <div class="mask"></div>
-    </header>
-    <div class="container">
-      <section class="section">
-        <h1>Blogs</h1>
-        <div class="row">
-          <div class="span4">
-            <h3><a href="http://foto.aereal.org/">A moment.</a></h3>
-            <p>写真による記録</p>
-          </div>
-          <div class="span4">
-            <h3><a href="http://this.aereal.org/">this A moment</a></h3>
-            <p>ソフトウェアにまつわるエッセイ</p>
-          </div>
-          <div class="span4">
-            <h3><a href="http://d.aereal.org/">行方知れず</a></h3>
-            <p>文による日記</p>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <h1>Projects</h1>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/hatena-bookmark-restful" itemprop="url">Hatena::Bookmark::Restful</a>
-            </h3>
-            <p class="description" itemprop="description">
-              A client library for Hatena::Bookmark RESTful API
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2014-01-04">2014</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/WebApplication" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="http://microjson.herokuapp.com/" itemprop="url">Microjson</a>
-            </h3>
-            <p class="description" itemprop="description">
-              Convert Microdata included markup into JSON
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2013-09-06">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/Template-Context-SourceMap" itemprop="url">Template::Context::SourceMap</a>
-            </h3>
-            <p class="description" itemprop="description">
-              Template::Toolkit plugin that annotates other templates inclusion like source map.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2013-07-14">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/ltsv.io" itemprop="url">ltsv.io</a>
-            </h3>
-            <p class="description" itemprop="description">
-              The parser for Labled Tab-separated Values (LTSV).
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2013-02-11">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/dotfiles/blob/master/colors/Japanesque/Japanesque.itermcolors" itemprop="url">Japanesque.itermcolors</a>
-            </h3>
-            <p class="description" itemprop="description">
-              The color scheme for iTerm 2 inspired by Japanese traditional colors.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2013-01-02">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://gist.github.com/aereal/4216115" itemprop="url">ambiguous.rb</a>
-            </h3>
-            <p class="description" itemprop="description">
-              Simple script that detects ambiguous symbols and helps refactoring.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2012-12-06">2012</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/gestopft" itemprop="url">Gestopft</a>
-            </h3>
-            <p class="description" itemprop="description">
-              Framework for CLI Application.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2011-03-17">2011</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/rubygems-auto-rehash" itemprop="url">rubygems-auto-rehash</a>
-            </h3>
-            <p class="description" itemprop="description">
-              A plugin for RubyGems that automatically execute rehash and/or rbenv rehash for rbenv and Zsh.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2011-12-11">2011</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/padrino-validation-html5" itemprop="url">Padrino::Validation::HTML5</a>
-            </h3>
-            <p class="description" itemprop="description">
-              The HTML5 client-side form validations supports for Padrino.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2011-11-09">2011</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/hated" itemprop="url">Hated</a>
-            </h3>
-            <p class="description" itemprop="description">
-              An tiny clone of Hatena::Diary for writing themes of it.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2011-10-27">2011</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemtype="http://schema.org/http://schema.org/Code" itemref="aereal" itemscope>
-            <h3 class="name" itemprop="name">
-              <a href="https://github.com/aereal/swaf" itemprop="url">swaf</a>
-            </h3>
-            <p class="description" itemprop="description">
-              More user-friendly interface for swf_ruby.
-              <span class="published">
-                - <time itemprop="datePublished" datetime="2011-06-03">2011</time>
-              </span>
-            </p>
-          </div>
-        
-      </section>
-      <section class="section">
-        <h1>Activities</h1>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">【DeployGate x はてな】スマートフォンアプリ開発最前線</h3>
-            <p>
-              <a href="http://developer.hatenastaff.com/entry/2015/04/01/120317" itemprop="url">Build CI for Smartphone apps dev. at Hatena</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2015-04-13">2015</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">テンプレートエンジンNight</h3>
-            <p>
-              <a href="http://this.aereal.org/entry/2014/10/20/100301" itemprop="url">テンプレートの静的解析とリファクタリング</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2014-10-17">2014</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">Kyoto.なんか</h3>
-            <p>
-              <a href="http://this.aereal.org/entry/2014/05/04/000139" itemprop="url">Introduce browserify</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2014-05-03">2014</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">Hatena Engineer Seminar</h3>
-            <p>
-              <a href="http://developer.hatenastaff.com/entry/2013/11/27/143648" itemprop="url">Vagrant と Chef でつくるはてなブックマークの開発環境</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2013-11-25">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">YAPC::Asia Tokyo 2013</h3>
-            <p>
-              <a href="http://yapcasia.org/2013/talk/show/6d9a81f8-ea36-11e2-ba88-5f716aeab6a4" itemprop="url">Vagrant と Chef でプログラマブルな開発環境をつくる</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2013-09-21">2013</time>
-              </span>
-            </p>
-          </div>
-        
-          <div class="section-item" itemprop="performerIn" itemtype="http://schema.org/Event" itemscope>
-            <h3 class="name" itemprop="name">関西闇RubyKaigi</h3>
-            <p>
-              <a href="http://this.aereal.org/entry/2011/11/14/223859" itemprop="url">Padrino::Validation::HTML5</a>
-              <span class="published started">
-                - <time itemprop="startDate" datetime="2011-11-13">2011</time>
-              </span>
-            </p>
-          </div>
-        
-      </section>
-      <section class="section">
-        <h1>Social Activities</h1>
-        <ul class="list">
-          <li><a href="https://github.com/aereal" title="aereal at GitHub">GitHub</a></li>
-          <li><a href="https://twitter.com/aereal" title="aereal at Twitter">Twitter</a></li>
-          <li><a href="http://last.fm/users/chloe_valens" title="chloe_valens at Last.fm">Last.fm</a></li>
-          <li><a href="http://500px.com/aereal" title="aereal at 500px">500px</a></li>
-        </ul>
-      </section>
-      <footer class="footer section">
-        <address id="contact">
-          <a href="mailto:aereal@aereal.org" itemprop="email">aereal@aereal.org</a>
-        </address>
-      </footer>
-    </div>
   </body>
 </html>
