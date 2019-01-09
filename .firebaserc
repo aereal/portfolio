@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "live": "aereal-org"
+  }
+}
