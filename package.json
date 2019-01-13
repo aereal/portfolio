@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/aereal/aereal.github.com/issues"
   },
-  "homepage": "https://github.com/aereal/aereal.github.com#readme"
+  "homepage": "https://github.com/aereal/aereal.github.com#readme",
+  "devDependencies": {
+    "gatsby": "^2.0.91",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
 }
