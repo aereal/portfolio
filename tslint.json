@@ -14,7 +14,8 @@
                 "trailingComma": "es5",
                 "jsxBracketSameLine": true
             }
-        ]
+        ],
+        "interface-name": false
     },
     "rulesDirectory": [
         "tslint-plugin-prettier"
