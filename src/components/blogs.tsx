@@ -1,4 +1,13 @@
+import { graphql as gql } from "gatsby"
 import React from "react"
+
+export const query = gql`
+  fragment BlogFragment on BlogsYaml {
+    title
+    summary
+    url
+  }
+`
 
 interface Blog {
   url: string

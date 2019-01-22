@@ -1,4 +1,13 @@
+import { graphql as gql } from "gatsby"
 import React from "react"
+
+export const query = gql`
+  fragment SocialAccountFragment on SocialAccountsYaml {
+    alt
+    url
+    service
+  }
+`
 
 interface SocialAccount {
   alt: string

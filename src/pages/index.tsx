@@ -1,3 +1,4 @@
+import { graphql as gql } from "gatsby"
 import React from "react"
 
 import { BlogsSection } from "../components/blogs"
@@ -14,6 +15,25 @@ const SelfSection: React.SFC<{}> = () => (
     </div>
   </section>
 )
+
+export const query = gql`
+  query IndexQuery {
+    allBlogsYaml {
+      edges {
+        node {
+          ...BlogFragment
+        }
+      }
+    }
+    allSocialAccountsYaml {
+      edges {
+        node {
+          ...SocialAccountFragment
+        }
+      }
+    }
+  }
+`
 
 const IndexPage = () => (
   <Layout>
