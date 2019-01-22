@@ -1,0 +1,11 @@
+---
+
+schema: 'http://localhost:8000/___graphql'
+config:
+  immutableTypes: true
+documents:
+  - src/**/*.tsx
+generates:
+  src/types/client.ts:
+    - typescript-common
+    - typescript-client
