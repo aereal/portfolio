@@ -38,17 +38,17 @@ const IndexPage = () => (
         socialAccounts={[
           {
             alt: "Hatena id:aereal",
-            serviceClass: "hatena",
+            service: "hatena",
             url: `http://profile.hatena.ne.jp/aereal/`,
           },
           {
             alt: "GitHub @aereal",
-            serviceClass: "github",
+            service: "github",
             url: "https://github.com/aereal",
           },
           {
             alt: "Twitter @aereal",
-            serviceClass: "twitter",
+            service: "twitter",
             url: "https://twitter.com/aereal",
           },
         ]}

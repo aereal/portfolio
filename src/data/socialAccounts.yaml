@@ -1,0 +1,14 @@
+---
+
+-
+  service: hatena
+  url: http://profile.hatena.ne.jp/aereal/
+  alt: "Hatena id:aereal"
+-
+  service: github
+  url: https://github.com/aereal
+  alt: "GitHub @aereal"
+-
+  service: twitter
+  url: https://twitter.com/aereal
+  alt: "Twitter @aereal"
