@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gatsby build",
     "start": "gatsby develop",
     "gql-gen": "gql-gen",
     "type-check": "tsc -p . --noEmit",
