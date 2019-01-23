@@ -2,6 +2,7 @@ import { graphql as gql } from "gatsby"
 import React from "react"
 
 import { BlogFragment } from "../types"
+import { Section } from "./section"
 
 type Blog = Required<BlogFragment.Fragment>
 
@@ -18,7 +19,7 @@ interface Props {
 }
 
 export const BlogsSection: React.SFC<Props> = ({ blogs }) => (
-  <section id="blogs">
+  <Section id="blogs">
     <h2>Blogs</h2>
     <ul>
       {blogs.map(({ url, title, summary }, i) => (
@@ -27,5 +28,5 @@ export const BlogsSection: React.SFC<Props> = ({ blogs }) => (
         </li>
       ))}
     </ul>
-  </section>
+  </Section>
 )

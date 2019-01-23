@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { Section } from "./section"
+
 const H1 = styled.h1`
   line-height: 1.2;
   letter-spacing: -0.1rem;
@@ -14,18 +16,6 @@ const H1 = styled.h1`
     & {
       font-size: 5rem;
     }
-  }
-`
-
-const Section = styled.section`
-  margin-top: 4rem;
-
-  & ul {
-    list-style: none;
-  }
-
-  & p {
-    margin-top: 1.5rem;
   }
 `
 

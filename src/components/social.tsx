@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import { SocialAccountFragment } from "../types"
 import { HorizontalList } from "./horizontal-list"
+import { Section } from "./section"
 
 export const query = gql`
   fragment SocialAccountFragment on SocialAccountsYaml {
@@ -29,7 +30,7 @@ interface Props {
 }
 
 export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
-  <section id="social">
+  <Section id="social">
     <HorizontalList>
       {socialAccounts.map(({ url, alt, service, color }, i) => (
         <li key={i}>
@@ -43,5 +44,5 @@ export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
         </li>
       ))}
     </HorizontalList>
-  </section>
+  </Section>
 )
