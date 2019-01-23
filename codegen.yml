@@ -1,11 +1,16 @@
 ---
 
 schema: 'http://localhost:8000/___graphql'
+overwrite: true
 config:
   immutableTypes: true
 documents:
   - src/**/*.tsx
 generates:
-  src/types/client.ts:
+  src/types.ts:
+    -
+      add: '// DO NOT EDIT'
+    -
+      add: '// tslint:disable'
     - typescript-common
     - typescript-client
