@@ -2,6 +2,7 @@ import { graphql as gql, StaticQuery } from "gatsby"
 import React from "react"
 import { createGlobalStyle } from "styled-components"
 
+import { ActivitiesSection } from "../components/activities-section"
 import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
 import { SelfSection } from "../components/self"
@@ -22,6 +23,13 @@ export const query = gql`
       edges {
         node {
           ...SocialAccountFragment
+        }
+      }
+    }
+    allActivitiesYaml(sort: { fields: [recordedAt___startDate], order: DESC }) {
+      edges {
+        node {
+          ...ActivityFragment
         }
       }
     }
@@ -63,6 +71,9 @@ const IndexPage: React.SFC<IndexQuery.Query> = data => (
               Required<BlogFragment.Fragment>
             >
           }
+        />
+        <ActivitiesSection
+          activities={data.allActivitiesYaml!.edges!.map(e => e!.node!)}
         />
         <SocialSection
           socialAccounts={

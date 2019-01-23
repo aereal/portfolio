@@ -121,6 +121,8 @@ export interface SitePageConnectionPluginCreatorInputObject {
 
   readonly nodeAPIs?: Maybe<SitePageConnectionPluginCreatorNodeApIsQueryList>;
 
+  readonly ssrAPIs?: Maybe<SitePageConnectionPluginCreatorSsrApIsQueryList>;
+
   readonly pluginFilepath?: Maybe<
     SitePageConnectionPluginCreatorPluginFilepathQueryString
   >;
@@ -241,6 +243,20 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoole
 }
 
 export interface SitePageConnectionPluginCreatorNodeApIsQueryList {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePageConnectionPluginCreatorSsrApIsQueryList {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -727,6 +743,8 @@ export interface FilterSitePlugin {
 
   readonly nodeAPIs?: Maybe<SitePluginConnectionNodeApIsQueryList_2>;
 
+  readonly ssrAPIs?: Maybe<SitePluginConnectionSsrApIsQueryList_2>;
+
   readonly pluginFilepath?: Maybe<
     SitePluginConnectionPluginFilepathQueryString_2
   >;
@@ -841,6 +859,20 @@ export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginConnectionNodeApIsQueryList_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePluginConnectionSsrApIsQueryList_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -1241,7 +1273,7 @@ export interface FilterDirectory {
 
   readonly blksize?: Maybe<DirectoryConnectionBlksizeQueryInteger_2>;
 
-  readonly ino?: Maybe<DirectoryConnectionInoQueryFloat_2>;
+  readonly ino?: Maybe<DirectoryConnectionInoQueryInteger_2>;
 
   readonly blocks?: Maybe<DirectoryConnectionBlocksQueryInteger_2>;
 
@@ -1700,7 +1732,7 @@ export interface DirectoryConnectionBlksizeQueryInteger_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<number>>>;
 }
 
-export interface DirectoryConnectionInoQueryFloat_2 {
+export interface DirectoryConnectionInoQueryInteger_2 {
   readonly eq?: Maybe<number>;
 
   readonly ne?: Maybe<number>;
@@ -1925,7 +1957,7 @@ export interface FilterFile {
 
   readonly blksize?: Maybe<FileConnectionBlksizeQueryInteger_2>;
 
-  readonly ino?: Maybe<FileConnectionInoQueryFloat_2>;
+  readonly ino?: Maybe<FileConnectionInoQueryInteger_2>;
 
   readonly blocks?: Maybe<FileConnectionBlocksQueryInteger_2>;
 
@@ -2400,7 +2432,7 @@ export interface FileConnectionBlksizeQueryInteger_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<number>>>;
 }
 
-export interface FileConnectionInoQueryFloat_2 {
+export interface FileConnectionInoQueryInteger_2 {
   readonly eq?: Maybe<number>;
 
   readonly ne?: Maybe<number>;
@@ -2850,6 +2882,288 @@ export interface BlogsYamlConnectionInternalOwnerQueryString_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface ActivitiesYamlConnectionSort {
+  readonly fields: ReadonlyArray<
+    Maybe<ActivitiesYamlConnectionSortByFieldsEnum>
+  >;
+
+  readonly order?: ActivitiesYamlConnectionSortOrderValues;
+}
+/** Filter connection on its fields */
+export interface FilterActivitiesYaml {
+  readonly type?: Maybe<ActivitiesYamlConnectionTypeQueryString_2>;
+
+  readonly name?: Maybe<ActivitiesYamlConnectionNameQueryString_2>;
+
+  readonly url?: Maybe<ActivitiesYamlConnectionUrlQueryString_2>;
+
+  readonly recordedAt?: Maybe<ActivitiesYamlConnectionRecordedAtInputObject_2>;
+
+  readonly id?: Maybe<ActivitiesYamlConnectionIdQueryString_2>;
+
+  readonly internal?: Maybe<ActivitiesYamlConnectionInternalInputObject_2>;
+}
+
+export interface ActivitiesYamlConnectionTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtInputObject_2 {
+  readonly type?: Maybe<ActivitiesYamlConnectionRecordedAtTypeQueryString_2>;
+
+  readonly url?: Maybe<ActivitiesYamlConnectionRecordedAtUrlQueryString_2>;
+
+  readonly name?: Maybe<ActivitiesYamlConnectionRecordedAtNameQueryString_2>;
+
+  readonly startDate?: Maybe<
+    ActivitiesYamlConnectionRecordedAtStartDateQueryString_2
+  >;
+
+  readonly location?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationInputObject_2
+  >;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtStartDateQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationInputObject_2 {
+  readonly type?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationTypeQueryString_2
+  >;
+
+  readonly name?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationNameQueryString_2
+  >;
+
+  readonly address?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationAddressInputObject_2
+  >;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationAddressInputObject_2 {
+  readonly type?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationAddressTypeQueryString_2
+  >;
+
+  readonly addressRegion?: Maybe<
+    ActivitiesYamlConnectionRecordedAtLocationAddressAddressRegionQueryString_2
+  >;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationAddressTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionRecordedAtLocationAddressAddressRegionQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionInternalInputObject_2 {
+  readonly contentDigest?: Maybe<
+    ActivitiesYamlConnectionInternalContentDigestQueryString_2
+  >;
+
+  readonly type?: Maybe<ActivitiesYamlConnectionInternalTypeQueryString_2>;
+
+  readonly owner?: Maybe<ActivitiesYamlConnectionInternalOwnerQueryString_2>;
+}
+
+export interface ActivitiesYamlConnectionInternalContentDigestQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionInternalTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlConnectionInternalOwnerQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface SitePageJsonNameQueryString {
   readonly eq?: Maybe<string>;
 
@@ -2932,6 +3246,8 @@ export interface SitePagePluginCreatorInputObject {
   readonly pluginOptions?: Maybe<SitePagePluginCreatorPluginOptionsInputObject>;
 
   readonly nodeAPIs?: Maybe<SitePagePluginCreatorNodeApIsQueryList>;
+
+  readonly ssrAPIs?: Maybe<SitePagePluginCreatorSsrApIsQueryList>;
 
   readonly pluginFilepath?: Maybe<
     SitePagePluginCreatorPluginFilepathQueryString
@@ -3047,6 +3363,20 @@ export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
 }
 
 export interface SitePagePluginCreatorNodeApIsQueryList {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePagePluginCreatorSsrApIsQueryList {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -3597,6 +3927,20 @@ export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginNodeApIsQueryList_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePluginSsrApIsQueryList_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -4502,7 +4846,7 @@ export interface DirectoryBlksizeQueryInteger_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<number>>>;
 }
 
-export interface DirectoryInoQueryFloat_2 {
+export interface DirectoryInoQueryInteger_2 {
   readonly eq?: Maybe<number>;
 
   readonly ne?: Maybe<number>;
@@ -5116,7 +5460,7 @@ export interface FileBlksizeQueryInteger_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<number>>>;
 }
 
-export interface FileInoQueryFloat_2 {
+export interface FileInoQueryInteger_2 {
   readonly eq?: Maybe<number>;
 
   readonly ne?: Maybe<number>;
@@ -5522,6 +5866,258 @@ export interface BlogsYamlInternalOwnerQueryString_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface ActivitiesYamlTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtInputObject_2 {
+  readonly type?: Maybe<ActivitiesYamlRecordedAtTypeQueryString_2>;
+
+  readonly url?: Maybe<ActivitiesYamlRecordedAtUrlQueryString_2>;
+
+  readonly name?: Maybe<ActivitiesYamlRecordedAtNameQueryString_2>;
+
+  readonly startDate?: Maybe<ActivitiesYamlRecordedAtStartDateQueryString_2>;
+
+  readonly location?: Maybe<ActivitiesYamlRecordedAtLocationInputObject_2>;
+}
+
+export interface ActivitiesYamlRecordedAtTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtStartDateQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtLocationInputObject_2 {
+  readonly type?: Maybe<ActivitiesYamlRecordedAtLocationTypeQueryString_2>;
+
+  readonly name?: Maybe<ActivitiesYamlRecordedAtLocationNameQueryString_2>;
+
+  readonly address?: Maybe<
+    ActivitiesYamlRecordedAtLocationAddressInputObject_2
+  >;
+}
+
+export interface ActivitiesYamlRecordedAtLocationTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtLocationNameQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtLocationAddressInputObject_2 {
+  readonly type?: Maybe<
+    ActivitiesYamlRecordedAtLocationAddressTypeQueryString_2
+  >;
+
+  readonly addressRegion?: Maybe<
+    ActivitiesYamlRecordedAtLocationAddressAddressRegionQueryString_2
+  >;
+}
+
+export interface ActivitiesYamlRecordedAtLocationAddressTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlRecordedAtLocationAddressAddressRegionQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlInternalInputObject_2 {
+  readonly contentDigest?: Maybe<
+    ActivitiesYamlInternalContentDigestQueryString_2
+  >;
+
+  readonly type?: Maybe<ActivitiesYamlInternalTypeQueryString_2>;
+
+  readonly owner?: Maybe<ActivitiesYamlInternalOwnerQueryString_2>;
+}
+
+export interface ActivitiesYamlInternalContentDigestQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlInternalTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface ActivitiesYamlInternalOwnerQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export type SitePageConnectionSortByFieldsEnum =
   | "jsonName"
   | "internalComponentName"
@@ -5578,6 +6174,7 @@ export type SitePluginConnectionSortByFieldsEnum =
   | "pluginOptions___path"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
   | "packageJson___description"
@@ -5604,6 +6201,7 @@ export type SitePluginDistinctEnum =
   | "pluginOptions___path"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
   | "packageJson___description"
@@ -5628,6 +6226,7 @@ export type SitePluginGroupEnum =
   | "pluginOptions___path"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
   | "packageJson___description"
@@ -5961,6 +6560,59 @@ export type BlogsYamlGroupEnum =
   | "internal___type"
   | "internal___owner";
 
+export type ActivitiesYamlConnectionSortByFieldsEnum =
+  | "type"
+  | "name"
+  | "url"
+  | "recordedAt___type"
+  | "recordedAt___url"
+  | "recordedAt___name"
+  | "recordedAt___startDate"
+  | "recordedAt___location___type"
+  | "recordedAt___location___name"
+  | "recordedAt___location___address"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
+export type ActivitiesYamlConnectionSortOrderValues = "ASC" | "DESC";
+
+export type ActivitiesYamlDistinctEnum =
+  | "type"
+  | "name"
+  | "url"
+  | "recordedAt___type"
+  | "recordedAt___url"
+  | "recordedAt___name"
+  | "recordedAt___startDate"
+  | "recordedAt___location___type"
+  | "recordedAt___location___name"
+  | "recordedAt___location___address"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
+export type ActivitiesYamlGroupEnum =
+  | "type"
+  | "name"
+  | "url"
+  | "recordedAt___type"
+  | "recordedAt___url"
+  | "recordedAt___name"
+  | "recordedAt___startDate"
+  | "recordedAt___location___type"
+  | "recordedAt___location___name"
+  | "recordedAt___location___address"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
 /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
 export type Date = any;
 
@@ -5977,6 +6629,8 @@ export namespace IndexQuery {
     readonly allBlogsYaml: Maybe<AllBlogsYaml>;
 
     readonly allSocialAccountsYaml: Maybe<AllSocialAccountsYaml>;
+
+    readonly allActivitiesYaml: Maybe<AllActivitiesYaml>;
   };
 
   export type AllBlogsYaml = {
@@ -6006,6 +6660,44 @@ export namespace IndexQuery {
   };
 
   export type _Node = SocialAccountFragment.Fragment;
+
+  export type AllActivitiesYaml = {
+    readonly __typename?: "ActivitiesYamlConnection";
+
+    readonly edges: Maybe<ReadonlyArray<Maybe<__Edges>>>;
+  };
+
+  export type __Edges = {
+    readonly __typename?: "ActivitiesYamlEdge";
+
+    readonly node: Maybe<__Node>;
+  };
+
+  export type __Node = ActivityFragment.Fragment;
+}
+
+export namespace ActivityFragment {
+  export type Fragment = {
+    readonly __typename?: "ActivitiesYaml";
+
+    readonly name: Maybe<string>;
+
+    readonly url: Maybe<string>;
+
+    readonly recordedAt: Maybe<RecordedAt>;
+  };
+
+  export type RecordedAt = {
+    readonly __typename?: "recordedAt_2";
+
+    readonly url: Maybe<string>;
+
+    readonly name: Maybe<string>;
+
+    readonly startYear: Maybe<Date>;
+
+    readonly startDate: Maybe<Date>;
+  };
 }
 
 export namespace BlogFragment {

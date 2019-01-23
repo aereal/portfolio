@@ -1,5 +1,21 @@
 ---
 
+# -
+#   type: CreativeWork
+#   name:
+#   url:
+#   recordedAt:
+#     type: Event
+#     url: 
+#     name: 
+#     startDate:
+#     location:
+#       type: Place
+#       name: 
+#       address:
+#         type: PostalAddress
+#         addressRegion: 
+
 -
   type: CreativeWork
   name: AWSではてなブログの常時HTTPS配信をバーンとやる話
