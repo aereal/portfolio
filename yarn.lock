@@ -5048,6 +5048,13 @@ graphql-code-generator@^0.16.0:
     request "2.88.0"
     valid-url "1.0.9"
 
+graphql-codegen-add@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-add/-/graphql-codegen-add-0.16.0.tgz#f1c19166d12a4174c597719b42facb7502b04fc8"
+  integrity sha512-6Zi993CXlfyLmqS8dqmlCbSbCAFzEoS7rN5PPvDgwyxiJ6SAdzGN+TjCRJUSWS9BuaI4rSgM1nGyRYG0erkeGg==
+  dependencies:
+    graphql-codegen-core "0.16.0"
+
 graphql-codegen-core@0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.16.0.tgz#04f19e231fcf27fb9911a192620f8567322bbf69"
