@@ -5,6 +5,7 @@ import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
 import { SelfSection } from "../components/self"
 import { SocialSection } from "../components/social"
+import { WholeContainer } from "../components/whole-container"
 import { BlogFragment, IndexQuery, SocialAccountFragment } from "../types"
 
 export const query = gql`
@@ -28,7 +29,7 @@ export const query = gql`
 
 const IndexPage: React.SFC<IndexQuery.Query> = data => (
   <Layout>
-    <main className="container">
+    <WholeContainer>
       <h1 itemProp="name">aereal</h1>
       <SelfSection />
       <BlogsSection
@@ -45,7 +46,7 @@ const IndexPage: React.SFC<IndexQuery.Query> = data => (
           ) as ReadonlyArray<Required<SocialAccountFragment.Fragment>>
         }
       />
-    </main>
+    </WholeContainer>
   </Layout>
 )
 
