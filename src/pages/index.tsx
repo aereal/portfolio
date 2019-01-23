@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components"
 
 import { ActivitiesSection } from "../components/activities-section"
 import { BlogsSection } from "../components/blogs"
+import { Metadata } from "../components/metadata"
 import { SelfSection } from "../components/self"
 import { SocialSection } from "../components/social"
 import { WholeContainer } from "../components/whole-container"
@@ -11,6 +12,11 @@ import { BlogFragment, IndexQuery, SocialAccountFragment } from "../types"
 
 export const query = gql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        ...MetadataFragment
+      }
+    }
     allBlogsYaml {
       edges {
         node {
@@ -61,6 +67,7 @@ const GlobalStyle = createGlobalStyle`
 const IndexPage: React.SFC<IndexQuery.Query> = data => (
   <>
     <GlobalStyle />
+    <Metadata metadata={data.site!.siteMetadata!} />
     <WholeContainer>
       <SelfSection />
       <BlogsSection

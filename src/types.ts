@@ -6854,12 +6854,22 @@ export namespace IndexQuery {
   export type Query = {
     readonly __typename?: "Query";
 
+    readonly site: Maybe<Site>;
+
     readonly allBlogsYaml: Maybe<AllBlogsYaml>;
 
     readonly allSocialAccountsYaml: Maybe<AllSocialAccountsYaml>;
 
     readonly allActivitiesYaml: Maybe<AllActivitiesYaml>;
   };
+
+  export type Site = {
+    readonly __typename?: "Site";
+
+    readonly siteMetadata: Maybe<SiteMetadata>;
+  };
+
+  export type SiteMetadata = MetadataFragment.Fragment;
 
   export type AllBlogsYaml = {
     readonly __typename?: "BlogsYamlConnection";
@@ -6937,6 +6947,36 @@ export namespace BlogFragment {
     readonly summary: Maybe<string>;
 
     readonly url: Maybe<string>;
+  };
+}
+
+export namespace MetadataFragment {
+  export type Fragment = {
+    readonly __typename?: "siteMetadata_2";
+
+    readonly title: Maybe<string>;
+
+    readonly description: Maybe<string>;
+
+    readonly facebookApp: Maybe<FacebookApp>;
+
+    readonly twitterCard: Maybe<TwitterCard>;
+  };
+
+  export type FacebookApp = {
+    readonly __typename?: "facebookApp_2";
+
+    readonly id: Maybe<string>;
+
+    readonly publisher: Maybe<string>;
+  };
+
+  export type TwitterCard = {
+    readonly __typename?: "twitterCard_2";
+
+    readonly owner: Maybe<string>;
+
+    readonly type: Maybe<string>;
   };
 }
 
