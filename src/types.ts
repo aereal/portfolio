@@ -2578,6 +2578,152 @@ export interface PublicUrlQueryString_4 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SocialAccountsYamlConnectionSort {
+  readonly fields: ReadonlyArray<
+    Maybe<SocialAccountsYamlConnectionSortByFieldsEnum>
+  >;
+
+  readonly order?: SocialAccountsYamlConnectionSortOrderValues;
+}
+/** Filter connection on its fields */
+export interface FilterSocialAccountsYaml {
+  readonly service?: Maybe<SocialAccountsYamlConnectionServiceQueryString_2>;
+
+  readonly url?: Maybe<SocialAccountsYamlConnectionUrlQueryString_2>;
+
+  readonly alt?: Maybe<SocialAccountsYamlConnectionAltQueryString_2>;
+
+  readonly color?: Maybe<SocialAccountsYamlConnectionColorQueryString_2>;
+
+  readonly id?: Maybe<SocialAccountsYamlConnectionIdQueryString_2>;
+
+  readonly internal?: Maybe<SocialAccountsYamlConnectionInternalInputObject_2>;
+}
+
+export interface SocialAccountsYamlConnectionServiceQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionAltQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionColorQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionInternalInputObject_2 {
+  readonly contentDigest?: Maybe<
+    SocialAccountsYamlConnectionInternalContentDigestQueryString_2
+  >;
+
+  readonly type?: Maybe<SocialAccountsYamlConnectionInternalTypeQueryString_2>;
+
+  readonly owner?: Maybe<
+    SocialAccountsYamlConnectionInternalOwnerQueryString_2
+  >;
+}
+
+export interface SocialAccountsYamlConnectionInternalContentDigestQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionInternalTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlConnectionInternalOwnerQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface BlogsYamlConnectionSort {
   readonly fields: ReadonlyArray<Maybe<BlogsYamlConnectionSortByFieldsEnum>>;
 
@@ -2691,136 +2837,6 @@ export interface BlogsYamlConnectionInternalTypeQueryString_2 {
 }
 
 export interface BlogsYamlConnectionInternalOwnerQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionSort {
-  readonly fields: ReadonlyArray<
-    Maybe<SocialAccountsYamlConnectionSortByFieldsEnum>
-  >;
-
-  readonly order?: SocialAccountsYamlConnectionSortOrderValues;
-}
-/** Filter connection on its fields */
-export interface FilterSocialAccountsYaml {
-  readonly service?: Maybe<SocialAccountsYamlConnectionServiceQueryString_2>;
-
-  readonly url?: Maybe<SocialAccountsYamlConnectionUrlQueryString_2>;
-
-  readonly alt?: Maybe<SocialAccountsYamlConnectionAltQueryString_2>;
-
-  readonly id?: Maybe<SocialAccountsYamlConnectionIdQueryString_2>;
-
-  readonly internal?: Maybe<SocialAccountsYamlConnectionInternalInputObject_2>;
-}
-
-export interface SocialAccountsYamlConnectionServiceQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionUrlQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionAltQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionIdQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionInternalInputObject_2 {
-  readonly contentDigest?: Maybe<
-    SocialAccountsYamlConnectionInternalContentDigestQueryString_2
-  >;
-
-  readonly type?: Maybe<SocialAccountsYamlConnectionInternalTypeQueryString_2>;
-
-  readonly owner?: Maybe<
-    SocialAccountsYamlConnectionInternalOwnerQueryString_2
-  >;
-}
-
-export interface SocialAccountsYamlConnectionInternalContentDigestQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionInternalTypeQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlConnectionInternalOwnerQueryString_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -5278,6 +5294,128 @@ export interface PublicUrlQueryString_3 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SocialAccountsYamlServiceQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlUrlQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlAltQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlColorQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlInternalInputObject_2 {
+  readonly contentDigest?: Maybe<
+    SocialAccountsYamlInternalContentDigestQueryString_2
+  >;
+
+  readonly type?: Maybe<SocialAccountsYamlInternalTypeQueryString_2>;
+
+  readonly owner?: Maybe<SocialAccountsYamlInternalOwnerQueryString_2>;
+}
+
+export interface SocialAccountsYamlInternalContentDigestQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlInternalTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SocialAccountsYamlInternalOwnerQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface BlogsYamlSummaryQueryString_2 {
   readonly eq?: Maybe<string>;
 
@@ -5371,114 +5509,6 @@ export interface BlogsYamlInternalTypeQueryString_2 {
 }
 
 export interface BlogsYamlInternalOwnerQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlServiceQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlUrlQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlAltQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlIdQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlInternalInputObject_2 {
-  readonly contentDigest?: Maybe<
-    SocialAccountsYamlInternalContentDigestQueryString_2
-  >;
-
-  readonly type?: Maybe<SocialAccountsYamlInternalTypeQueryString_2>;
-
-  readonly owner?: Maybe<SocialAccountsYamlInternalOwnerQueryString_2>;
-}
-
-export interface SocialAccountsYamlInternalContentDigestQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlInternalTypeQueryString_2 {
-  readonly eq?: Maybe<string>;
-
-  readonly ne?: Maybe<string>;
-
-  readonly regex?: Maybe<string>;
-
-  readonly glob?: Maybe<string>;
-
-  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
-
-  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
-}
-
-export interface SocialAccountsYamlInternalOwnerQueryString_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -5864,6 +5894,41 @@ export type FileGroupEnum =
   | "ctime"
   | "birthtime";
 
+export type SocialAccountsYamlConnectionSortByFieldsEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "color"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
+export type SocialAccountsYamlConnectionSortOrderValues = "ASC" | "DESC";
+
+export type SocialAccountsYamlDistinctEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "color"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
+export type SocialAccountsYamlGroupEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "color"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
+
 export type BlogsYamlConnectionSortByFieldsEnum =
   | "summary"
   | "title"
@@ -5890,38 +5955,6 @@ export type BlogsYamlGroupEnum =
   | "summary"
   | "title"
   | "url"
-  | "id"
-  | "parent"
-  | "internal___contentDigest"
-  | "internal___type"
-  | "internal___owner";
-
-export type SocialAccountsYamlConnectionSortByFieldsEnum =
-  | "service"
-  | "url"
-  | "alt"
-  | "id"
-  | "parent"
-  | "internal___contentDigest"
-  | "internal___type"
-  | "internal___owner";
-
-export type SocialAccountsYamlConnectionSortOrderValues = "ASC" | "DESC";
-
-export type SocialAccountsYamlDistinctEnum =
-  | "service"
-  | "url"
-  | "alt"
-  | "id"
-  | "parent"
-  | "internal___contentDigest"
-  | "internal___type"
-  | "internal___owner";
-
-export type SocialAccountsYamlGroupEnum =
-  | "service"
-  | "url"
-  | "alt"
   | "id"
   | "parent"
   | "internal___contentDigest"
