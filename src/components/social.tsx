@@ -1,6 +1,8 @@
 import { graphql as gql } from "gatsby"
 import React from "react"
 
+import { SocialAccountFragment } from "../types"
+
 export const query = gql`
   fragment SocialAccountFragment on SocialAccountsYaml {
     alt
@@ -9,11 +11,7 @@ export const query = gql`
   }
 `
 
-interface SocialAccount {
-  alt: string
-  url: string
-  service: string
-}
+type SocialAccount = Required<SocialAccountFragment.Fragment>
 
 interface Props {
   socialAccounts: ReadonlyArray<SocialAccount>

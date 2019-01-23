@@ -1,9 +1,10 @@
-import { graphql as gql } from "gatsby"
+import { graphql as gql, StaticQuery } from "gatsby"
 import React from "react"
 
 import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
 import { SocialSection } from "../components/social"
+import { BlogFragment, IndexQuery, SocialAccountFragment } from "../types"
 
 const SelfSection: React.SFC<{}> = () => (
   <section id="self">
@@ -35,46 +36,29 @@ export const query = gql`
   }
 `
 
-const IndexPage = () => (
+const IndexPage: React.SFC<IndexQuery.Query> = data => (
   <Layout>
     <main className="container">
       <h1 itemProp="name">aereal</h1>
       <SelfSection />
       <BlogsSection
-        blogs={[
-          {
-            summary: "Technical writing in Japanese",
-            title: "Sexually Knowing",
-            url: "https://this.aereal.org/",
-          },
-          {
-            summary: "diary with words or not",
-            title: "『言葉を吐く』",
-            url: "https://d.aereal.org/",
-          },
-        ]}
+        blogs={
+          data.allBlogsYaml!.edges!.map(e => e!.node!) as ReadonlyArray<
+            Required<BlogFragment.Fragment>
+          >
+        }
       />
       <SocialSection
-        socialAccounts={[
-          {
-            alt: "Hatena id:aereal",
-            service: "hatena",
-            url: `http://profile.hatena.ne.jp/aereal/`,
-          },
-          {
-            alt: "GitHub @aereal",
-            service: "github",
-            url: "https://github.com/aereal",
-          },
-          {
-            alt: "Twitter @aereal",
-            service: "twitter",
-            url: "https://twitter.com/aereal",
-          },
-        ]}
+        socialAccounts={
+          data.allSocialAccountsYaml!.edges!.map(
+            e => e!.node!
+          ) as ReadonlyArray<Required<SocialAccountFragment.Fragment>>
+        }
       />
     </main>
   </Layout>
 )
 
-export default IndexPage
+export default () => (
+  <StaticQuery query={query}>{data => <IndexPage {...data} />}</StaticQuery>
+)

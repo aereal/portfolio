@@ -1,6 +1,10 @@
 import { graphql as gql } from "gatsby"
 import React from "react"
 
+import { BlogFragment } from "../types"
+
+type Blog = Required<BlogFragment.Fragment>
+
 export const query = gql`
   fragment BlogFragment on BlogsYaml {
     title
@@ -8,12 +12,6 @@ export const query = gql`
     url
   }
 `
-
-interface Blog {
-  url: string
-  title: string
-  summary: string
-}
 
 interface Props {
   blogs: ReadonlyArray<Blog>
