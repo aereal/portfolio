@@ -17,10 +17,10 @@ export const query = gql`
 
 const Icon = styled.img<{ color: string }>`
   background-color: ${props => props.color};
-  width: 2rem;
-  height: 2rem;
-  padding: 0.2rem;
-  border-radius: 1.2rem;
+  width: 2em;
+  height: 2em;
+  padding: 0.2em;
+  border-radius: 1.2em;
 `
 
 type SocialAccount = Required<SocialAccountFragment.Fragment>
