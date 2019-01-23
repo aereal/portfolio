@@ -30,7 +30,6 @@ export const query = gql`
 const IndexPage: React.SFC<IndexQuery.Query> = data => (
   <Layout>
     <WholeContainer>
-      <h1 itemProp="name">aereal</h1>
       <SelfSection />
       <BlogsSection
         blogs={
