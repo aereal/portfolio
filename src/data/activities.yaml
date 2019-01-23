@@ -1,0 +1,199 @@
+---
+
+# -
+#   type: CreativeWork
+#   name:
+#   url:
+#   recordedAt:
+#     type: Event
+#     url: 
+#     name: 
+#     startDate:
+#     location:
+#       type: Place
+#       name: 
+#       address:
+#         type: PostalAddress
+#         addressRegion: 
+
+-
+  type: CreativeWork
+  name: AWSではてなブログの常時HTTPS配信をバーンとやる話
+  url: https://speakerdeck.com/aereal/the-epic-of-migration-from-http-to-https-on-hatena-blog-with-aws
+  recordedAt:
+    type: Event
+    url: http://developer.hatenastaff.com/entry/2018/06/08/190000
+    name: 'Hatena Engineer Seminar #10'
+    startDate: 2018-05-23
+    location:
+      type: Place
+      name: 株式会社サポーターズ 東京オフィス
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  name: ScalaとPerlでMicroservices in production
+  url: https://speakerdeck.com/aereal/building-microservices-with-perl-and-scala-in-production
+  recordedAt:
+    type: Event
+    url: https://cookpad.connpass.com/event/64837/
+    name: 'Cookpad Tech Kitchen #11'
+    startDate: 2017-09-28
+    location:
+      type: Place
+      name: 株式会社はてな セミナールーム
+      address:
+        type: PostalAddress
+        addressRegion: 京都
+
+-
+  type: CreativeWork
+  name: Scalaで自動作曲の練習
+  url: https://this.aereal.org/entry/2017/09/15/113346
+  recordedAt:
+    type: Event
+    name: はてな技術勉強会
+    startDate: 2017-09-14
+    location:
+      type: Place
+      name: 株式会社はてな セミナールーム
+      address:
+        type: PostalAddress
+        addressRegion: 京都
+
+-
+  type: CreativeWork
+  name: Goで実装する軽量マークアップ言語パーサー
+  url: https://this.aereal.org/entry/2017/08/05/215059
+  recordedAt:
+    type: Event
+    name: builderscon tokyo 2017
+    startDate: 2017-08-04
+    location:
+      type: Place
+      name: 慶應義塾日吉キャンパス
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  name: Goで軽量マークアップ言語のパーサーを書く
+  url: https://speakerdeck.com/aereal/writing-a-parser-with-go
+  recordedAt:
+    type: Event
+    name: そうだGo、京都
+    startDate: 2017-04-29
+    location:
+      type: Place
+      name: 株式会社はてな セミナールーム
+      address:
+        type: PostalAddress
+        addressRegion: 京都
+
+-
+  type: CreativeWork
+  name: はてなにおけるマイクロサービスとScala
+  url: https://speakerdeck.com/aereal/microservices-and-scala-at-hatena
+  recordedAt:
+    type: Event
+    name: Scala関西Summit 2016
+    startDate: 2016-10-08
+    location:
+      type: Place
+      name:
+      address:
+        type: PostalAddress
+        addressRegion: 大阪
+
+-
+  type: CreativeWork
+  name: 世界展開する大規模ウェブサービスのデプロイを支える技術
+  url: https://speakerdeck.com/hatena/yapc-asia-tokyo-2015
+  recordedAt:
+    type: Event
+    name: YAPC::Asia Tokyo 2015
+    startDate: 2015-08-21
+    location:
+      type: Place
+      name: 東京ビッグサイト
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  name: Build CI for Smartphone apps dev. at Hatena
+  url: http://developer.hatenastaff.com/entry/2015/04/01/120317
+  recordedAt:
+    type: Event
+    name: 【DeployGate x はてな】スマートフォンアプリ開発最前線
+    startDate: 2015-04-13
+    location:
+      type: Place
+      name: 株式会社ミクシィ コラボレーションルーム
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  url: https://this.aereal.org/entry/2014/10/20/100301
+  name: テンプレートの静的解析とリファクタリング
+  recordedAt:
+    type: Event
+    name: テンプレートエンジンNight
+    startDate: 2014-10-17
+    location:
+      type: Place
+      name: ピクシブ株式会社
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  url: https://this.aereal.org/entry/2014/05/04/000139
+  name: Introduce Browserify
+  recordedAt:
+    type: Event
+    name: Kyoto.なんか
+    startDate: 2014-05-03
+    location:
+      type: Place
+      name: 株式会社はてな セミナールーム
+      address:
+        type: PostalAddress
+        addressRegion: 京都
+
+-
+  type: CreativeWork
+  name: Vagrant と Chef でつくるはてなブックマークの開発環境
+  url: http://developer.hatenastaff.com/entry/2013/11/27/143648
+  recordedAt:
+    type: Event
+    name: 'Hatena Engineer Seminar #2'
+    startDate: 2013-11-25
+    location:
+      type: Place
+      name: T's 渋谷アジアビル
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: MediaObject
+  name: Vagrant と Chef でプログラマブルな開発環境をつくる
+  url: http://yapcasia.org/2013/talk/show/6d9a81f8-ea36-11e2-ba88-5f716aeab6a4
+  recordedAt:
+    type: Event
+    name: 'YAPC::Asia Tokyo 2013'
+    startDate: 2013-09-21
+    location:
+      type: Place
+      name: 慶應義塾日吉キャンパス
+      address:
+        type: PostalAddress
+        addressRegion: 東京

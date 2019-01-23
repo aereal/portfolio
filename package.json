@@ -1,0 +1,52 @@
+{
+  "name": "aereal.github.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "gql-gen": "gql-gen",
+    "type-check": "tsc -p . --noEmit",
+    "type-check:watch": "tsc -p . --noEmit -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aereal/aereal.github.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aereal/aereal.github.com/issues"
+  },
+  "homepage": "https://github.com/aereal/aereal.github.com#readme",
+  "devDependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-helmet": "^5.0.8",
+    "@types/styled-components": "^4.1.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.0.91",
+    "gatsby-plugin-google-analytics": "^2.0.10",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-typescript": "^2.0.3",
+    "gatsby-source-filesystem": "^2.0.16",
+    "gatsby-transformer-yaml": "^2.1.7",
+    "graphql-code-generator": "^0.16.0",
+    "graphql-codegen-add": "^0.16.0",
+    "graphql-codegen-typescript-client": "^0.16.0",
+    "graphql-codegen-typescript-common": "^0.16.0",
+    "prettier": "^1.15.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.1.3",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  }
+}

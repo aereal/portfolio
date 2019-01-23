@@ -1,0 +1,17 @@
+---
+
+-
+  service: hatena
+  url: http://profile.hatena.ne.jp/aereal/
+  alt: "Hatena id:aereal"
+  color: '#0071c5'
+-
+  service: github
+  url: https://github.com/aereal
+  alt: "GitHub @aereal"
+  color: '#333333'
+-
+  service: twitter
+  url: https://twitter.com/aereal
+  alt: "Twitter @aereal"
+  color: '#55acff'
