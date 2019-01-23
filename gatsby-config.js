@@ -1,6 +1,15 @@
 module.exports = {
   siteMetadata: {
-    siteName: 'aereal',
+    title: 'aereal.org',
+    description: `aereal's portfolio`,
+    facebookApp: {
+      id: '588890224485471',
+      publisher: 'https://www.facebook.com/ryota.nkzw',
+    },
+    twitterCard: {
+      type: 'summary',
+      owner: '@aereal',
+    },
   },
   plugins: [
     'gatsby-plugin-typescript',

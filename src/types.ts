@@ -121,6 +121,10 @@ export interface SitePageConnectionPluginCreatorInputObject {
 
   readonly nodeAPIs?: Maybe<SitePageConnectionPluginCreatorNodeApIsQueryList>;
 
+  readonly browserAPIs?: Maybe<
+    SitePageConnectionPluginCreatorBrowserApIsQueryList
+  >;
+
   readonly ssrAPIs?: Maybe<SitePageConnectionPluginCreatorSsrApIsQueryList>;
 
   readonly pluginFilepath?: Maybe<
@@ -199,6 +203,10 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
     SitePageConnectionPluginCreatorPluginOptionsPathQueryString
   >;
 
+  readonly trackingId?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsTrackingIdQueryString
+  >;
+
   readonly pathCheck?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean
   >;
@@ -232,6 +240,20 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SitePageConnectionPluginCreatorPluginOptionsTrackingIdQueryString {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean {
   readonly eq?: Maybe<boolean>;
 
@@ -243,6 +265,20 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoole
 }
 
 export interface SitePageConnectionPluginCreatorNodeApIsQueryList {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePageConnectionPluginCreatorBrowserApIsQueryList {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -743,6 +779,8 @@ export interface FilterSitePlugin {
 
   readonly nodeAPIs?: Maybe<SitePluginConnectionNodeApIsQueryList_2>;
 
+  readonly browserAPIs?: Maybe<SitePluginConnectionBrowserApIsQueryList_2>;
+
   readonly ssrAPIs?: Maybe<SitePluginConnectionSsrApIsQueryList_2>;
 
   readonly pluginFilepath?: Maybe<
@@ -815,6 +853,10 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
 
   readonly path?: Maybe<SitePluginConnectionPluginOptionsPathQueryString_2>;
 
+  readonly trackingId?: Maybe<
+    SitePluginConnectionPluginOptionsTrackingIdQueryString_2
+  >;
+
   readonly pathCheck?: Maybe<
     SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2
   >;
@@ -848,6 +890,20 @@ export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SitePluginConnectionPluginOptionsTrackingIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
   readonly eq?: Maybe<boolean>;
 
@@ -859,6 +915,20 @@ export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginConnectionNodeApIsQueryList_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePluginConnectionBrowserApIsQueryList_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -3247,6 +3317,8 @@ export interface SitePagePluginCreatorInputObject {
 
   readonly nodeAPIs?: Maybe<SitePagePluginCreatorNodeApIsQueryList>;
 
+  readonly browserAPIs?: Maybe<SitePagePluginCreatorBrowserApIsQueryList>;
+
   readonly ssrAPIs?: Maybe<SitePagePluginCreatorSsrApIsQueryList>;
 
   readonly pluginFilepath?: Maybe<
@@ -3319,6 +3391,10 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
 
   readonly path?: Maybe<SitePagePluginCreatorPluginOptionsPathQueryString>;
 
+  readonly trackingId?: Maybe<
+    SitePagePluginCreatorPluginOptionsTrackingIdQueryString
+  >;
+
   readonly pathCheck?: Maybe<
     SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean
   >;
@@ -3352,6 +3428,20 @@ export interface SitePagePluginCreatorPluginOptionsPathQueryString {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SitePagePluginCreatorPluginOptionsTrackingIdQueryString {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
   readonly eq?: Maybe<boolean>;
 
@@ -3363,6 +3453,20 @@ export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
 }
 
 export interface SitePagePluginCreatorNodeApIsQueryList {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePagePluginCreatorBrowserApIsQueryList {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -3885,6 +3989,8 @@ export interface SitePluginPluginOptionsInputObject_2 {
 
   readonly path?: Maybe<SitePluginPluginOptionsPathQueryString_2>;
 
+  readonly trackingId?: Maybe<SitePluginPluginOptionsTrackingIdQueryString_2>;
+
   readonly pathCheck?: Maybe<SitePluginPluginOptionsPathCheckQueryBoolean_2>;
 }
 
@@ -3916,6 +4022,20 @@ export interface SitePluginPluginOptionsPathQueryString_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
+export interface SitePluginPluginOptionsTrackingIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
 export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
   readonly eq?: Maybe<boolean>;
 
@@ -3927,6 +4047,20 @@ export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginNodeApIsQueryList_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SitePluginBrowserApIsQueryList_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -4265,10 +4399,98 @@ export interface SitePluginInternalOwnerQueryString_2 {
 }
 
 export interface SiteSiteMetadataInputObject_2 {
-  readonly siteName?: Maybe<SiteSiteMetadataSiteNameQueryString_2>;
+  readonly title?: Maybe<SiteSiteMetadataTitleQueryString_2>;
+
+  readonly description?: Maybe<SiteSiteMetadataDescriptionQueryString_2>;
+
+  readonly facebookApp?: Maybe<SiteSiteMetadataFacebookAppInputObject_2>;
+
+  readonly twitterCard?: Maybe<SiteSiteMetadataTwitterCardInputObject_2>;
 }
 
-export interface SiteSiteMetadataSiteNameQueryString_2 {
+export interface SiteSiteMetadataTitleQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SiteSiteMetadataDescriptionQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SiteSiteMetadataFacebookAppInputObject_2 {
+  readonly id?: Maybe<SiteSiteMetadataFacebookAppIdQueryString_2>;
+
+  readonly publisher?: Maybe<SiteSiteMetadataFacebookAppPublisherQueryString_2>;
+}
+
+export interface SiteSiteMetadataFacebookAppIdQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SiteSiteMetadataFacebookAppPublisherQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SiteSiteMetadataTwitterCardInputObject_2 {
+  readonly type?: Maybe<SiteSiteMetadataTwitterCardTypeQueryString_2>;
+
+  readonly owner?: Maybe<SiteSiteMetadataTwitterCardOwnerQueryString_2>;
+}
+
+export interface SiteSiteMetadataTwitterCardTypeQueryString_2 {
+  readonly eq?: Maybe<string>;
+
+  readonly ne?: Maybe<string>;
+
+  readonly regex?: Maybe<string>;
+
+  readonly glob?: Maybe<string>;
+
+  readonly in?: Maybe<ReadonlyArray<Maybe<string>>>;
+
+  readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
+}
+
+export interface SiteSiteMetadataTwitterCardOwnerQueryString_2 {
   readonly eq?: Maybe<string>;
 
   readonly ne?: Maybe<string>;
@@ -6172,8 +6394,10 @@ export type SitePluginConnectionSortByFieldsEnum =
   | "version"
   | "pluginOptions___name"
   | "pluginOptions___path"
+  | "pluginOptions___trackingId"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "browserAPIs"
   | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
@@ -6199,8 +6423,10 @@ export type SitePluginDistinctEnum =
   | "version"
   | "pluginOptions___name"
   | "pluginOptions___path"
+  | "pluginOptions___trackingId"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "browserAPIs"
   | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
@@ -6224,8 +6450,10 @@ export type SitePluginGroupEnum =
   | "version"
   | "pluginOptions___name"
   | "pluginOptions___path"
+  | "pluginOptions___trackingId"
   | "pluginOptions___pathCheck"
   | "nodeAPIs"
+  | "browserAPIs"
   | "ssrAPIs"
   | "pluginFilepath"
   | "packageJson___name"
