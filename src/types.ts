@@ -6029,5 +6029,7 @@ export namespace SocialAccountFragment {
     readonly url: Maybe<string>;
 
     readonly service: Maybe<string>;
+
+    readonly color: Maybe<string>;
   };
 }

@@ -1,5 +1,6 @@
-import { graphql as gql } from "gatsby"
+import { graphql as gql, withPrefix } from "gatsby"
 import React from "react"
+import styled from "styled-components"
 
 import { SocialAccountFragment } from "../types"
 
@@ -8,7 +9,16 @@ export const query = gql`
     alt
     url
     service
+    color
   }
+`
+
+const Icon = styled.img<{ color: string }>`
+  background-color: ${props => props.color};
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+  border-radius: 1.2rem;
 `
 
 type SocialAccount = Required<SocialAccountFragment.Fragment>
@@ -20,12 +30,12 @@ interface Props {
 export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
   <section id="social">
     <ul>
-      {socialAccounts.map(({ url, alt, service }, i) => (
+      {socialAccounts.map(({ url, alt, service, color }, i) => (
         <li key={i}>
           <a href={url}>
-            <img
-              className={`icon ${service}`}
-              src={`/images/vendor/drawic/${service}.svg`}
+            <Icon
+              color={color!}
+              src={withPrefix(`/images/vendor/drawic/${service}.svg`)}
               alt={alt}
             />
           </a>
