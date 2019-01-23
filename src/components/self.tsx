@@ -28,7 +28,22 @@ export const SelfSection: React.SFC<{}> = () => (
           <li>Software Developer</li>
           <li>Hobby player of Guitar</li>
         </ul>
+        <p>
+          ... from{" "}
+          <span
+            itemProp="address"
+            itemType="http://schema.org/PostalAddress"
+            itemScope={true}>
+            <span itemProp="addressRegion">Kyoto</span>
+          </span>
+          .
+        </p>
       </div>
+      <img
+        src="https://avatars3.githubusercontent.com/u/87649?s=230"
+        alt="aereal"
+        itemProp="avatar"
+      />
     </Section>
   </>
 )
