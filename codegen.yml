@@ -6,6 +6,7 @@ config:
   immutableTypes: true
   avoidOptionals: false
   optionalType: 'undefined'
+  enumsAsTypes: true
 documents:
   - src/**/*.tsx
 generates:

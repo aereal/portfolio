@@ -5492,477 +5492,441 @@ export interface SocialAccountsYamlInternalOwnerQueryString_2 {
   readonly nin?: Maybe<ReadonlyArray<Maybe<string>>>;
 }
 
-export enum SitePageConnectionSortByFieldsEnum {
-  JsonName = "jsonName",
-  InternalComponentName = "internalComponentName",
-  Path = "path",
-  Component = "component",
-  ComponentChunkName = "componentChunkName",
-  PluginCreatorNode = "pluginCreator___NODE",
-  PluginCreatorId = "pluginCreatorId",
-  ComponentPath = "componentPath",
-  Id = "id",
-  InternalType = "internal___type",
-  InternalContentDigest = "internal___contentDigest",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner"
-}
+export type SitePageConnectionSortByFieldsEnum =
+  | "jsonName"
+  | "internalComponentName"
+  | "path"
+  | "component"
+  | "componentChunkName"
+  | "pluginCreator___NODE"
+  | "pluginCreatorId"
+  | "componentPath"
+  | "id"
+  | "internal___type"
+  | "internal___contentDigest"
+  | "internal___description"
+  | "internal___owner";
 
-export enum sitePageConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type SitePageConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum sitePageDistinctEnum {
-  JsonName = "jsonName",
-  InternalComponentName = "internalComponentName",
-  Path = "path",
-  Component = "component",
-  ComponentChunkName = "componentChunkName",
-  PluginCreatorNode = "pluginCreator___NODE",
-  PluginCreatorId = "pluginCreatorId",
-  ComponentPath = "componentPath",
-  Id = "id",
-  InternalType = "internal___type",
-  InternalContentDigest = "internal___contentDigest",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner"
-}
+export type SitePageDistinctEnum =
+  | "jsonName"
+  | "internalComponentName"
+  | "path"
+  | "component"
+  | "componentChunkName"
+  | "pluginCreator___NODE"
+  | "pluginCreatorId"
+  | "componentPath"
+  | "id"
+  | "internal___type"
+  | "internal___contentDigest"
+  | "internal___description"
+  | "internal___owner";
 
-export enum sitePageGroupEnum {
-  JsonName = "jsonName",
-  InternalComponentName = "internalComponentName",
-  Path = "path",
-  Component = "component",
-  ComponentChunkName = "componentChunkName",
-  PluginCreatorNode = "pluginCreator___NODE",
-  PluginCreatorId = "pluginCreatorId",
-  ComponentPath = "componentPath",
-  Id = "id",
-  InternalType = "internal___type",
-  InternalContentDigest = "internal___contentDigest",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner"
-}
+export type SitePageGroupEnum =
+  | "jsonName"
+  | "internalComponentName"
+  | "path"
+  | "component"
+  | "componentChunkName"
+  | "pluginCreator___NODE"
+  | "pluginCreatorId"
+  | "componentPath"
+  | "id"
+  | "internal___type"
+  | "internal___contentDigest"
+  | "internal___description"
+  | "internal___owner";
 
-export enum SitePluginConnectionSortByFieldsEnum {
-  Resolve = "resolve",
-  Id = "id",
-  Name = "name",
-  Version = "version",
-  PluginOptionsName = "pluginOptions___name",
-  PluginOptionsPath = "pluginOptions___path",
-  PluginOptionsPathCheck = "pluginOptions___pathCheck",
-  NodeApIs = "nodeAPIs",
-  PluginFilepath = "pluginFilepath",
-  PackageJsonName = "packageJson___name",
-  PackageJsonDescription = "packageJson___description",
-  PackageJsonVersion = "packageJson___version",
-  PackageJsonMain = "packageJson___main",
-  PackageJsonAuthor = "packageJson___author",
-  PackageJsonLicense = "packageJson___license",
-  PackageJsonDependencies = "packageJson___dependencies",
-  PackageJsonDevDependencies = "packageJson___devDependencies",
-  PackageJsonPeerDependencies = "packageJson___peerDependencies",
-  PackageJsonKeywords = "packageJson___keywords",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SitePluginConnectionSortByFieldsEnum =
+  | "resolve"
+  | "id"
+  | "name"
+  | "version"
+  | "pluginOptions___name"
+  | "pluginOptions___path"
+  | "pluginOptions___pathCheck"
+  | "nodeAPIs"
+  | "pluginFilepath"
+  | "packageJson___name"
+  | "packageJson___description"
+  | "packageJson___version"
+  | "packageJson___main"
+  | "packageJson___author"
+  | "packageJson___license"
+  | "packageJson___dependencies"
+  | "packageJson___devDependencies"
+  | "packageJson___peerDependencies"
+  | "packageJson___keywords"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum sitePluginConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type SitePluginConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum sitePluginDistinctEnum {
-  Resolve = "resolve",
-  Id = "id",
-  Name = "name",
-  Version = "version",
-  PluginOptionsName = "pluginOptions___name",
-  PluginOptionsPath = "pluginOptions___path",
-  PluginOptionsPathCheck = "pluginOptions___pathCheck",
-  NodeApIs = "nodeAPIs",
-  PluginFilepath = "pluginFilepath",
-  PackageJsonName = "packageJson___name",
-  PackageJsonDescription = "packageJson___description",
-  PackageJsonVersion = "packageJson___version",
-  PackageJsonMain = "packageJson___main",
-  PackageJsonAuthor = "packageJson___author",
-  PackageJsonLicense = "packageJson___license",
-  PackageJsonDependencies = "packageJson___dependencies",
-  PackageJsonDevDependencies = "packageJson___devDependencies",
-  PackageJsonPeerDependencies = "packageJson___peerDependencies",
-  PackageJsonKeywords = "packageJson___keywords",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SitePluginDistinctEnum =
+  | "resolve"
+  | "id"
+  | "name"
+  | "version"
+  | "pluginOptions___name"
+  | "pluginOptions___path"
+  | "pluginOptions___pathCheck"
+  | "nodeAPIs"
+  | "pluginFilepath"
+  | "packageJson___name"
+  | "packageJson___description"
+  | "packageJson___version"
+  | "packageJson___main"
+  | "packageJson___author"
+  | "packageJson___license"
+  | "packageJson___dependencies"
+  | "packageJson___devDependencies"
+  | "packageJson___peerDependencies"
+  | "packageJson___keywords"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum sitePluginGroupEnum {
-  Resolve = "resolve",
-  Id = "id",
-  Name = "name",
-  Version = "version",
-  PluginOptionsName = "pluginOptions___name",
-  PluginOptionsPath = "pluginOptions___path",
-  PluginOptionsPathCheck = "pluginOptions___pathCheck",
-  NodeApIs = "nodeAPIs",
-  PluginFilepath = "pluginFilepath",
-  PackageJsonName = "packageJson___name",
-  PackageJsonDescription = "packageJson___description",
-  PackageJsonVersion = "packageJson___version",
-  PackageJsonMain = "packageJson___main",
-  PackageJsonAuthor = "packageJson___author",
-  PackageJsonLicense = "packageJson___license",
-  PackageJsonDependencies = "packageJson___dependencies",
-  PackageJsonDevDependencies = "packageJson___devDependencies",
-  PackageJsonPeerDependencies = "packageJson___peerDependencies",
-  PackageJsonKeywords = "packageJson___keywords",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SitePluginGroupEnum =
+  | "resolve"
+  | "id"
+  | "name"
+  | "version"
+  | "pluginOptions___name"
+  | "pluginOptions___path"
+  | "pluginOptions___pathCheck"
+  | "nodeAPIs"
+  | "pluginFilepath"
+  | "packageJson___name"
+  | "packageJson___description"
+  | "packageJson___version"
+  | "packageJson___main"
+  | "packageJson___author"
+  | "packageJson___license"
+  | "packageJson___dependencies"
+  | "packageJson___devDependencies"
+  | "packageJson___peerDependencies"
+  | "packageJson___keywords"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum DirectoryConnectionSortByFieldsEnum {
-  Id = "id",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime"
-}
+export type DirectoryConnectionSortByFieldsEnum =
+  | "id"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime";
 
-export enum directoryConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type DirectoryConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum directoryDistinctEnum {
-  Id = "id",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime"
-}
+export type DirectoryDistinctEnum =
+  | "id"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime";
 
-export enum directoryGroupEnum {
-  Id = "id",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime"
-}
+export type DirectoryGroupEnum =
+  | "id"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime";
 
-export enum FileConnectionSortByFieldsEnum {
-  Id = "id",
-  Children = "children",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime",
-  PublicUrl = "publicURL"
-}
+export type FileConnectionSortByFieldsEnum =
+  | "id"
+  | "children"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___mediaType"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime"
+  | "publicURL";
 
-export enum fileConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type FileConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum fileDistinctEnum {
-  Id = "id",
-  Children = "children",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime"
-}
+export type FileDistinctEnum =
+  | "id"
+  | "children"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___mediaType"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime";
 
-export enum fileGroupEnum {
-  Id = "id",
-  Children = "children",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalDescription = "internal___description",
-  InternalOwner = "internal___owner",
-  SourceInstanceName = "sourceInstanceName",
-  AbsolutePath = "absolutePath",
-  RelativePath = "relativePath",
-  Extension = "extension",
-  Size = "size",
-  PrettySize = "prettySize",
-  ModifiedTime = "modifiedTime",
-  AccessTime = "accessTime",
-  ChangeTime = "changeTime",
-  BirthTime = "birthTime",
-  Root = "root",
-  Dir = "dir",
-  Base = "base",
-  Ext = "ext",
-  Name = "name",
-  RelativeDirectory = "relativeDirectory",
-  Dev = "dev",
-  Mode = "mode",
-  Nlink = "nlink",
-  Uid = "uid",
-  Gid = "gid",
-  Rdev = "rdev",
-  Blksize = "blksize",
-  Ino = "ino",
-  Blocks = "blocks",
-  AtimeMs = "atimeMs",
-  MtimeMs = "mtimeMs",
-  CtimeMs = "ctimeMs",
-  BirthtimeMs = "birthtimeMs",
-  Atime = "atime",
-  Mtime = "mtime",
-  Ctime = "ctime",
-  Birthtime = "birthtime"
-}
+export type FileGroupEnum =
+  | "id"
+  | "children"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___mediaType"
+  | "internal___description"
+  | "internal___owner"
+  | "sourceInstanceName"
+  | "absolutePath"
+  | "relativePath"
+  | "extension"
+  | "size"
+  | "prettySize"
+  | "modifiedTime"
+  | "accessTime"
+  | "changeTime"
+  | "birthTime"
+  | "root"
+  | "dir"
+  | "base"
+  | "ext"
+  | "name"
+  | "relativeDirectory"
+  | "dev"
+  | "mode"
+  | "nlink"
+  | "uid"
+  | "gid"
+  | "rdev"
+  | "blksize"
+  | "ino"
+  | "blocks"
+  | "atimeMs"
+  | "mtimeMs"
+  | "ctimeMs"
+  | "birthtimeMs"
+  | "atime"
+  | "mtime"
+  | "ctime"
+  | "birthtime";
 
-export enum BlogsYamlConnectionSortByFieldsEnum {
-  Summary = "summary",
-  Title = "title",
-  Url = "url",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type BlogsYamlConnectionSortByFieldsEnum =
+  | "summary"
+  | "title"
+  | "url"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum blogsYamlConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type BlogsYamlConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum blogsYamlDistinctEnum {
-  Summary = "summary",
-  Title = "title",
-  Url = "url",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type BlogsYamlDistinctEnum =
+  | "summary"
+  | "title"
+  | "url"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum blogsYamlGroupEnum {
-  Summary = "summary",
-  Title = "title",
-  Url = "url",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type BlogsYamlGroupEnum =
+  | "summary"
+  | "title"
+  | "url"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum SocialAccountsYamlConnectionSortByFieldsEnum {
-  Service = "service",
-  Url = "url",
-  Alt = "alt",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SocialAccountsYamlConnectionSortByFieldsEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum socialAccountsYamlConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
+export type SocialAccountsYamlConnectionSortOrderValues = "ASC" | "DESC";
 
-export enum socialAccountsYamlDistinctEnum {
-  Service = "service",
-  Url = "url",
-  Alt = "alt",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SocialAccountsYamlDistinctEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
-export enum socialAccountsYamlGroupEnum {
-  Service = "service",
-  Url = "url",
-  Alt = "alt",
-  Id = "id",
-  Parent = "parent",
-  InternalContentDigest = "internal___contentDigest",
-  InternalType = "internal___type",
-  InternalOwner = "internal___owner"
-}
+export type SocialAccountsYamlGroupEnum =
+  | "service"
+  | "url"
+  | "alt"
+  | "id"
+  | "parent"
+  | "internal___contentDigest"
+  | "internal___type"
+  | "internal___owner";
 
 /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
 export type Date = any;
