@@ -1,5 +1,6 @@
 import { graphql as gql, StaticQuery } from "gatsby"
 import React from "react"
+import { createGlobalStyle } from "styled-components"
 
 import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
@@ -27,26 +28,52 @@ export const query = gql`
   }
 `
 
+const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: 'Lato', 'Helvetiva Neue', 'YuGothic', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+    background-color: #fdfafa;
+  }
+
+  a {
+    color: #1eaedb;
+
+    &:hover {
+      color: #0fa0ce;
+    }
+  }
+`
+
 const IndexPage: React.SFC<IndexQuery.Query> = data => (
-  <Layout>
-    <WholeContainer>
-      <SelfSection />
-      <BlogsSection
-        blogs={
-          data.allBlogsYaml!.edges!.map(e => e!.node!) as ReadonlyArray<
-            Required<BlogFragment.Fragment>
-          >
-        }
-      />
-      <SocialSection
-        socialAccounts={
-          data.allSocialAccountsYaml!.edges!.map(
-            e => e!.node!
-          ) as ReadonlyArray<Required<SocialAccountFragment.Fragment>>
-        }
-      />
-    </WholeContainer>
-  </Layout>
+  <>
+    <GlobalStyle />
+    <Layout>
+      <WholeContainer>
+        <SelfSection />
+        <BlogsSection
+          blogs={
+            data.allBlogsYaml!.edges!.map(e => e!.node!) as ReadonlyArray<
+              Required<BlogFragment.Fragment>
+            >
+          }
+        />
+        <SocialSection
+          socialAccounts={
+            data.allSocialAccountsYaml!.edges!.map(
+              e => e!.node!
+            ) as ReadonlyArray<Required<SocialAccountFragment.Fragment>>
+          }
+        />
+      </WholeContainer>
+    </Layout>
+  </>
 )
 
 export default () => (
