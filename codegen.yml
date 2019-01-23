@@ -4,6 +4,8 @@ schema: 'http://localhost:8000/___graphql'
 overwrite: true
 config:
   immutableTypes: true
+  avoidOptionals: false
+  optionalType: 'undefined'
 documents:
   - src/**/*.tsx
 generates:
