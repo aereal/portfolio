@@ -2,6 +2,7 @@ import { graphql as gql, StaticQuery } from "gatsby"
 import React from "react"
 import { createGlobalStyle } from "styled-components"
 
+import { Helmet } from "react-helmet"
 import { ActivitiesSection } from "../components/activities-section"
 import { BlogsSection } from "../components/blogs"
 import { Metadata } from "../components/metadata"
@@ -67,6 +68,9 @@ const GlobalStyle = createGlobalStyle`
 const IndexPage: React.SFC<IndexQuery.Query> = data => (
   <>
     <GlobalStyle />
+    <Helmet>
+      <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    </Helmet>
     <Metadata metadata={data.site!.siteMetadata!} />
     <WholeContainer>
       <SelfSection />
