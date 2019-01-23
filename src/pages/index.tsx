@@ -3,19 +3,9 @@ import React from "react"
 
 import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
+import { SelfSection } from "../components/self"
 import { SocialSection } from "../components/social"
 import { BlogFragment, IndexQuery, SocialAccountFragment } from "../types"
-
-const SelfSection: React.SFC<{}> = () => (
-  <section id="self">
-    <div className="description">
-      <ul>
-        <li>Software Developer</li>
-        <li>Hobby player of Guitar</li>
-      </ul>
-    </div>
-  </section>
-)
 
 export const query = gql`
   query IndexQuery {
