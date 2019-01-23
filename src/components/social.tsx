@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { SocialAccountFragment } from "../types"
+import { HorizontalList } from "./horizontal-list"
 
 export const query = gql`
   fragment SocialAccountFragment on SocialAccountsYaml {
@@ -29,7 +30,7 @@ interface Props {
 
 export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
   <section id="social">
-    <ul>
+    <HorizontalList>
       {socialAccounts.map(({ url, alt, service, color }, i) => (
         <li key={i}>
           <a href={url}>
@@ -41,6 +42,6 @@ export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
           </a>
         </li>
       ))}
-    </ul>
+    </HorizontalList>
   </section>
 )
