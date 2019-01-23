@@ -1,4 +1,4 @@
-import { graphql as gql, StaticQuery } from "gatsby"
+import { graphql as gql } from "gatsby"
 import React from "react"
 import { createGlobalStyle } from "styled-components"
 
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const IndexPage: React.SFC<IndexQuery.Query> = data => (
+const IndexPage: React.SFC<{ data: IndexQuery.Query }> = ({ data }) => (
   <>
     <GlobalStyle />
     <Helmet>
@@ -95,6 +95,4 @@ const IndexPage: React.SFC<IndexQuery.Query> = data => (
   </>
 )
 
-export default () => (
-  <StaticQuery query={query}>{data => <IndexPage {...data} />}</StaticQuery>
-)
+export default IndexPage
