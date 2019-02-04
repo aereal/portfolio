@@ -4701,10 +4701,10 @@ gatsby-link@^2.0.8:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-google-analytics@^2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.10.tgz#3111d23132b4c8bd78ed67d6721e0296659d029f"
-  integrity sha512-lOl9L4B/O6jHi1q+dMPVsl4rumn/A1O7MBf2gqkRXswIhdBf7h5S6n+A6KAsJZOnO3cF/HPJPVU/+uaFp/O76Q==
+gatsby-plugin-google-analytics@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.13.tgz#31ecf6be05815ba2047ec8cd5129f0bea9d7fd75"
+  integrity sha512-cOfQ+f3FRl0yPm5J9atj23Xp7uGILMpYuPXHpm9nh74Tgg9R8rJyaLZaHpEiA2jdnqGvfLIBsqm6Sh0x/wepGQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
