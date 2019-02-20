@@ -4723,10 +4723,10 @@ gatsby-plugin-page-creator@^2.0.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-styled-components@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.4.tgz#f34546bd8b80b87f4b5acddfcced4a900da8482d"
-  integrity sha512-SD9a8bqn+WssH1FHqS0Nsx2oRra34fusrM4zBgLn2fCzw1s/O2xpgxJb5HtfSS7uFWYtO8ptLlPVbVxBwgWKFw==
+gatsby-plugin-styled-components@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.6.tgz#873857d1a03123683833688c8f008bd9f782504b"
+  integrity sha512-wCr0ab4LlYF7X2+idSB1fRIL4aoxoUjfRGYpcyDE0k9qsGHlMpD3Gd4qSdyCUdxSDd+7oK35Wqy0KPHl56RDCg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
