@@ -33,7 +33,7 @@
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-plugin-typescript": "^2.0.3",
     "gatsby-source-filesystem": "^2.0.16",
-    "gatsby-transformer-yaml": "^2.1.7",
+    "gatsby-transformer-yaml": "^2.1.10",
     "graphql-code-generator": "^0.16.0",
     "graphql-codegen-add": "^0.16.0",
     "graphql-codegen-typescript-client": "^0.16.0",

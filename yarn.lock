@@ -4769,10 +4769,10 @@ gatsby-source-filesystem@^2.0.16:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-yaml@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.1.7.tgz#b24e8eea74b5a420dbf02fdc4ceb0be985e11eb7"
-  integrity sha512-go/Tloljv6HZdwmcx/O3cSWPh75BODfxFjhA4pIoZMdxiIpt4eTXARdcHRRT+sZ51bZmhG+xmlPUj23h7dZdbg==
+gatsby-transformer-yaml@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.1.10.tgz#9c310499827c6ada7082279dfd647ff014412451"
+  integrity sha512-LF35NbrfnI8bKR2g0clRPy/aaj+lUlY0wXCYIHWY+Xi0ogPKg62JaoLYz9xx4RNMc1v26jkxixfW/MIRQI/2ZA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     js-yaml "3.11.0"
