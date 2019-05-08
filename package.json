@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/aereal/aereal.github.com#readme",
   "devDependencies": {
-    "@types/react": "^16.7.18",
+    "@types/react": "^16.8.17",
     "@types/react-dom": "^16.0.11",
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "^4.1.6",
