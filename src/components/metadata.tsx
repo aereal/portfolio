@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 import { MetadataFragment } from "../types"
 
 export const query = gql`
-  fragment MetadataFragment on siteMetadata_2 {
+  fragment MetadataFragment on SiteSiteMetadata {
     title
     description
     facebookApp {
