@@ -9,7 +9,7 @@
     "gql-gen": "gql-gen",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
-    "test": "tsc -p . --noEmit"
+    "test": "run-p -l -s type-check build"
   },
   "repository": {
     "type": "git",
