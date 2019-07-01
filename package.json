@@ -28,7 +28,7 @@
     "@types/react-helmet": "5.0.8",
     "@types/styled-components": "4.1.6",
     "babel-plugin-styled-components": "1.10.4",
-    "gatsby": "2.11.6",
+    "gatsby": "2.11.7",
     "gatsby-plugin-google-analytics": "2.1.1",
     "gatsby-plugin-styled-components": "3.1.0",
     "gatsby-plugin-typescript": "2.1.0",
