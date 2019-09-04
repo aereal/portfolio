@@ -32,7 +32,7 @@
     "gatsby-plugin-google-analytics": "2.1.14",
     "gatsby-plugin-styled-components": "3.1.4",
     "gatsby-plugin-typescript": "2.1.6",
-    "gatsby-source-filesystem": "2.1.20",
+    "gatsby-source-filesystem": "2.1.21",
     "gatsby-transformer-yaml": "2.2.8",
     "graphql-code-generator": "0.18.2",
     "graphql-codegen-add": "0.18.2",
