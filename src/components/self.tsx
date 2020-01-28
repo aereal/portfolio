@@ -24,12 +24,8 @@ export const SelfSection: React.SFC<{}> = () => (
     <H1 itemProp="name">aereal</H1>
     <Section id="self">
       <div className="description">
-        <ul>
-          <li>Software Developer</li>
-          <li>Hobby player of Guitar</li>
-        </ul>
         <p>
-          ... from{" "}
+          Developer of music, photography, or web app based on{" "}
           <span
             itemProp="address"
             itemType="http://schema.org/PostalAddress"
