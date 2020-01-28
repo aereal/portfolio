@@ -18,6 +18,54 @@
 
 -
   type: CreativeWork
+  name: 自動作曲入門
+  url: https://speakerdeck.com/aereal/introduction-to-programatic-music-composition
+  recordedAt:
+    type: Event
+    url: https://builderscon.io/builderscon/tokyo/2019/
+    name: builderscon tokyo 2019
+    startDate: '2019-08-31'
+    location:
+      type: Place
+      name: 東京電機大学 （東京千住キャンパス）1号館
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  name: はてなブログ タグとCDK
+  url: https://speakerdeck.com/aereal/the-epic-of-aws-cdk-and-hatena-blog-tag
+  recordedAt:
+    type: Event
+    url: https://awsclouddevelopmentkitcdkmeetu.splashthat.com/
+    name: AWS Cloud Development Kit -CDK- Meetup
+    startDate: '2019-07-18'
+    location:
+      type: Place
+      name: AWS Loft Tokyo
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
+  name: はてなブログ タグの技術選択
+  url: https://speakerdeck.com/aereal/the-technical-details-of-hatena-blog-tag
+  recordedAt:
+    type: Event
+    url: https://developer.hatenastaff.com/entry/2019/06/03/191500
+    name: 'Hatena Engineer Seminar #12'
+    startDate: '2019-06-26'
+    location:
+      type: Place
+      name: 株式会社はてな 東京オフィス SHIBAFU
+      address:
+        type: PostalAddress
+        addressRegion: 東京
+
+-
+  type: CreativeWork
   name: ブログサービスのHTTPS化を支えたAWSで作るピタゴラスイッチ
   url: https://speakerdeck.com/aereal/the-construction-of-large-scale-tls-certificates-management-system-with-aws
   recordedAt:
