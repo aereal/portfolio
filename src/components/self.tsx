@@ -9,7 +9,7 @@ const H1 = styled.h1`
   margin: 0.67em 0;
   margin-top: 0;
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: -2rem;
   font-weight: 300;
 
   @media (min-width: 550px) {

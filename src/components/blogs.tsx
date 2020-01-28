@@ -1,5 +1,6 @@
 import { graphql as gql } from "gatsby"
 import React from "react"
+import styled from "styled-components"
 
 import { BlogFragment } from "../types"
 import { Section } from "./section"
@@ -18,15 +19,21 @@ interface Props {
   blogs: ReadonlyArray<Blog>
 }
 
+const List = styled.ul`
+  padding-inline-start: 0;
+`
+
+const ListItem = styled.li``
+
 export const BlogsSection: React.SFC<Props> = ({ blogs }) => (
   <Section id="blogs">
     <h2>Blogs</h2>
-    <ul>
+    <List>
       {blogs.map(({ url, title, summary }, i) => (
-        <li key={i}>
+        <ListItem key={i}>
           <a href={url}>{title}</a> - {summary}
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   </Section>
 )
