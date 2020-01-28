@@ -69,6 +69,7 @@ const IndexPage: React.SFC<{ data: IndexQuery.Query }> = ({ data }) => (
   <>
     <GlobalStyle />
     <Helmet>
+      <html itemScope={true} itemType="http://schema.org/Person" />
       <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
     </Helmet>
     <Metadata metadata={data.site!.siteMetadata!} />
