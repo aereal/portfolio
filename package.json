@@ -46,6 +46,7 @@
     "prettier": "1.19.1",
     "react": "16.13.0",
     "react-dom": "16.13.0",
+    "react-is": "^16.13.0",
     "styled-components": "5.0.1",
     "typescript": "3.5.3"
   },
