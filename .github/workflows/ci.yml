@@ -35,3 +35,7 @@ jobs:
       - name: deploy
         if: github.ref == 'refs/heads/master'
         run: yarn deploy --token "${{ secrets.FIREBASE_TOKEN }}"
+        env:
+          CONTENTFUL_DELIVERY_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_ACCESS_TOKEN }}
+          CONTENTFUL_MANAGEMENT_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_ACCESS_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
