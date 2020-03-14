@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "firebase deploy --only hosting",
     "build": "gatsby build",
     "start": "gatsby develop",
     "gql-gen": "gql-gen",
@@ -35,6 +36,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "firebase-tools": "^7.15.0",
     "gatsby": "2.19.37",
     "gatsby-plugin-google-analytics": "2.1.37",
     "gatsby-plugin-styled-components": "3.1.20",
