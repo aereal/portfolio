@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from "react"
 import { GetStaticProps } from "next"
+import Head from "next/head"
 import { createGlobalStyle } from "styled-components"
-import { Helmet } from "react-helmet"
 import { WholeContainer } from "../src/components/whole-container"
 import { SelfSection } from "../src/components/self"
 import { BlogsSection } from "../src/components/blogs"
@@ -52,13 +52,14 @@ const RootPage: FC<RootPageProps> = props => {
   return (
     <>
       <GlobalStyle />
-      <Helmet>
-        <html itemScope={true} itemType="http://schema.org/Person" />
+      <Head>
+        <html itemScope={true} itemType="http://schema.org/Person" key="html" />
         <link
           href="https://fonts.googleapis.com/css?family=Lato"
           rel="stylesheet"
+          key="font"
         />
-      </Helmet>
+      </Head>
       {site ? <Metadata site={site} /> : null}
       <WholeContainer>
         <SelfSection />
