@@ -1,27 +1,21 @@
-import { graphql as gql } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
-
-import { MetadataFragment } from "../types"
-
-export const query = gql`
-  fragment MetadataFragment on SiteSiteMetadata {
-    title
-    description
-    facebookApp {
-      id
-      publisher
-    }
-    twitterCard {
-      owner
-      type
-    }
-  }
-`
+import { Site } from "../fetch-entries"
 
 export const Metadata: React.SFC<{
-  metadata: MetadataFragment.Fragment
-}> = ({ metadata: { title, description, facebookApp, twitterCard } }) => (
+  readonly site: Site
+}> = ({
+  site: {
+    fields: {
+      title,
+      description,
+      facebookAppId,
+      facebookAppPublisher,
+      twitterCardOwner,
+      twitterCardType,
+    },
+  },
+}) => (
   <Helmet>
     <title>{title}</title>
     <meta property="og:title" content={title} />
@@ -36,10 +30,10 @@ export const Metadata: React.SFC<{
     <meta
       prefix="fb: http://ogp.me/ns/fb#"
       property="fb:app_id"
-      content={facebookApp!.id}
+      content={facebookAppId}
     />
-    <meta property="article:publisher" content={facebookApp!.publisher} />
-    <meta name="twitter:card" content={twitterCard!.type} />
-    <meta name="twitter:site" content={twitterCard!.owner} />
+    <meta property="article:publisher" content={facebookAppPublisher} />
+    <meta name="twitter:card" content={twitterCardType} />
+    <meta name="twitter:site" content={twitterCardOwner} />
   </Helmet>
 )

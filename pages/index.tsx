@@ -6,7 +6,14 @@ import { SelfSection } from "../src/components/self"
 import { BlogsSection } from "../src/components/blogs"
 import { ActivitiesSection } from "../src/components/activities-section"
 import { SocialSection } from "../src/components/social"
-import { Work, Blog, fetchEntries, SocialAccount } from "../src/fetch-entries"
+import { Metadata } from "../src/components/metadata"
+import {
+  Work,
+  Blog,
+  fetchEntries,
+  SocialAccount,
+  Site,
+} from "../src/fetch-entries"
 
 const RootPage: FC = () => {
   const [works, setWorks] = useState<readonly Work[]>([])
@@ -14,6 +21,7 @@ const RootPage: FC = () => {
   const [socialAccoutns, setSocialAccounts] = useState<
     readonly SocialAccount[]
   >([])
+  const [site, setSite] = useState<Site | undefined>(undefined)
 
   useEffect(() => {
     const doFetch = async () => {
@@ -21,6 +29,7 @@ const RootPage: FC = () => {
       setWorks([...accum.works])
       setBlogs([...accum.blogs])
       setSocialAccounts([...accum.socialAccounts])
+      setSite(accum.site)
     }
     doFetch()
   }, [])
@@ -35,6 +44,7 @@ const RootPage: FC = () => {
           rel="stylesheet"
         />
       </Helmet>
+      {site ? <Metadata site={site} /> : null}
       <WholeContainer>
         <SelfSection />
         <BlogsSection blogs={blogs} />

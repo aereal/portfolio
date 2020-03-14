@@ -31,6 +31,43 @@ export interface IBlog extends Entry<IBlogFields> {
   }
 }
 
+export interface ISiteFields {
+  /** title */
+  title: string
+
+  /** facebookAppID */
+  facebookAppId: string
+
+  /** facebookAppPublisher */
+  facebookAppPublisher: string
+
+  /** twitterCardType */
+  twitterCardType: string
+
+  /** twitterCardOwner */
+  twitterCardOwner: string
+
+  /** description */
+  description: string
+}
+
+export interface ISite extends Entry<ISiteFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "site"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface ISocialAccountFields {
   /** service */
   service: string
@@ -99,7 +136,7 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE = "blog" | "socialAccount" | "work"
+type CONTENT_TYPE = "blog" | "site" | "socialAccount" | "work"
 
 type LOCALE_CODE = "en-US"
 

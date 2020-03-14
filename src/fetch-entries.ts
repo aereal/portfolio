@@ -4,11 +4,13 @@ import {
   CONTENT_TYPE,
   IBlogFields,
   ISocialAccountFields,
+  ISiteFields,
 } from "./@types/@aereal/portfolio"
 
 export type Work = Entry<IWorkFields>
 export type Blog = Entry<IBlogFields>
 export type SocialAccount = Entry<ISocialAccountFields>
+export type Site = Entry<ISiteFields>
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
@@ -20,11 +22,17 @@ interface WholeEntries {
   readonly works: Work[]
   readonly blogs: Blog[]
   readonly socialAccounts: SocialAccount[]
+  site: Site
 }
 
 export const fetchEntries = async (): Promise<WholeEntries> => {
   const entries = await client.getEntries()
-  const accum: WholeEntries = { works: [], blogs: [], socialAccounts: [] }
+  const accum: WholeEntries = {
+    works: [],
+    blogs: [],
+    socialAccounts: [],
+    site: null as any,
+  }
   for (const item of entries.items) {
     switch (item.sys.contentType.sys.id as CONTENT_TYPE) {
       case "blog":
@@ -35,6 +43,9 @@ export const fetchEntries = async (): Promise<WholeEntries> => {
         break
       case "socialAccount":
         accum.socialAccounts.push(item as SocialAccount)
+        break
+      case "site":
+        accum.site = item as Site
         break
     }
   }
