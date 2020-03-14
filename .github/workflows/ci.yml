@@ -28,3 +28,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: test
         run: yarn test
+      - name: deploy
+        run: yarn deploy --token "${{ secrets.FIREBASE_TOKEN }}"

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "firebase deploy --only hosting",
     "build": "gatsby build",
     "start": "gatsby develop",
     "gql-gen": "gql-gen",
