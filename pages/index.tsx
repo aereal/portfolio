@@ -30,6 +30,14 @@ interface RootPageProps {
   readonly site: Site
 }
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[]
+  }
+}
+
+const GA_PROP = "UA-36542486-1"
+
 const RootPage: FC<RootPageProps> = props => {
   const [works, setWorks] = useState<readonly Work[]>(props.works)
   const [blogs, setBlogs] = useState<readonly Blog[]>(props.blogs)
@@ -47,6 +55,12 @@ const RootPage: FC<RootPageProps> = props => {
       setSite(accum.site)
     }
     doFetch()
+  }, [])
+
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push("js", new Date())
+    window.dataLayer.push("config", GA_PROP)
   }, [])
 
   return (
@@ -67,6 +81,10 @@ const RootPage: FC<RootPageProps> = props => {
         <ActivitiesSection works={works} />
         <SocialSection socialAccounts={socialAccoutns} />
       </WholeContainer>
+      <script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_PROP}`}
+        async
+      />
     </>
   )
 }
