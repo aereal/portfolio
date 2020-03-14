@@ -118,5 +118,14 @@
     "semi": false,
     "trailingComma": "es5",
     "jsxBracketSameLine": true
+  },
+  "babel": {
+    "presets": ["next/babel"],
+    "plugins": [
+      [
+        "styled-components",
+        { "ssr": true }
+      ]
+    ]
   }
 }
