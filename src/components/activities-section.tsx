@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-import { ActivityFragment } from "../types"
+import { Work } from "../fetch-entries"
 import { Activity } from "./activity"
 import { Section } from "./section"
 
@@ -13,15 +12,15 @@ const WidenList = styled.ul`
 `
 
 interface Props {
-  activities: ReadonlyArray<ActivityFragment.Fragment>
+  readonly works: readonly Work[]
 }
 
-export const ActivitiesSection: React.SFC<Props> = ({ activities }) => (
+export const ActivitiesSection: React.SFC<Props> = ({ works }) => (
   <Section id="activities">
     <h2>Activities</h2>
     <WidenList>
-      {activities!.map((a, i) => (
-        <Activity activity={a} key={i} />
+      {works.map((work, i) => (
+        <Activity key={i} work={work} />
       ))}
     </WidenList>
   </Section>

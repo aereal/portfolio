@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "deploy": "firebase deploy --only hosting",
-    "build": "gatsby build",
-    "start": "gatsby develop",
-    "gql-gen": "gql-gen",
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "export": "next export -o dist",
+    "predeploy": "run-s -l -s build export",
+    "generate-content-model-defs": "contentful-typescript-codegen --output src/@types/@aereal/portfolio.d.ts",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
     "test": "run-p -l -s type-check build"
@@ -24,34 +27,28 @@
   },
   "homepage": "https://github.com/aereal/aereal.github.com#readme",
   "devDependencies": {
+    "@contentful/rich-text-types": "^14.1.0",
     "@types/react": "16.7.20",
     "@types/react-dom": "16.0.11",
-    "@types/react-helmet": "5.0.15",
     "@types/styled-components": "4.1.6",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
     "babel-plugin-styled-components": "1.10.7",
+    "contentful": "^7.14.0",
+    "contentful-management": "^5.13.0",
+    "contentful-typescript-codegen": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "firebase-tools": "^7.15.0",
-    "gatsby": "2.19.37",
-    "gatsby-plugin-google-analytics": "2.1.37",
-    "gatsby-plugin-styled-components": "3.1.20",
-    "gatsby-plugin-typescript": "2.2.2",
-    "gatsby-source-filesystem": "2.1.52",
-    "gatsby-transformer-yaml": "2.2.26",
-    "graphql-code-generator": "0.18.2",
-    "graphql-codegen-add": "0.18.2",
-    "graphql-codegen-typescript-client": "0.18.2",
-    "graphql-codegen-typescript-common": "0.18.2",
+    "next": "^9.3.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.19.1",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "react-helmet": "5.2.1",
+    "react-is": "^16.13.0",
     "styled-components": "5.0.1",
     "typescript": "3.5.3"
   },
@@ -122,5 +119,18 @@
     "semi": false,
     "trailingComma": "es5",
     "jsxBracketSameLine": true
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ]
+    ]
   }
 }

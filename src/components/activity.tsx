@@ -1,21 +1,6 @@
-import { graphql as gql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-
-import { ActivityFragment } from "../types"
-
-export const query = gql`
-  fragment ActivityFragment on ActivitiesYaml {
-    name
-    url
-    recordedAt {
-      url
-      name
-      startYear: startDate(formatString: "YYYY")
-      startDate: startDate(formatString: "YYYY-mm-dd")
-    }
-  }
-`
+import { Work } from "../fetch-entries"
 
 const TableListItem = styled.li`
   position: relative;
@@ -41,17 +26,17 @@ const EventDate = styled(ItemFragment)<{ dateTime?: string }>`
 `
 
 interface Props {
-  activity: ActivityFragment.Fragment
+  readonly work: Work
 }
 
-export const Activity: React.SFC<Props> = ({ activity }) => (
+export const Activity: React.SFC<Props> = ({ work }) => (
   <TableListItem>
-    <ActivityLink as="a" href={activity.url!}>
-      {activity.name}
+    <ActivityLink as="a" href={work.fields.url}>
+      {work.fields.name}
     </ActivityLink>
-    <EventName>{activity.recordedAt!.name}</EventName>
-    <EventDate dateTime={activity.recordedAt!.startDate}>
-      {activity.recordedAt!.startYear}
+    <EventName>{work.fields.eventName}</EventName>
+    <EventDate dateTime={work.fields.performedDate}>
+      {work.fields.performedDate}
     </EventDate>
   </TableListItem>
 )
