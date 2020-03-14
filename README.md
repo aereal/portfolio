@@ -1,6 +1,6 @@
 ```
 yarn
-yarn start # start develop server
-yarn build && firebase deploy # deploy
-yarn gql-gen # generate type definitions if src/data modified
+yarn dev # start develop server
+yarn deploy # deploy
+yarn generate-content-model-defs # generate type definitions if content model updated
 ```
