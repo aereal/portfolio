@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-import { SocialAccountFragment } from "../types"
+import { SocialAccount } from "../fetch-entries"
 import { HorizontalList } from "./horizontal-list"
 import { Section } from "./section"
 
@@ -13,26 +12,26 @@ const Icon = styled.img<{ color: string }>`
   border-radius: 1.2em;
 `
 
-type SocialAccount = Required<SocialAccountFragment.Fragment>
-
 interface Props {
-  socialAccounts: readonly SocialAccount[]
+  readonly socialAccounts: readonly SocialAccount[]
 }
 
 export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
   <Section id="social">
     <HorizontalList>
-      {socialAccounts.map(({ url, alt, service, color }, i) => (
-        <li key={i}>
-          <a href={url}>
-            <Icon
-              color={color!}
-              src={`/images/vendor/drawic/${service}.svg`}
-              alt={alt}
-            />
-          </a>
-        </li>
-      ))}
+      {socialAccounts.map(
+        ({ fields: { url, alternativeText, service, color } }, i) => (
+          <li key={i}>
+            <a href={url}>
+              <Icon
+                color={color}
+                src={`/images/vendor/drawic/${service}.svg`}
+                alt={alternativeText}
+              />
+            </a>
+          </li>
+        )
+      )}
     </HorizontalList>
   </Section>
 )

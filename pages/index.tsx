@@ -6,17 +6,21 @@ import { SelfSection } from "../src/components/self"
 import { BlogsSection } from "../src/components/blogs"
 import { ActivitiesSection } from "../src/components/activities-section"
 import { SocialSection } from "../src/components/social"
-import { Work, Blog, fetchEntries } from "../src/fetch-entries"
+import { Work, Blog, fetchEntries, SocialAccount } from "../src/fetch-entries"
 
 const RootPage: FC = () => {
   const [works, setWorks] = useState<readonly Work[]>([])
   const [blogs, setBlogs] = useState<readonly Blog[]>([])
+  const [socialAccoutns, setSocialAccounts] = useState<
+    readonly SocialAccount[]
+  >([])
 
   useEffect(() => {
     const doFetch = async () => {
       const accum = await fetchEntries()
       setWorks([...accum.works])
       setBlogs([...accum.blogs])
+      setSocialAccounts([...accum.socialAccounts])
     }
     doFetch()
   }, [])
@@ -35,13 +39,7 @@ const RootPage: FC = () => {
         <SelfSection />
         <BlogsSection blogs={blogs} />
         <ActivitiesSection works={works} />
-        <SocialSection
-          socialAccounts={
-            [
-              /* TODO */
-            ]
-          }
-        />
+        <SocialSection socialAccounts={socialAccoutns} />
       </WholeContainer>
     </>
   )

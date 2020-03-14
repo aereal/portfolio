@@ -31,6 +31,37 @@ export interface IBlog extends Entry<IBlogFields> {
   }
 }
 
+export interface ISocialAccountFields {
+  /** service */
+  service: string
+
+  /** url */
+  url: string
+
+  /** alternativeText */
+  alternativeText: string
+
+  /** color */
+  color: string
+}
+
+export interface ISocialAccount extends Entry<ISocialAccountFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "socialAccount"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface IWorkFields {
   /** name */
   name: string
@@ -68,7 +99,7 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE = "blog" | "work"
+type CONTENT_TYPE = "blog" | "socialAccount" | "work"
 
 type LOCALE_CODE = "en-US"
 
