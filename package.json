@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "deploy": "firebase deploy --only hosting",
-    "build": "gatsby build",
-    "start": "gatsby develop",
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
     "gql-gen": "gql-gen",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
