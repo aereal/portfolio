@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect } from "react"
+import { GetStaticProps } from "next"
 import { createGlobalStyle } from "styled-components"
 import { Helmet } from "react-helmet"
 import { WholeContainer } from "../src/components/whole-container"
@@ -15,13 +16,27 @@ import {
   Site,
 } from "../src/fetch-entries"
 
-const RootPage: FC = () => {
-  const [works, setWorks] = useState<readonly Work[]>([])
-  const [blogs, setBlogs] = useState<readonly Blog[]>([])
+export const getStaticProps: GetStaticProps = async () => {
+  const { works, blogs, socialAccounts, site } = await fetchEntries()
+  return {
+    props: { works, blogs, socialAccounts, site },
+  }
+}
+
+interface RootPageProps {
+  readonly works: Work[]
+  readonly blogs: Blog[]
+  readonly socialAccounts: SocialAccount[]
+  readonly site: Site
+}
+
+const RootPage: FC<RootPageProps> = props => {
+  const [works, setWorks] = useState<readonly Work[]>(props.works)
+  const [blogs, setBlogs] = useState<readonly Blog[]>(props.blogs)
   const [socialAccoutns, setSocialAccounts] = useState<
     readonly SocialAccount[]
-  >([])
-  const [site, setSite] = useState<Site | undefined>(undefined)
+  >(props.socialAccounts)
+  const [site, setSite] = useState<Site | undefined>(props.site)
 
   useEffect(() => {
     const doFetch = async () => {
