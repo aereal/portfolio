@@ -67,7 +67,6 @@ const RootPage: FC<RootPageProps> = props => {
     <>
       <GlobalStyle />
       <Head>
-        <html itemScope={true} itemType="http://schema.org/Person" key="html" />
         <link
           href="https://fonts.googleapis.com/css?family=Lato"
           rel="stylesheet"
