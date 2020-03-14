@@ -1,21 +1,7 @@
-import { graphql as gql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
 import { ActivityFragment } from "../types"
-
-export const query = gql`
-  fragment ActivityFragment on ActivitiesYaml {
-    name
-    url
-    recordedAt {
-      url
-      name
-      startYear: startDate(formatString: "YYYY")
-      startDate: startDate(formatString: "YYYY-mm-dd")
-    }
-  }
-`
 
 const TableListItem = styled.li`
   position: relative;

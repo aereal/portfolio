@@ -13,14 +13,14 @@ const WidenList = styled.ul`
 `
 
 interface Props {
-  activities: ReadonlyArray<ActivityFragment.Fragment>
+  activities: readonly ActivityFragment.Fragment[]
 }
 
 export const ActivitiesSection: React.SFC<Props> = ({ activities }) => (
   <Section id="activities">
     <h2>Activities</h2>
     <WidenList>
-      {activities!.map((a, i) => (
+      {activities.map((a, i) => (
         <Activity activity={a} key={i} />
       ))}
     </WidenList>

@@ -1,19 +1,9 @@
-import { graphql as gql, withPrefix } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
 import { SocialAccountFragment } from "../types"
 import { HorizontalList } from "./horizontal-list"
 import { Section } from "./section"
-
-export const query = gql`
-  fragment SocialAccountFragment on SocialAccountsYaml {
-    alt
-    url
-    service
-    color
-  }
-`
 
 const Icon = styled.img<{ color: string }>`
   background-color: ${props => props.color};
@@ -26,7 +16,7 @@ const Icon = styled.img<{ color: string }>`
 type SocialAccount = Required<SocialAccountFragment.Fragment>
 
 interface Props {
-  socialAccounts: ReadonlyArray<SocialAccount>
+  socialAccounts: readonly SocialAccount[]
 }
 
 export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
@@ -37,7 +27,7 @@ export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
           <a href={url}>
             <Icon
               color={color!}
-              src={withPrefix(`/images/vendor/drawic/${service}.svg`)}
+              src={`/images/vendor/drawic/${service}.svg`}
               alt={alt}
             />
           </a>

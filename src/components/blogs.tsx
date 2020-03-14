@@ -1,4 +1,3 @@
-import { graphql as gql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
@@ -7,16 +6,8 @@ import { Section } from "./section"
 
 type Blog = Required<BlogFragment.Fragment>
 
-export const query = gql`
-  fragment BlogFragment on BlogsYaml {
-    title
-    summary
-    url
-  }
-`
-
 interface Props {
-  blogs: ReadonlyArray<Blog>
+  blogs: readonly Blog[]
 }
 
 const List = styled.ul`
