@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { createGlobalStyle } from "styled-components"
 import { Helmet } from "react-helmet"
 import { WholeContainer } from "../src/components/whole-container"
@@ -6,8 +6,19 @@ import { SelfSection } from "../src/components/self"
 import { BlogsSection } from "../src/components/blogs"
 import { ActivitiesSection } from "../src/components/activities-section"
 import { SocialSection } from "../src/components/social"
+import { fetchWorks, Work } from "../src/fetch-entries"
 
 const RootPage: FC = () => {
+  const [works, setWorks] = useState<readonly Work[]>([])
+
+  useEffect(() => {
+    const doFetch = async () => {
+      const fetched = await fetchWorks()
+      setWorks([...fetched])
+    }
+    doFetch()
+  }, [])
+
   return (
     <>
       <GlobalStyle />
@@ -27,13 +38,7 @@ const RootPage: FC = () => {
             ]
           }
         />
-        <ActivitiesSection
-          activities={
-            [
-              /* TODO */
-            ]
-          }
-        />
+        <ActivitiesSection works={works} />
         <SocialSection
           socialAccounts={
             [
