@@ -8,6 +8,8 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
+    "export": "next export -o dist",
+    "predeploy": "run-s -l -s build export",
     "generate-content-model-defs": "contentful-typescript-codegen --output src/@types/@aereal/portfolio.d.ts",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
@@ -119,11 +121,15 @@
     "jsxBracketSameLine": true
   },
   "babel": {
-    "presets": ["next/babel"],
+    "presets": [
+      "next/babel"
+    ],
     "plugins": [
       [
         "styled-components",
-        { "ssr": true }
+        {
+          "ssr": true
+        }
       ]
     ]
   }
