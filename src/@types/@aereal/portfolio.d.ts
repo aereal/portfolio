@@ -3,6 +3,34 @@
 import { Asset, Entry } from "contentful"
 import { Document } from "@contentful/rich-text-types"
 
+export interface IBlogFields {
+  /** title */
+  title: string
+
+  /** url */
+  url: string
+
+  /** summary */
+  summary: string
+}
+
+export interface IBlog extends Entry<IBlogFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "blog"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface IWorkFields {
   /** name */
   name: string
@@ -40,7 +68,7 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE = "work"
+type CONTENT_TYPE = "blog" | "work"
 
 type LOCALE_CODE = "en-US"
 
