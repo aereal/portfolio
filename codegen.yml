@@ -14,6 +14,6 @@ generates:
     -
       add: '// DO NOT EDIT'
     -
-      add: '// tslint:disable'
+      add: '/* eslint-disable */'
     - typescript-common
     - typescript-client
