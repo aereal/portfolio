@@ -29,4 +29,5 @@ jobs:
       - name: test
         run: yarn test
       - name: deploy
+        if: github.ref == 'refs/heads/master'
         run: yarn deploy --token "${{ secrets.FIREBASE_TOKEN }}"
