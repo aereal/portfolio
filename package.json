@@ -8,6 +8,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
+    "generate-content-model-defs": "contentful-typescript-codegen --output src/@types/@aereal/portfolio.d.ts",
     "gql-gen": "gql-gen",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
