@@ -2,19 +2,19 @@ import React, { FC, useState, useEffect } from "react"
 import { GetStaticProps } from "next"
 import Head from "next/head"
 import { createGlobalStyle } from "styled-components"
-import { WholeContainer } from "../src/components/whole-container"
-import { SelfSection } from "../src/components/self"
-import { BlogsSection } from "../src/components/blogs"
-import { ActivitiesSection } from "../src/components/activities-section"
-import { SocialSection } from "../src/components/social"
-import { Metadata } from "../src/components/metadata"
+import { WholeContainer } from "../components/whole-container"
+import { SelfSection } from "../components/self"
+import { BlogsSection } from "../components/blogs"
+import { ActivitiesSection } from "../components/activities-section"
+import { SocialSection } from "../components/social"
+import { Metadata } from "../components/metadata"
 import {
   Work,
   Blog,
   fetchEntries,
   SocialAccount,
   Site,
-} from "../src/fetch-entries"
+} from "../fetch-entries"
 
 export const getStaticProps: GetStaticProps = async () => {
   const { works, blogs, socialAccounts, site } = await fetchEntries()
