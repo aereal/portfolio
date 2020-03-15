@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - master
+  repository_dispatch:
+    types:
+      - "contentful.contents_updated"
 jobs:
   test:
     runs-on: ubuntu-latest
