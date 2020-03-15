@@ -6,11 +6,7 @@ import {
   ISocialAccountFields,
   ISiteFields,
 } from "./@types/@aereal/portfolio"
-
-export type Work = Entry<IWorkFields>
-export type Blog = Entry<IBlogFields>
-export type SocialAccount = Entry<ISocialAccountFields>
-export type Site = Entry<ISiteFields>
+import { Work, Blog, Site, SocialAccount } from "./model"
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,

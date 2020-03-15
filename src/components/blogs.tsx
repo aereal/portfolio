@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Blog } from "../fetch-entries"
+import { Blog } from "../model"
 import { Section } from "./section"
 
 interface Props {

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Work } from "../fetch-entries"
+import { Work } from "../model"
 
 const TableListItem = styled.li`
   position: relative;
