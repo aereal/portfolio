@@ -13,7 +13,8 @@
     "generate-content-model-defs": "contentful-typescript-codegen --output src/@types/@aereal/portfolio.d.ts",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
-    "test": "run-p -l -s type-check build"
+    "test": "run-p -l -s build jest",
+    "jest": "jest"
   },
   "repository": {
     "type": "git",
@@ -135,5 +136,15 @@
         }
       ]
     ]
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx"]
   }
 }
