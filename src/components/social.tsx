@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { SocialAccount } from "../fetch-entries"
+import { SocialAccount } from "../model"
 import { HorizontalList } from "./horizontal-list"
 import { Section } from "./section"
 

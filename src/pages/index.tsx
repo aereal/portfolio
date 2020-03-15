@@ -8,13 +8,8 @@ import { BlogsSection } from "../components/blogs"
 import { ActivitiesSection } from "../components/activities-section"
 import { SocialSection } from "../components/social"
 import { Metadata } from "../components/metadata"
-import {
-  Work,
-  Blog,
-  fetchEntries,
-  SocialAccount,
-  Site,
-} from "../fetch-entries"
+import { fetchEntries } from "../fetch-entries"
+import { Work, Blog, SocialAccount, Site } from "../model"
 
 export const getStaticProps: GetStaticProps = async () => {
   const { works, blogs, socialAccounts, site } = await fetchEntries()

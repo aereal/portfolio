@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "next/head"
-import { Site } from "../fetch-entries"
+import { Site } from "../model"
 
 export const Metadata: React.SFC<{
   readonly site: Site
