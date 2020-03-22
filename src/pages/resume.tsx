@@ -76,7 +76,9 @@ const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
               中長期的な視野に立ったエンジニアリングの牽引を務める。
             </p>
             {jobEntries.map(
-              ({ fields: { title, startDate, finishDate, body } }) => (
+              ({
+                fields: { title, startDate, finishDate, body, relatedWorks },
+              }) => (
                 <JobEntry
                   key={title}
                   title={title}
@@ -84,6 +86,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
                   finishDate={finishDate !== undefined ? finishDate : undefined}
                   body={body}
                   level={5}
+                  relatedWorks={relatedWorks}
                 />
               )
             )}

@@ -4,6 +4,8 @@ import { Document } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { Section } from "./section"
 import { Heading, HeadingLevel } from "./heading"
+import { RelatedWorksList } from "./related-works-list"
+import { Work } from "../model"
 
 interface JobEntryProps {
   readonly startDate: string
@@ -11,6 +13,7 @@ interface JobEntryProps {
   readonly title: string
   readonly body?: Document
   readonly level?: HeadingLevel
+  readonly relatedWorks?: Work[]
 }
 
 export const JobEntry: FC<JobEntryProps> = ({
@@ -20,6 +23,7 @@ export const JobEntry: FC<JobEntryProps> = ({
   children,
   body,
   level,
+  relatedWorks,
 }) => (
   <EntrySection>
     <Heading level={level !== undefined ? level : 4}>{title}</Heading>
@@ -31,6 +35,12 @@ export const JobEntry: FC<JobEntryProps> = ({
       <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(body) }} />
     ) : undefined}
     {children}
+    {relatedWorks !== undefined && relatedWorks.length > 0 ? (
+      <RelatedWorksList
+        relatedWorks={relatedWorks}
+        level={level !== undefined ? ((level + 1) as any) : 5}
+      />
+    ) : null}
   </EntrySection>
 )
 
