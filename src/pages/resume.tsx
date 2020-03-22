@@ -6,6 +6,7 @@ import { WholeContainer } from "../components/whole-container"
 import { Section } from "../components/section"
 import { Heading } from "../components/heading"
 import { JobEntry } from "../components/job-entry"
+import { Profile } from "../components/profile"
 
 const ResumePage: FC = () => (
   <>
@@ -15,15 +16,7 @@ const ResumePage: FC = () => (
     <Layout>
       <WholeContainer>
         <Heading level={1}>職務経歴</Heading>
-        <Section>
-          <Heading level={2}>基本情報</Heading>
-          <p>
-            aerealという名前で活動している。本名は中澤亮太 (RYOTA,Nakazawa)。
-          </p>
-          <p>
-            <time dateTime="1990-08-27">1990年8月27日</time>生まれ。
-          </p>
-        </Section>
+        <Profile />
         <Section>
           <Heading level={2}>略歴</Heading>
           <List>
