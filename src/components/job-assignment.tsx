@@ -20,20 +20,8 @@ export const JobAssignment: FC<JobAssignmentProps> = ({
       dangerouslySetInnerHTML={{
         __html: documentToHtmlString(description),
       }}></div>
-    {(activities ?? []).map(
-      ({
-        sys: { id },
-        fields: { title, startDate, finishDate, body, relatedWorks },
-      }) => (
-        <JobEntry
-          key={id}
-          title={title}
-          startDate={startDate}
-          finishDate={finishDate}
-          body={body}
-          relatedWorks={relatedWorks}
-        />
-      )
-    )}
+    {(activities ?? []).map((jobEntry) => (
+      <JobEntry key={jobEntry.sys.id} jobEntry={jobEntry} />
+    ))}
   </Section>
 )

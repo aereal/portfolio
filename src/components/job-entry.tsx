@@ -1,27 +1,20 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { Document } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { Section } from "./section"
 import { Heading } from "./heading"
 import { RelatedWorksList } from "./related-works-list"
-import { Work } from "../model"
+import { Work, JobEntry as JobEntryModel } from "../model"
 
 interface JobEntryProps {
-  readonly startDate: string
-  readonly finishDate?: string
-  readonly title: string
-  readonly body?: Document
-  readonly relatedWorks?: Work[]
+  readonly jobEntry: JobEntryModel
 }
 
 export const JobEntry: FC<JobEntryProps> = ({
-  title,
-  startDate,
-  finishDate,
   children,
-  body,
-  relatedWorks,
+  jobEntry: {
+    fields: { title, startDate, finishDate, body, relatedWorks },
+  },
 }) => (
   <EntrySection>
     <Heading>{title}</Heading>
