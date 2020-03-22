@@ -5,11 +5,6 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { Section } from "./section"
 import { Heading, HeadingLevel } from "./heading"
 
-interface DateTime {
-  readonly dateTime: string
-  readonly label: string
-}
-
 interface JobEntryProps {
   readonly startDate: string
   readonly finishDate?: string
@@ -29,8 +24,8 @@ export const JobEntry: FC<JobEntryProps> = ({
   <EntrySection>
     <Heading level={level !== undefined ? level : 4}>{title}</Heading>
     <Aside>
-      <time dateTime={startDate}>{startDate}</time>〜
-      {finishDate ? <time dateTime={finishDate}>{finishDate}</time> : "現在"}
+      <DateMonth dateTime={startDate} />〜
+      {finishDate ? <DateMonth dateTime={finishDate} /> : "現在"}
     </Aside>
     {body !== undefined ? (
       <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(body) }} />
@@ -48,3 +43,18 @@ const Aside = styled.div`
   margin-top: -0.5rem;
   color: #777;
 `
+
+const jaFormatter = new Intl.DateTimeFormat("ja-JP", {
+  year: "numeric",
+  month: "long",
+})
+
+const DateMonth: FC<{ readonly dateTime: string }> = ({ dateTime }) => {
+  const dt = new Date(Date.parse(dateTime))
+  const month = dt.getMonth() + 1
+  return (
+    <time dateTime={`${dt.getFullYear()}-${month < 10 ? `0${month}` : month}`}>
+      {jaFormatter.format(dt)}
+    </time>
+  )
+}
