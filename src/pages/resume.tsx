@@ -9,6 +9,7 @@ import { Section } from "../components/section"
 import { Heading } from "../components/heading"
 import { JobEntry } from "../components/job-entry"
 import { Profile } from "../components/profile"
+import { ListItem, List } from "../components/list"
 import { JobEntry as JobEntryType } from "../model"
 
 interface ResumePageProps {
@@ -173,19 +174,5 @@ const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
     </Layout>
   </>
 )
-
-const List = styled.ul`
-  padding-left: 0;
-`
-
-const ListItem = styled.li`
-  list-style-type: none;
-
-  &::before {
-    content: "-";
-    display: inline-block;
-    margin-right: 1rem;
-  }
-`
 
 export default ResumePage
