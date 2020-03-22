@@ -7,10 +7,10 @@ import { Section } from "../components/section"
 import { Heading } from "../components/heading"
 import { JobEntry } from "../components/job-entry"
 
-const JobExperiencePage: FC = () => (
+const ResumePage: FC = () => (
   <>
     <Head>
-      <title>Job Experience - aereal</title>
+      <title>Resume - aereal</title>
     </Head>
     <Layout>
       <WholeContainer>
@@ -208,4 +208,4 @@ const ListItem = styled.li`
   }
 `
 
-export default JobExperiencePage
+export default ResumePage
