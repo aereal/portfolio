@@ -1,5 +1,4 @@
 import React, { FC } from "react"
-import styled from "styled-components"
 import Head from "next/head"
 import { GetStaticProps } from "next"
 import { fetchEntries } from "../fetch-entries"
@@ -7,23 +6,23 @@ import { Layout } from "../components/layout"
 import { WholeContainer } from "../components/whole-container"
 import { Section } from "../components/section"
 import { Heading } from "../components/heading"
-import { JobEntry } from "../components/job-entry"
 import { Profile } from "../components/profile"
 import { ListItem, List } from "../components/list"
-import { JobEntry as JobEntryType } from "../model"
+import { JobPosition } from "../components/job-position"
+import { JobPosition as JobPositionModel } from "../model"
 
 interface ResumePageProps {
-  readonly jobEntries: JobEntryType[]
+  readonly jobPositions: JobPositionModel[]
 }
 
 export const getStaticProps: GetStaticProps<ResumePageProps> = async () => {
-  const { jobEntries } = await fetchEntries()
+  const { jobPositions } = await fetchEntries()
   return {
-    props: { jobEntries },
+    props: { jobPositions },
   }
 }
 
-const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
+const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
   <>
     <Head>
       <title>Resume - aereal</title>
@@ -55,52 +54,13 @@ const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
         </Section>
         <Section>
           <Heading level={2}>職務経験</Heading>
-          <Section>
-            <Heading level={3}>ソフトウェアエンジニア</Heading>
-            <Section>
-              <Heading level={4}>株式会社はてな ブログチーム</Heading>
-              <div>
-                <time dateTime="2015-12">2015年12月</time>〜現在,{" "}
-                <time dateTime="2012-03">2012年3月</time>〜
-                <time dateTime="2013-02">2013年2月</time>
-              </div>
-            </Section>
-            <p>
-              国内のブログサービスである
-              <a href="https://hatenablog.com/">はてなブログ</a>
-              の開発チームに所属。
-            </p>
-            <p>
-              <time dateTime="2017-08">2017年8月</time>
-              からテックリードとして、ミドルウェアのアップデート戦略やシステムのリアーキテクチャリングの提案と遂行など
-              中長期的な視野に立ったエンジニアリングの牽引を務める。
-            </p>
-            {jobEntries.map(
-              ({
-                fields: { title, startDate, finishDate, body, relatedWorks },
-              }) => (
-                <JobEntry
-                  key={title}
-                  title={title}
-                  startDate={startDate}
-                  finishDate={finishDate !== undefined ? finishDate : undefined}
-                  body={body}
-                  level={5}
-                  relatedWorks={relatedWorks}
-                />
-              )
-            )}
-          </Section>
-          <Section>
-            <Heading level={3}>マネージャー</Heading>
-            <JobEntry
-              title="株式会社はてな シニアエンジニア"
-              startDate="2019-02">
-              <p>
-                職能組織所属のマネージャーとして、3人程度のメンバーの人事評価やメンタリングを行う。
-              </p>
-            </JobEntry>
-          </Section>
+          {jobPositions.map((jobPosition) => (
+            <JobPosition
+              headingLevel={3}
+              jobPosition={jobPosition}
+              key={jobPosition.sys.id}
+            />
+          ))}
         </Section>
         <Section>
           <Heading level={2}>スキル</Heading>

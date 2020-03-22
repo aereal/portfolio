@@ -31,6 +31,34 @@ export interface IBlog extends Entry<IBlogFields> {
   }
 }
 
+export interface IJobAssignmentFields {
+  /** name */
+  name: string
+
+  /** activities */
+  activities?: IJobEntry[] | undefined
+
+  /** description */
+  description: Document
+}
+
+export interface IJobAssignment extends Entry<IJobAssignmentFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "jobAssignment"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface IJobEntryFields {
   /** title */
   title: string
@@ -58,6 +86,31 @@ export interface IJobEntry extends Entry<IJobEntryFields> {
     contentType: {
       sys: {
         id: "jobEntry"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
+export interface IJobPositionFields {
+  /** name */
+  name: string
+
+  /** assignments */
+  assignments?: IJobAssignment[] | undefined
+}
+
+export interface IJobPosition extends Entry<IJobPositionFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "jobPosition"
         linkType: "ContentType"
         type: "Link"
       }
@@ -170,7 +223,14 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE = "blog" | "jobEntry" | "site" | "socialAccount" | "work"
+type CONTENT_TYPE =
+  | "blog"
+  | "jobAssignment"
+  | "jobEntry"
+  | "jobPosition"
+  | "site"
+  | "socialAccount"
+  | "work"
 
 type LOCALE_CODE = "en-US"
 
