@@ -31,6 +31,40 @@ export interface IBlog extends Entry<IBlogFields> {
   }
 }
 
+export interface IJobEntryFields {
+  /** title */
+  title: string
+
+  /** start date */
+  startDate: string
+
+  /** finish date */
+  finishDate?: string | undefined
+
+  /** body */
+  body?: Document | undefined
+
+  /** related works */
+  relatedWorks?: IWork[] | undefined
+}
+
+export interface IJobEntry extends Entry<IJobEntryFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "jobEntry"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface ISiteFields {
   /** title */
   title: string
@@ -113,7 +147,7 @@ export interface IWorkFields {
   performedDate: string
 
   /** eventURL */
-  eventUrl: string
+  eventUrl?: string | undefined
 
   /** eventName */
   eventName: string
@@ -136,7 +170,7 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE = "blog" | "site" | "socialAccount" | "work"
+type CONTENT_TYPE = "blog" | "jobEntry" | "site" | "socialAccount" | "work"
 
 type LOCALE_CODE = "en-US"
 

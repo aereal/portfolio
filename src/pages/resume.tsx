@@ -1,14 +1,28 @@
 import React, { FC } from "react"
 import styled from "styled-components"
 import Head from "next/head"
+import { GetStaticProps } from "next"
+import { fetchEntries } from "../fetch-entries"
 import { Layout } from "../components/layout"
 import { WholeContainer } from "../components/whole-container"
 import { Section } from "../components/section"
 import { Heading } from "../components/heading"
 import { JobEntry } from "../components/job-entry"
 import { Profile } from "../components/profile"
+import { JobEntry as JobEntryType } from "../model"
 
-const ResumePage: FC = () => (
+interface ResumePageProps {
+  readonly jobEntries: JobEntryType[]
+}
+
+export const getStaticProps: GetStaticProps<ResumePageProps> = async () => {
+  const { jobEntries } = await fetchEntries()
+  return {
+    props: { jobEntries },
+  }
+}
+
+const ResumePage: FC<ResumePageProps> = ({ jobEntries }) => (
   <>
     <Head>
       <title>Resume - aereal</title>
@@ -60,51 +74,24 @@ const ResumePage: FC = () => (
               からテックリードとして、ミドルウェアのアップデート戦略やシステムのリアーキテクチャリングの提案と遂行など
               中長期的な視野に立ったエンジニアリングの牽引を務める。
             </p>
-            <JobEntry
-              title="課金システムのAWS移設およびコンテナワークロードへの移行"
-              level={5}
-              startDate={{ dateTime: "2019-12", label: "2019年2月" }}
-              finishDate={{ dateTime: "2020-01", label: "2020年1月" }}>
-              <p>
-                立ち上げに携わった課金システムをオンプレミス環境からAWSに移設した。
-              </p>
-              <p>また、コンテナワークロード (AWS ECS) へ移行した。</p>
-            </JobEntry>
-            <JobEntry
-              title="UGCサービスのリニューアル"
-              level={5}
-              startDate={{ dateTime: "2018-09", label: "2018年9月" }}
-              finishDate={{ dateTime: "2019-11", label: "2019年11月" }}>
-              <p>
-                ユーザーが言葉の意味を投稿できるサービス「はてなキーワード」の後継である「
-                <a href="https://d.hatena.ne.jp/">はてなブログ タグ</a>
-                」を開発した。
-              </p>
-            </JobEntry>
-            <JobEntry
-              title="独自ドメインのTLS証明書自動プロビジョニングシステムの開発"
-              level={5}
-              startDate={{ dateTime: "2018-01", label: "2018年1月" }}
-              finishDate={{ dateTime: "2018-06", label: "2018年6月" }}>
-              <p>
-                独自ドメインを持ち込み可能なブログサービスで常時HTTPS接続するため、TLS証明書のオンデマンド発行とTLS終端プロキシ上で動的読み込みするシステムの設計と開発を担当した。
-              </p>
-            </JobEntry>
-            <JobEntry
-              title="課金システムとサブスクリプションサービスのリニューアル"
-              level={5}
-              startDate={{ dateTime: "2016-08", label: "2016年8月" }}
-              finishDate={{ dateTime: "2017-07", label: "2017年7月" }}>
-              <p>
-                はてなブログと決済代行業者の間に立つ課金システムの新規開発と、既存のサブスクリプションメニューを移設・リニューアルするプロジェクトのリーダーを務めた。
-              </p>
-            </JobEntry>
+            {jobEntries.map(
+              ({ fields: { title, startDate, finishDate, body } }) => (
+                <JobEntry
+                  key={title}
+                  title={title}
+                  startDate={startDate}
+                  finishDate={finishDate !== undefined ? finishDate : undefined}
+                  body={body}
+                  level={5}
+                />
+              )
+            )}
           </Section>
           <Section>
             <Heading level={3}>マネージャー</Heading>
             <JobEntry
               title="株式会社はてな シニアエンジニア"
-              startDate={{ dateTime: "2019-02", label: "2019年2月" }}>
+              startDate="2019-02">
               <p>
                 職能組織所属のマネージャーとして、3人程度のメンバーの人事評価やメンタリングを行う。
               </p>

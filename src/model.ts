@@ -8,18 +8,22 @@ import {
   IBlogFields,
   ISocialAccountFields,
   ISiteFields,
+  IJobEntryFields,
+  IJobEntry,
 } from "./@types/@aereal/portfolio"
 
 export type Work = IWork
 export type Blog = IBlog
 export type SocialAccount = ISocialAccount
 export type Site = ISite
+export type JobEntry = IJobEntry
 
 interface ContentTypeToEntryType {
   blog: Blog
   site: Site
   socialAccount: SocialAccount
   work: Work
+  jobEntry: JobEntry
 }
 
 interface ContentTypeToFieldType {
@@ -27,6 +31,7 @@ interface ContentTypeToFieldType {
   site: ISiteFields
   socialAccount: ISocialAccountFields
   work: IWorkFields
+  jobEntry: IJobEntryFields
 }
 
 export type FieldTypeOf<CT extends CONTENT_TYPE> = ContentTypeToFieldType[CT]

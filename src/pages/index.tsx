@@ -24,7 +24,7 @@ interface RootPageProps {
   readonly site: Site
 }
 
-const RootPage: FC<RootPageProps> = props => {
+const RootPage: FC<RootPageProps> = (props) => {
   const [works, setWorks] = useState<readonly Work[]>(props.works)
   const [blogs, setBlogs] = useState<readonly Blog[]>(props.blogs)
   const [socialAccoutns, setSocialAccounts] = useState<

@@ -1,12 +1,6 @@
 import { createClient, Entry, ContentfulCollection } from "contentful"
-import {
-  IWorkFields,
-  CONTENT_TYPE,
-  IBlogFields,
-  ISocialAccountFields,
-  ISiteFields,
-} from "./@types/@aereal/portfolio"
-import { Work, Blog, Site, SocialAccount } from "./model"
+import { CONTENT_TYPE } from "./@types/@aereal/portfolio"
+import { Work, Blog, Site, SocialAccount, JobEntry } from "./model"
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
@@ -19,6 +13,7 @@ interface WholeEntries {
   readonly blogs: Blog[]
   readonly socialAccounts: SocialAccount[]
   site: Site
+  readonly jobEntries: JobEntry[]
 }
 
 export const fetchEntries = async (): Promise<WholeEntries> =>
@@ -32,6 +27,7 @@ export const transformResponse = (
     blogs: [],
     socialAccounts: [],
     site: null as any,
+    jobEntries: [],
   }
   for (const item of entries.items) {
     switch (item.sys.contentType.sys.id as CONTENT_TYPE) {
@@ -47,11 +43,17 @@ export const transformResponse = (
       case "site":
         accum.site = item as Site
         break
+      case "jobEntry":
+        accum.jobEntries.push(item as JobEntry)
+        break
     }
   }
   accum.works.sort(
     (a, b) =>
       Date.parse(b.fields.performedDate) - Date.parse(a.fields.performedDate)
+  )
+  accum.jobEntries.sort(
+    (a, b) => Date.parse(b.fields.startDate) - Date.parse(a.fields.startDate)
   )
   return accum
 }
