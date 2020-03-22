@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Document } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { Section } from "./section"
-import { Heading, HeadingLevel } from "./heading"
+import { Heading } from "./heading"
 import { RelatedWorksList } from "./related-works-list"
 import { Work } from "../model"
 
@@ -12,7 +12,6 @@ interface JobEntryProps {
   readonly finishDate?: string
   readonly title: string
   readonly body?: Document
-  readonly level?: HeadingLevel
   readonly relatedWorks?: Work[]
 }
 
@@ -22,11 +21,10 @@ export const JobEntry: FC<JobEntryProps> = ({
   finishDate,
   children,
   body,
-  level,
   relatedWorks,
 }) => (
   <EntrySection>
-    <Heading level={level !== undefined ? level : 4}>{title}</Heading>
+    <Heading>{title}</Heading>
     <Aside>
       <DateMonth dateTime={startDate} />〜
       {finishDate ? <DateMonth dateTime={finishDate} /> : "現在"}
@@ -36,10 +34,7 @@ export const JobEntry: FC<JobEntryProps> = ({
     ) : undefined}
     {children}
     {relatedWorks !== undefined && relatedWorks.length > 0 ? (
-      <RelatedWorksList
-        relatedWorks={relatedWorks}
-        level={level !== undefined ? ((level + 1) as any) : 5}
-      />
+      <RelatedWorksList relatedWorks={relatedWorks} />
     ) : null}
   </EntrySection>
 )

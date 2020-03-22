@@ -5,7 +5,7 @@ import { Heading } from "../components/heading"
 
 export const Profile: FC = () => (
   <Section>
-    <Heading level={2}>基本情報</Heading>
+    <Heading>基本情報</Heading>
     <Container>
       <Figure>
         <Img src="https://lh3.googleusercontent.com/-Yi31gdYc5-k/XncCxuKNjQI/AAAAAAAAiVU/NXtfQAlLns87WkSxsg8tCZJwM7mhrAEkQCE0YBhgL/s1920/profile.jpg" />

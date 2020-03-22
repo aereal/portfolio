@@ -29,10 +29,10 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
     </Head>
     <Layout>
       <WholeContainer>
-        <Heading level={1}>職務経歴</Heading>
+        <Heading>職務経歴</Heading>
         <Profile />
         <Section>
-          <Heading level={2}>略歴</Heading>
+          <Heading>略歴</Heading>
           <List>
             <ListItem>
               <time dateTime="2011-04">2011年4月</time> 追手門学院大学
@@ -53,19 +53,15 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
           </List>
         </Section>
         <Section>
-          <Heading level={2}>職務経験</Heading>
+          <Heading>職務経験</Heading>
           {jobPositions.map((jobPosition) => (
-            <JobPosition
-              headingLevel={3}
-              jobPosition={jobPosition}
-              key={jobPosition.sys.id}
-            />
+            <JobPosition jobPosition={jobPosition} key={jobPosition.sys.id} />
           ))}
         </Section>
         <Section>
-          <Heading level={2}>スキル</Heading>
+          <Heading>スキル</Heading>
           <Section>
-            <Heading level={3}>TypeScript</Heading>
+            <Heading>TypeScript</Heading>
             <p>
               フロントエンドに<a href="https://flow.org/">Flow</a>
               が導入されていたサービスにTypeScriptを導入、linterやCIなどをセットアップしチームメンバーへの導入を行い移行プロジェクトを開始した
@@ -97,7 +93,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
             </List>
           </Section>
           <Section>
-            <Heading level={3}>Go</Heading>
+            <Heading>Go</Heading>
             <p>
               複数のWebアプリケーションをスクラッチから設計・実装する経験あり。
             </p>
@@ -106,7 +102,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
             </p>
           </Section>
           <Section>
-            <Heading level={3}>
+            <Heading>
               <abbr title="Amazon Web Services">AWS</abbr>
             </Heading>
             <p>
@@ -116,7 +112,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
             </p>
           </Section>
           <Section>
-            <Heading level={3}>Perl</Heading>
+            <Heading>Perl</Heading>
             <p>一般的なWebサービスのサーバーサイドとして開発の経験多数。</p>
             <p>いくつかのCPANモジュールも作った。</p>
             <List>

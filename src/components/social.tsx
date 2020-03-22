@@ -5,7 +5,7 @@ import { HorizontalList } from "./horizontal-list"
 import { Section } from "./section"
 
 const Icon = styled.img<{ color: string }>`
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   width: 2em;
   height: 2em;
   padding: 0.2em;
