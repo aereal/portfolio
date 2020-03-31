@@ -31,7 +31,7 @@
     "@contentful/rich-text-html-renderer": "13.4.0",
     "@contentful/rich-text-types": "14.1.0",
     "@types/jest": "25.1.4",
-    "@types/react": "16.9.29",
+    "@types/react": "16.9.30",
     "@types/react-dom": "16.9.5",
     "@types/styled-components": "5.0.1",
     "@typescript-eslint/eslint-plugin": "2.26.0",
