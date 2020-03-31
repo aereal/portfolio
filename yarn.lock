@@ -3193,10 +3193,10 @@ contentful-sdk-core@^6.4.0:
     lodash "^4.17.10"
     qs "^6.5.2"
 
-contentful-typescript-codegen@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/contentful-typescript-codegen/-/contentful-typescript-codegen-3.0.0.tgz#bfc813c633570284463d71ff0f06c7ad9ef77396"
-  integrity sha512-d7DNLTR2Bx2HmAeCYX9QQsED7tp/TUAZI1FU4ZBTjjbwynujXZfwy0feIYn+5W1WPtbkwzcswT81r6dABd78nw==
+contentful-typescript-codegen@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/contentful-typescript-codegen/-/contentful-typescript-codegen-3.0.1.tgz#6e5b284108f6df3cc219c25f9cac0b9d71aa6a54"
+  integrity sha512-rGXORMj8RgiXKGeqmr2XdOQXBiMzTGjlCecP+/qGru0t0BBhXMYYZpz9kRBYTwXxjWkfWGXCs/wtCJMn0hM+6w==
   dependencies:
     fs-extra "^8.1.0"
     lodash "^4.17.15"
