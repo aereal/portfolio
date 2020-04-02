@@ -1032,10 +1032,10 @@
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-1.0.4.tgz#ce86ffa94f9cfafa2e68f7b3e4a7fad194189723"
   integrity sha512-VccZDcOql77obTnFh0TbNED/6ZbbmHDf8UMNnzO1d5g9V0Htfm4k5cllY8P1tJsRKC3zWYGRLaViiupcgVjBoQ==
 
-"@google-cloud/pubsub@^1.1.5":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/pubsub/-/pubsub-1.6.0.tgz#135e58aa85c50ff765ae036ea5b749171e9f1396"
-  integrity sha512-RL7GJFOQaJpUcNjMDXAQ6dv+cxIIzzDc5DFwbak8KlIvK9znw/YrEybki8e8JTMdvU5Kg7FKGi5RmI6EQkWkVw==
+"@google-cloud/pubsub@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/pubsub/-/pubsub-1.7.0.tgz#7506a9aeb0fd2f1f530e9750fd548fcca35b906b"
+  integrity sha512-CJgyfZ+ZFIwD90LRGh42AU65rZO/8tBg6HVapD9DSFSJxP8O6k0eQMEpLD6S5RAkoo8hWiBRyD0K66PqwP5UpA==
   dependencies:
     "@google-cloud/paginator" "^2.0.0"
     "@google-cloud/precise-date" "^1.0.0"
@@ -4324,12 +4324,12 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase-tools@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.0.0.tgz#3f59bbe3bfabb6c1854cfa597ad10f7afd1e0f5e"
-  integrity sha512-fIWWz9830evyVrgGnfqNJDkyieQMxDW7vJ2YU6jj59arhawnoALG/3sLR2jFawkKL5awsrh4NibMR1gnkrungw==
+firebase-tools@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.0.1.tgz#bbbff8ef62c35dea126bf541e83b0467d7e8551d"
+  integrity sha512-8M4u9AAJgJwJytm2Sa1Nf90t7nBah54UcvqVNLlCgAGghaPolAeex4aeP+1u/2vvHcD5mR5lqg1tjJyoAxocXQ==
   dependencies:
-    "@google-cloud/pubsub" "^1.1.5"
+    "@google-cloud/pubsub" "^1.7.0"
     JSONStream "^1.2.1"
     archiver "^3.0.0"
     body-parser "^1.19.0"
