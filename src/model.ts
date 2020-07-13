@@ -44,6 +44,10 @@ interface ContentTypeToFieldType {
   jobAssignment: IJobAssignmentFields
 }
 
-export type FieldTypeOf<CT extends CONTENT_TYPE> = ContentTypeToFieldType[CT]
+export type FieldTypeOf<
+  CT extends keyof ContentTypeToFieldType
+> = ContentTypeToFieldType[CT]
 
-export type EntryTypeOf<CT extends CONTENT_TYPE> = ContentTypeToEntryType[CT]
+export type EntryTypeOf<
+  CT extends keyof ContentTypeToEntryType
+> = ContentTypeToEntryType[CT]
