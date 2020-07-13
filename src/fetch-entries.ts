@@ -12,7 +12,7 @@ interface WholeEntries {
   readonly works: Work[]
   readonly blogs: Blog[]
   readonly socialAccounts: SocialAccount[]
-  site: Site
+  readonly site: Site
   readonly jobEntries: JobEntry[]
   readonly jobPositions: JobPosition[]
 }
@@ -23,14 +23,14 @@ export const fetchEntries = async (): Promise<WholeEntries> =>
 export const transformResponse = (
   entries: ContentfulCollection<Entry<unknown>>
 ): WholeEntries => {
-  const accum: WholeEntries = {
+  const accum: Omit<WholeEntries, "site"> = {
     works: [],
     blogs: [],
     socialAccounts: [],
-    site: null as any,
     jobEntries: [],
     jobPositions: [],
   }
+  let site: Site | null = null
   for (const item of entries.items) {
     switch (item.sys.contentType.sys.id as CONTENT_TYPE) {
       case "blog":
@@ -43,7 +43,7 @@ export const transformResponse = (
         accum.socialAccounts.push(item as SocialAccount)
         break
       case "site":
-        accum.site = item as Site
+        site = item as Site
         break
       case "jobEntry":
         accum.jobEntries.push(item as JobEntry)
@@ -60,5 +60,8 @@ export const transformResponse = (
   accum.jobEntries.sort(
     (a, b) => Date.parse(b.fields.startDate) - Date.parse(a.fields.startDate)
   )
-  return accum
+  if (site === null) {
+    throw new Error("site not found")
+  }
+  return { ...accum, site }
 }
