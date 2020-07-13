@@ -21,6 +21,9 @@ interface ResumePageProps {
 
 export const getStaticProps: GetStaticProps<ResumePageProps> = async () => {
   const { jobPositions, profile } = await fetchEntries()
+  if (!profile) {
+    throw new Error("profile not found")
+  }
   return {
     props: { jobPositions, profile },
   }

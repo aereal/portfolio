@@ -20,10 +20,10 @@ interface WholeEntries {
   readonly works: Work[]
   readonly blogs: Blog[]
   readonly socialAccounts: SocialAccount[]
-  readonly site: Site
+  readonly site: Site | null
   readonly jobEntries: JobEntry[]
   readonly jobPositions: JobPosition[]
-  readonly profile: Profile
+  readonly profile: Profile | null
 }
 
 export const fetchEntries = async (): Promise<WholeEntries> =>
@@ -73,11 +73,5 @@ export const transformResponse = (
   accum.jobEntries.sort(
     (a, b) => Date.parse(b.fields.startDate) - Date.parse(a.fields.startDate)
   )
-  if (site === null) {
-    throw new Error("site not found")
-  }
-  if (profile === null) {
-    throw new Error("profile not found")
-  }
   return { ...accum, site, profile }
 }
