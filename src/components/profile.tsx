@@ -2,13 +2,21 @@ import React, { FC } from "react"
 import styled from "styled-components"
 import { Section } from "../components/section"
 import { Heading } from "../components/heading"
+import { Profile as ProfileModel } from "../model"
 
-export const Profile: FC = () => (
+interface ProfileProps {
+  readonly profile: ProfileModel
+}
+
+export const Profile: FC<ProfileProps> = ({ profile }) => (
   <Section>
     <Heading>基本情報</Heading>
     <Container>
       <Figure>
-        <Img src="https://lh3.googleusercontent.com/-Yi31gdYc5-k/XncCxuKNjQI/AAAAAAAAiVU/NXtfQAlLns87WkSxsg8tCZJwM7mhrAEkQCE0YBhgL/s1920/profile.jpg" />
+        <Img
+          src={profile.fields.profileImage.fields.file.url}
+          alt={profile.fields.profileImage.fields.title}
+        />
         <Caption>近影</Caption>
         <LicenseFooter>
           Original archived in{" "}

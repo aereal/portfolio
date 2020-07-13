@@ -9,20 +9,27 @@ import { Heading } from "../components/heading"
 import { Profile } from "../components/profile"
 import { ListItem, List } from "../components/list"
 import { JobPosition } from "../components/job-position"
-import { JobPosition as JobPositionModel } from "../model"
+import {
+  JobPosition as JobPositionModel,
+  Profile as ProfileModel,
+} from "../model"
 
 interface ResumePageProps {
   readonly jobPositions: JobPositionModel[]
+  readonly profile: ProfileModel
 }
 
 export const getStaticProps: GetStaticProps<ResumePageProps> = async () => {
-  const { jobPositions } = await fetchEntries()
+  const { jobPositions, profile } = await fetchEntries()
+  if (!profile) {
+    throw new Error("profile not found")
+  }
   return {
-    props: { jobPositions },
+    props: { jobPositions, profile },
   }
 }
 
-const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
+const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
   <>
     <Head>
       <title>Resume - aereal</title>
@@ -30,7 +37,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions }) => (
     <Layout>
       <WholeContainer>
         <Heading>職務経歴</Heading>
-        <Profile />
+        <Profile profile={profile} />
         <Section>
           <Heading>略歴</Heading>
           <List>

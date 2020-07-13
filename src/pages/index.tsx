@@ -33,11 +33,14 @@ const RootPage: FC<RootPageProps> = (props) => {
   const [site, setSite] = useState<Site | undefined>(props.site)
 
   useEffect(() => {
-    const doFetch = async () => {
+    const doFetch = async (): Promise<void> => {
       const accum = await fetchEntries()
       setWorks([...accum.works])
       setBlogs([...accum.blogs])
       setSocialAccounts([...accum.socialAccounts])
+      if (!accum.site) {
+        throw new Error("site not found")
+      }
       setSite(accum.site)
     }
     doFetch()

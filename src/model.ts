@@ -14,6 +14,8 @@ import {
   IJobAssignmentFields,
   IJobPosition,
   IJobPositionFields,
+  IProfile,
+  IProfileFields,
 } from "./@types/@aereal/portfolio"
 
 export type Work = IWork
@@ -23,6 +25,7 @@ export type Site = ISite
 export type JobEntry = IJobEntry
 export type JobPosition = IJobPosition
 export type JobAssignment = IJobAssignment
+export type Profile = IProfile
 
 interface ContentTypeToEntryType {
   blog: Blog
@@ -32,6 +35,7 @@ interface ContentTypeToEntryType {
   jobEntry: JobEntry
   jobPosition: JobPosition
   jobAssignment: JobAssignment
+  profile: Profile
 }
 
 interface ContentTypeToFieldType {
@@ -42,8 +46,13 @@ interface ContentTypeToFieldType {
   jobEntry: IJobEntryFields
   jobPosition: IJobPositionFields
   jobAssignment: IJobAssignmentFields
+  profile: IProfileFields
 }
 
-export type FieldTypeOf<CT extends CONTENT_TYPE> = ContentTypeToFieldType[CT]
+export type FieldTypeOf<
+  CT extends keyof ContentTypeToFieldType
+> = ContentTypeToFieldType[CT]
 
-export type EntryTypeOf<CT extends CONTENT_TYPE> = ContentTypeToEntryType[CT]
+export type EntryTypeOf<
+  CT extends keyof ContentTypeToEntryType
+> = ContentTypeToEntryType[CT]
