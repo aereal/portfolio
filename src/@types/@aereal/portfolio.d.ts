@@ -118,6 +118,28 @@ export interface IJobPosition extends Entry<IJobPositionFields> {
   }
 }
 
+export interface IProfileFields {
+  /** profileImage */
+  profileImage: Asset
+}
+
+export interface IProfile extends Entry<IProfileFields> {
+  sys: {
+    id: string
+    type: string
+    createdAt: string
+    updatedAt: string
+    locale: string
+    contentType: {
+      sys: {
+        id: "profile"
+        linkType: "ContentType"
+        type: "Link"
+      }
+    }
+  }
+}
+
 export interface ISiteFields {
   /** title */
   title: string
@@ -223,15 +245,16 @@ export interface IWork extends Entry<IWorkFields> {
   }
 }
 
-type CONTENT_TYPE =
+export type CONTENT_TYPE =
   | "blog"
   | "jobAssignment"
   | "jobEntry"
   | "jobPosition"
+  | "profile"
   | "site"
   | "socialAccount"
   | "work"
 
-type LOCALE_CODE = "en-US"
+export type LOCALE_CODE = "en-US" | "ja-JP"
 
-type CONTENTFUL_DEFAULT_LOCALE_CODE = "en-US"
+export type CONTENTFUL_DEFAULT_LOCALE_CODE = "en-US"
