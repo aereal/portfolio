@@ -1,6 +1,14 @@
 import { createClient, Entry, ContentfulCollection } from "contentful"
 import { CONTENT_TYPE } from "./@types/@aereal/portfolio"
-import { Work, Blog, Site, SocialAccount, JobEntry, JobPosition } from "./model"
+import {
+  Work,
+  Blog,
+  Site,
+  SocialAccount,
+  JobEntry,
+  JobPosition,
+  Profile,
+} from "./model"
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
@@ -15,6 +23,7 @@ interface WholeEntries {
   readonly site: Site
   readonly jobEntries: JobEntry[]
   readonly jobPositions: JobPosition[]
+  readonly profile: Profile
 }
 
 export const fetchEntries = async (): Promise<WholeEntries> =>
@@ -23,13 +32,14 @@ export const fetchEntries = async (): Promise<WholeEntries> =>
 export const transformResponse = (
   entries: ContentfulCollection<Entry<unknown>>
 ): WholeEntries => {
-  const accum: Omit<WholeEntries, "site"> = {
+  const accum: Omit<WholeEntries, "site" | "profile"> = {
     works: [],
     blogs: [],
     socialAccounts: [],
     jobEntries: [],
     jobPositions: [],
   }
+  let profile: Profile | null = null
   let site: Site | null = null
   for (const item of entries.items) {
     switch (item.sys.contentType.sys.id as CONTENT_TYPE) {
@@ -51,6 +61,9 @@ export const transformResponse = (
       case "jobPosition":
         accum.jobPositions.push(item as JobPosition)
         break
+      case "profile":
+        profile = item as Profile
+        break
     }
   }
   accum.works.sort(
@@ -63,5 +76,8 @@ export const transformResponse = (
   if (site === null) {
     throw new Error("site not found")
   }
-  return { ...accum, site }
+  if (profile === null) {
+    throw new Error("profile not found")
+  }
+  return { ...accum, site, profile }
 }
