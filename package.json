@@ -55,7 +55,7 @@
     "react-is": "16.13.1",
     "styled-components": "5.1.1",
     "ts-jest": "26.1.2",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "eslintConfig": {
     "extends": [
