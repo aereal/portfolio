@@ -30,7 +30,7 @@
   "devDependencies": {
     "@contentful/rich-text-html-renderer": "14.1.1",
     "@contentful/rich-text-types": "14.1.1",
-    "@types/jest": "26.0.5",
+    "@types/jest": "26.0.6",
     "@types/react": "16.9.32",
     "@types/react-dom": "16.9.8",
     "@types/styled-components": "5.1.1",
