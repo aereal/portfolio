@@ -1,10 +1,10 @@
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import React, { FC } from "react"
 import styled from "styled-components"
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
-import { Section } from "./section"
+import { JobEntry as JobEntryModel } from "../model"
 import { Heading } from "./heading"
 import { RelatedWorksList } from "./related-works-list"
-import { Work, JobEntry as JobEntryModel } from "../model"
+import { Section } from "./section"
 
 interface JobEntryProps {
   readonly jobEntry: JobEntryModel
@@ -20,7 +20,7 @@ export const JobEntry: FC<JobEntryProps> = ({
     <Heading>{title}</Heading>
     <Aside>
       <DateMonth dateTime={startDate} />〜
-      {finishDate ? <DateMonth dateTime={finishDate} /> : "現在"}
+      {finishDate !== undefined ? <DateMonth dateTime={finishDate} /> : "現在"}
     </Aside>
     {body !== undefined ? (
       <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(body) }} />

@@ -1,7 +1,10 @@
 import React, { FC } from "react"
 import styled from "styled-components"
+import {
+  asHeadingElement,
+  useCurrentHeadingLevel,
+} from "../contexts/heading-level"
 import { SectionEl } from "./section"
-import { useHeadingLevel } from "../contexts/heading-level"
 
 const H = styled.h1<{ readonly level: number }>`
   line-height: 1.25;
@@ -17,9 +20,9 @@ const H = styled.h1<{ readonly level: number }>`
 `
 
 export const Heading: FC = ({ children }) => {
-  const level = useHeadingLevel()
+  const level = useCurrentHeadingLevel()
   return (
-    <H as={`h${level}` as any} level={level}>
+    <H as={asHeadingElement(level)} level={level}>
       {children}
     </H>
   )

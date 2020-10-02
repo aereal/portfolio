@@ -1,9 +1,9 @@
-import React, { FC } from "react"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
-import { Section } from "./section"
+import React, { FC } from "react"
+import { JobAssignment as JobAssignmentModel } from "../model"
 import { Heading } from "./heading"
 import { JobEntry } from "./job-entry"
-import { JobAssignment as JobAssignmentModel } from "../model"
+import { Section } from "./section"
 
 interface JobAssignmentProps {
   readonly jobAssignment: JobAssignmentModel

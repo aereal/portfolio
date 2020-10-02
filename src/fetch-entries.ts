@@ -1,13 +1,13 @@
-import { createClient, Entry, ContentfulCollection } from "contentful"
+import { ContentfulCollection, Entry, createClient } from "contentful"
 import { CONTENT_TYPE } from "./@types/@aereal/portfolio"
 import {
-  Work,
   Blog,
-  Site,
-  SocialAccount,
   JobEntry,
   JobPosition,
   Profile,
+  Site,
+  SocialAccount,
+  Work,
 } from "./model"
 
 const client = createClient({
@@ -64,6 +64,8 @@ export const transformResponse = (
       case "profile":
         profile = item as Profile
         break
+      default:
+      // no-op
     }
   }
   accum.works.sort(
