@@ -1,6 +1,9 @@
 import React, { ComponentProps, FC } from "react"
 import styled from "styled-components"
-import { HeadingLevelContext, useHeadingLevel } from "../contexts/heading-level"
+import {
+  HeadingLevelContext,
+  useNextHeadingLevel,
+} from "../contexts/heading-level"
 
 export const SectionEl = styled.section`
   margin-top: 4rem;
@@ -18,7 +21,7 @@ export const Section: FC<ComponentProps<typeof SectionEl>> = ({
   children,
   ...props
 }) => (
-  <HeadingLevelContext.Provider value={useHeadingLevel() + 1}>
+  <HeadingLevelContext.Provider value={useNextHeadingLevel()}>
     <SectionEl {...props}>{children}</SectionEl>
   </HeadingLevelContext.Provider>
 )

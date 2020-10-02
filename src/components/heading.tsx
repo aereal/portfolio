@@ -1,6 +1,9 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { useHeadingLevel } from "../contexts/heading-level"
+import {
+  asHeadingElement,
+  useCurrentHeadingLevel,
+} from "../contexts/heading-level"
 import { SectionEl } from "./section"
 
 const H = styled.h1<{ readonly level: number }>`
@@ -17,10 +20,9 @@ const H = styled.h1<{ readonly level: number }>`
 `
 
 export const Heading: FC = ({ children }) => {
-  const level = useHeadingLevel()
+  const level = useCurrentHeadingLevel()
   return (
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    <H as={`h${level}` as any} level={level}>
+    <H as={asHeadingElement(level)} level={level}>
       {children}
     </H>
   )
