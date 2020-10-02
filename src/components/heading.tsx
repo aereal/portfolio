@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { SectionEl } from "./section"
 import { useHeadingLevel } from "../contexts/heading-level"
+import { SectionEl } from "./section"
 
 const H = styled.h1<{ readonly level: number }>`
   line-height: 1.25;
@@ -19,6 +19,7 @@ const H = styled.h1<{ readonly level: number }>`
 export const Heading: FC = ({ children }) => {
   const level = useHeadingLevel()
   return (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     <H as={`h${level}` as any} level={level}>
       {children}
     </H>

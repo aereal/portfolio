@@ -1,6 +1,6 @@
-import React, { FC, ComponentProps } from "react"
+import React, { ComponentProps, FC } from "react"
 import styled from "styled-components"
-import { useHeadingLevel, HeadingLevelContext } from "../contexts/heading-level"
+import { HeadingLevelContext, useHeadingLevel } from "../contexts/heading-level"
 
 export const SectionEl = styled.section`
   margin-top: 4rem;
