@@ -55,7 +55,11 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
             </ListItem>
             <ListItem>
               <time dateTime="2012-09">2012年9月</time> 株式会社はてな
-              に正社員として入社 (現)
+              に正社員として入社
+            </ListItem>
+            <ListItem>
+              <time dateTime="2020-08">2020年8月</time> 同社を退職。
+              フリーランスとして独立
             </ListItem>
           </List>
         </Section>
