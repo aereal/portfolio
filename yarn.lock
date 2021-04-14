@@ -970,6 +970,11 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
+"@types/json-patch@0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@types/json-patch/-/json-patch-0.0.30.tgz#7c562173216c50529e70126ceb8e7a533f865e9b"
+  integrity sha512-MhCUjojzDhVLnZnxwPwa+rETFRDQ0ffjxYdrqOP6TBO2O0/Z64PV5tNeYApo4bc4y4frbWOrRwv/eEkXlI13Rw==
+
 "@types/json-schema@^7.0.3":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
@@ -2506,11 +2511,12 @@ content-type@^1.0.4, content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
-contentful-management@7.14.1:
-  version "7.14.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.14.1.tgz#b5aa8d58dfbfc5a8aab95b44f12ee2af563ac9e1"
-  integrity sha512-s8Jisju/GI9n0zvkBQDix8jo8Grq3dfv0VPicc4cRXUopxjy8O+zH+nBiiU+M9TPS4RxtivDzwNH64smweDkbg==
+contentful-management@7.15.0:
+  version "7.15.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.15.0.tgz#a6c8d3147a5323cc1557116f15f5329dbd122408"
+  integrity sha512-/K0OrnE/8M38rvY41tBmij5imZOfmC3mZaLv9KdpPZ6bpSXYzfsYTX3VMPqZp93Kw2yyUSPGYZzNsT1W5M3Heg==
   dependencies:
+    "@types/json-patch" "0.0.30"
     axios "^0.21.0"
     contentful-sdk-core "^6.7.0"
     fast-copy "^2.1.0"
