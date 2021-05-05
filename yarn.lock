@@ -2521,14 +2521,14 @@ content-type@^1.0.4, content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
-contentful-management@7.17.7:
-  version "7.17.7"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.17.7.tgz#874055433547682e99205829758fde077b179cf3"
-  integrity sha512-QuNigkSHk1PG+GfuH4BZ1De4UrGaeeIH25ydM3rVfy+vMT7Dsax3j6Es1FFR6xT3Obm8QiBalJRepI1VdN5wpw==
+contentful-management@7.17.8:
+  version "7.17.8"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.17.8.tgz#02baffb5dea34b8e06ffe93db2755172a2d443dc"
+  integrity sha512-LYjrMbvlcbj+YOZtB1AA3w+80vOQglk3SZ8MLgdxSnBGo4WEZ2xr5SPyxkp5O99F2BgvIuRmojjeT2lI4gspwQ==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
-    contentful-sdk-core "^6.7.0"
+    contentful-sdk-core "^6.8.0"
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
     type-fest "0.20.2"
@@ -2548,10 +2548,10 @@ contentful-sdk-core@^6.5.0:
     fast-copy "^2.1.0"
     qs "^6.5.2"
 
-contentful-sdk-core@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.7.0.tgz#c014f12d7a716548c248e905dd8e095a6dbf7a0f"
-  integrity sha512-+b8UXVE249Z6WzMLXvsu3CIvN/s5xXRZ9o+zY7zDdPkIYBMW15xcs9N2ATI6ncmc+s1uj4XZij/2skflletHiw==
+contentful-sdk-core@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.8.0.tgz#b3e24dc1c89444b021dede26062451d9e13db61f"
+  integrity sha512-X45uNrcbQ2qY2p4G/Wx2EFUdnLnoDXjw29i+d0JVTUXqCG58p3q4GHuAPzTX+uafJL4h0ZY2xPOn4nvJ83eRBQ==
   dependencies:
     fast-copy "^2.1.0"
     qs "^6.9.4"
