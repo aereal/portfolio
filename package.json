@@ -64,8 +64,7 @@
       "plugin:@typescript-eslint/recommended",
       "plugin:@typescript-eslint/recommended-requiring-type-checking",
       "plugin:react/recommended",
-      "plugin:prettier/recommended",
-      "prettier/@typescript-eslint"
+      "plugin:prettier/recommended"
     ],
     "plugins": [
       "@typescript-eslint",
@@ -146,6 +145,17 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  },
+  "dependencies": {
+    "@types/pdfjs-dist": "^2.7.2",
+    "event-iterator": "^2.0.0",
+    "pdfjs-dist": "^2.7.570",
+    "worker-loader": "^3.0.8"
   }
 }
