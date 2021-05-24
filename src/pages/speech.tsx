@@ -1,6 +1,6 @@
 import React, { ChangeEventHandler, FC, FormEvent, useState } from "react"
 import Head from "next/head"
-import { getController, subscribe } from "../speech"
+import { getController, subscribeUtterance } from "../speech"
 
 const SinglePointRangeInput: FC<{
   readonly min: number
@@ -105,9 +105,12 @@ const SpeechVoicesList: FC<{
   )
 }
 
+const speechConditions = ["waiting", "speaking", "pausing"] as const
+type SpeechCondition = typeof speechConditions[number]
+
 const SpeechForm: FC = () => {
   const [text, setText] = useState("")
-  const [isSpeaking, setSpeaking] = useState(false)
+  const [condition, setCondition] = useState<SpeechCondition>("waiting")
   const [voice, setVoice] = useState<SpeechSynthesisVoice | undefined>()
   const [volume, setVolume] = useState(1)
   const [pitch, setPitch] = useState(1)
@@ -116,41 +119,51 @@ const SpeechForm: FC = () => {
   const voices = ctrl.getVoices()
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault()
-    if (isSpeaking) {
-      ctrl.pause()
-    } else {
-      const utter = new SpeechSynthesisUtterance(text)
-      if (voice !== undefined) {
-        utter.voice = voice
-      }
-      utter.volume = volume
-      utter.pitch = pitch
-      utter.rate = rate
-      setTimeout(async (): Promise<void> => {
-        const speechEvents = subscribe(utter)
-        for await (const event of speechEvents) {
-          console.log(
-            `---> received event name=${JSON.stringify(
-              event.name
-            )} type=${JSON.stringify(event.type)}`
-          )
-          switch (event.type) {
-            case "start":
-              console.log("start")
-              setSpeaking(true)
-              break
-            case "error":
-              console.log(
-                `---> error ${(event as SpeechSynthesisErrorEvent).error}`
-              )
-              break
-            case "end":
-              setSpeaking(false)
-              break
-          }
+    console.log(`submitted; condition=${condition}`)
+    const utter = new SpeechSynthesisUtterance(text)
+    switch (condition) {
+      case "pausing":
+        ctrl.resume()
+        setCondition("speaking")
+        break
+      case "speaking":
+        ctrl.pause()
+        setCondition("pausing")
+        break
+      case "waiting":
+        if (voice !== undefined) {
+          utter.voice = voice
         }
-      }, 0)
-      ctrl.speak(utter)
+        utter.volume = volume
+        utter.pitch = pitch
+        utter.rate = rate
+        setTimeout(async (): Promise<void> => {
+          const speechEvents = subscribeUtterance(utter)
+          for await (const event of speechEvents) {
+            console.log(
+              `---> received event name=${JSON.stringify(
+                event.name
+              )} type=${JSON.stringify(event.type)}`
+            )
+            switch (event.type) {
+              case "start":
+                console.log("start")
+                setCondition("speaking")
+                break
+              case "error":
+                setCondition("waiting")
+                console.log(
+                  `---> error ${(event as SpeechSynthesisErrorEvent).error}`
+                )
+                break
+              case "end":
+                setCondition("waiting")
+                break
+            }
+          }
+        }, 0)
+        ctrl.speak(utter)
+        break
     }
   }
   const handleChangeVoice = (selectedVoice: SpeechSynthesisVoice): void =>
@@ -171,10 +184,20 @@ const SpeechForm: FC = () => {
       <VolumeInput onChange={handleVolumeChange} />
       <PitchInput onChange={handlePitchChange} />
       <RateInput onChange={handleRateChange} />
-      <button type="submit">{isSpeaking ? "Pause" : "Play"}</button>
+      <SubmitButton speechCondition={condition} />
     </form>
   )
 }
+
+const buttonLabel: Record<SpeechCondition, string> = {
+  pausing: String.fromCodePoint(0x25b6, 0xfe0f),
+  waiting: String.fromCodePoint(0x25b6, 0xfe0f),
+  speaking: String.fromCodePoint(0x23f8),
+}
+
+const SubmitButton: FC<{ readonly speechCondition: SpeechCondition }> = ({
+  speechCondition,
+}) => <button type="submit">{buttonLabel[speechCondition]}</button>
 
 const SpeechPage: FC = () => (
   <>
