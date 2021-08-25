@@ -2693,10 +2693,10 @@ content-type@^1.0.4, content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
-contentful-management@7.32.1:
-  version "7.32.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.32.1.tgz#6ce21e4f17abdd14e4c414e7902376f071a054c8"
-  integrity sha512-h45bwyI1Zv6ZCJCtkeo/xtNJNK9LU4s6DqudqQC/FWUH6+op59xxZ4V+KWaCJ14nR8Rh+hcwXIHzF4VNhGSEmg==
+contentful-management@7.33.0:
+  version "7.33.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.33.0.tgz#fd9c7004fc59116d09c42234860746d150879b78"
+  integrity sha512-Q6Y0peBdmZUkQyrKP5rRuv2IbVpt5LflYfRdWstTQ9sERyAOgYJWBtvDCupXKw3g1oBXUxLXXU7vZY2M5jnTpQ==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
