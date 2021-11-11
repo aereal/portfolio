@@ -536,18 +536,18 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@contentful/rich-text-html-renderer@15.6.2":
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-15.6.2.tgz#3668f2607cb428dda30ed8dc82a59e345f34a286"
-  integrity sha512-mwiJg2U3ibgKMaoaQSDK9nK8p8ByNUITjKbWYIo/cAJImfSRxN12c5rWyNF8XRDfYQBksvPhlFGawBoyxE6hCw==
+"@contentful/rich-text-html-renderer@15.8.0":
+  version "15.8.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-15.8.0.tgz#a416a4487b2d98404af13a044b1f143b907dbd90"
+  integrity sha512-oRifZfF49BqPyqopR8YyDBcc1skw4IrMYaA/rLKL+NrhdUfm3RFhZfv66q0DVPBPGN6nYHyUVVjGF1ptEVbwcQ==
   dependencies:
-    "@contentful/rich-text-types" "^15.6.2"
+    "@contentful/rich-text-types" "^15.7.0"
     escape-html "^1.0.3"
 
-"@contentful/rich-text-types@15.6.2", "@contentful/rich-text-types@^15.6.2":
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.6.2.tgz#fe213886970b2d8a867a7272de938753e95d1f6e"
-  integrity sha512-PAgQo7rGmYjCzkNmzfs6VYqB4SXpNy9mBTH2vLYcNrOh2qEkG3hIjjgCZCH96mAz6WHEr5OaZ+BASP3kIeu2gA==
+"@contentful/rich-text-types@15.7.0", "@contentful/rich-text-types@^15.7.0":
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.7.0.tgz#7d2ef28b975778cab133fec5b8d12aca39fb5eb8"
+  integrity sha512-SrwNCHGYshsEhCVHZg6bn0G9rMdbtFBCw8f0L1PorZex1Us7r9Ix8YTAxKhs1LmWKCOZkXpjI3wR+ZOW/hZ6rw==
 
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
