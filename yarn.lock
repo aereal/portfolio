@@ -541,18 +541,20 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@contentful/rich-text-html-renderer@15.8.0":
-  version "15.8.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-15.8.0.tgz#a416a4487b2d98404af13a044b1f143b907dbd90"
-  integrity sha512-oRifZfF49BqPyqopR8YyDBcc1skw4IrMYaA/rLKL+NrhdUfm3RFhZfv66q0DVPBPGN6nYHyUVVjGF1ptEVbwcQ==
+"@contentful/rich-text-html-renderer@15.9.0":
+  version "15.9.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-15.9.0.tgz#dda1d7537793b13317e6a1b53a236078428c7423"
+  integrity sha512-oZDuifOT/5dA8z+2flfhqCCB0CCM9ybLuxWST/LRjJa1dqnYwpciQXw7KvXhEEOjifRSS949j6G0+Klnzshpzg==
   dependencies:
-    "@contentful/rich-text-types" "^15.7.0"
+    "@contentful/rich-text-types" "^15.9.0"
     escape-html "^1.0.3"
 
-"@contentful/rich-text-types@15.7.0", "@contentful/rich-text-types@^15.7.0":
-  version "15.7.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.7.0.tgz#7d2ef28b975778cab133fec5b8d12aca39fb5eb8"
-  integrity sha512-SrwNCHGYshsEhCVHZg6bn0G9rMdbtFBCw8f0L1PorZex1Us7r9Ix8YTAxKhs1LmWKCOZkXpjI3wR+ZOW/hZ6rw==
+"@contentful/rich-text-types@15.9.0", "@contentful/rich-text-types@^15.9.0":
+  version "15.9.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.9.0.tgz#8a305b6106e47f7d55c2bb825a2368a5d46753f3"
+  integrity sha512-PS/pcWDu56AGsQgIPGFNsFZKl9yOmTJDqC2HwtTUw18MN8IogzxdunzdFSmngoNoX6JTViKKve4wagbJqUx6gg==
+  dependencies:
+    ajv "^8.8.2"
 
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
@@ -1573,6 +1575,16 @@ ajv@^6.12.6:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@^8.8.2:
+  version "8.8.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.8.2.tgz#01b4fef2007a28bf75f0b7fc009f62679de4abbb"
+  integrity sha512-x9VuX+R/jcFj1DHo/fCp99esgGDWiHENrKxaCENuCxpoMCmAt/COCGVDwA7kleEpEzJjDnvh3yGoOuLu0Dtllw==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
 anser@1.4.9:
@@ -7960,6 +7972,11 @@ require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
+
+require-from-string@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
+  integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
 require-main-filename@^2.0.0:
   version "2.0.0"
