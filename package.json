@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "5.7.0",
     "babel-plugin-styled-components": "2.0.2",
     "contentful": "8.4.0",
-    "contentful-management": "7.45.7",
+    "contentful-management": "7.46.0",
     "contentful-typescript-codegen": "3.2.3",
     "eslint": "8.4.1",
     "eslint-config-prettier": "8.3.0",
