@@ -1854,12 +1854,12 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.10.0"
 
-axios@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
-  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+axios@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
+  integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
   dependencies:
-    follow-redirects "^1.14.7"
+    follow-redirects "^1.14.8"
 
 babel-jest@^27.5.1:
   version "27.5.1"
@@ -2614,13 +2614,13 @@ content-type@^1.0.4, content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
-contentful-management@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-8.1.0.tgz#25d467182f5fe9d9139b26759ec66c9314e3e2b3"
-  integrity sha512-LYHiyF6l9Z1ozIWU65PVRXwV5ut9wWhvaod2kR4M31259nsd9WQ2avEfI4UBhIYZX+wfsYb9pSqCXRdsK780og==
+contentful-management@8.1.2:
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-8.1.2.tgz#36f96cbf3bb3796b7c14892bc077b44e87c5fd50"
+  integrity sha512-OVBISez69X3cEWb7Vn4UuNvjU/I5kRNyVKSx5KjOa2NGSixlo1mDLvZjp6IGRwH5IVDNErSgU9EDHKRnhTTxWA==
   dependencies:
     "@types/json-patch" "0.0.30"
-    axios "^0.25.0"
+    axios "^0.26.0"
     contentful-sdk-core "^7.0.1"
     fast-copy "^2.1.1"
     lodash.isplainobject "^4.0.6"
@@ -3885,7 +3885,7 @@ follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
 
-follow-redirects@^1.14.7:
+follow-redirects@^1.14.8:
   version "1.14.8"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
   integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
