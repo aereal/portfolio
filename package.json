@@ -36,7 +36,7 @@
     "@types/styled-components": "5.1.24",
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
-    "babel-plugin-styled-components": "2.0.6",
+    "babel-plugin-styled-components": "2.0.7",
     "contentful": "8.4.0",
     "contentful-management": "9.0.0",
     "contentful-typescript-codegen": "3.2.3",
