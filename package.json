@@ -46,7 +46,7 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
     "firebase-tools": "10.7.2",
-    "jest": "27.5.1",
+    "jest": "28.0.3",
     "next": "12.1.6",
     "npm-run-all": "4.1.5",
     "prettier": "2.6.2",
@@ -54,7 +54,7 @@
     "react-dom": "18.1.0",
     "react-is": "18.1.0",
     "styled-components": "5.3.5",
-    "ts-jest": "27.1.4",
+    "ts-jest": "28.0.0",
     "typescript": "4.6.4"
   },
   "eslintConfig": {
