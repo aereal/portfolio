@@ -39,7 +39,7 @@
     "babel-plugin-styled-components": "2.0.7",
     "contentful": "8.4.0",
     "contentful-management": "9.4.0",
-    "contentful-typescript-codegen": "3.2.3",
+    "contentful-typescript-codegen": "3.3.0",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
