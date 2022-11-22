@@ -2717,10 +2717,10 @@ contentful-sdk-core@^7.0.1:
     p-throttle "^4.1.1"
     qs "^6.9.4"
 
-contentful-typescript-codegen@3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/contentful-typescript-codegen/-/contentful-typescript-codegen-3.2.3.tgz#5f94c04128254c17e102cf6a0c80e10b00e976f8"
-  integrity sha512-w0xgQ+xC62opk9r9zYe+I/VpIGdH5RbfRYXdbyldGUleyQePD9TxOOq+fEpQ7Gu9UARRYJvT9R4LNB0E9xJXeQ==
+contentful-typescript-codegen@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/contentful-typescript-codegen/-/contentful-typescript-codegen-3.3.0.tgz#481b39b924318d2e64941d28a390eef0aed59d6c"
+  integrity sha512-zyOZl2VFDNEO3IHs5GtMAUh5NtW0qjr9NqFz6EyXLskUxH+WRtyjSwEEFOcyqhWPV8cnxRVta62iI4uZb/OxQg==
   dependencies:
     fs-extra "^9.1.0"
     lodash "^4.17.21"
