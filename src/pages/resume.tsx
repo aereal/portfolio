@@ -140,6 +140,18 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
             </List>
           </Section>
         </Section>
+        <Section>
+          <Heading>賞罰</Heading>
+          <List>
+            <ListItem>
+              <time dateTime="2018-12">2018年12月</time>
+              <a href="https://diary2.mirakui.com/entry/2018/12/31/211047">
+                mirakui版ツイートオブザイヤー2018
+              </a>
+              受賞
+            </ListItem>
+          </List>
+        </Section>
       </WholeContainer>
     </Layout>
   </>
