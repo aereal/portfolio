@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/aereal/aereal.github.com#readme",
   "devDependencies": {
-    "@contentful/rich-text-html-renderer": "16.6.10",
-    "@contentful/rich-text-types": "16.8.5",
+    "@contentful/rich-text-html-renderer": "17.0.0",
+    "@contentful/rich-text-types": "17.0.0",
     "@types/jest": "28.1.8",
     "@types/react": "17.0.62",
     "@types/react-dom": "18.2.6",
