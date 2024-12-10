@@ -41,7 +41,7 @@
     "contentful-management": "9.4.0",
     "contentful-typescript-codegen": "3.4.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "8.10.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-hooks": "4.6.0",
