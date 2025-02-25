@@ -49,10 +49,8 @@ interface ContentTypeToFieldType {
   profile: IProfileFields
 }
 
-export type FieldTypeOf<
-  CT extends keyof ContentTypeToFieldType
-> = ContentTypeToFieldType[CT]
+export type FieldTypeOf<CT extends keyof ContentTypeToFieldType> =
+  ContentTypeToFieldType[CT]
 
-export type EntryTypeOf<
-  CT extends keyof ContentTypeToEntryType
-> = ContentTypeToEntryType[CT]
+export type EntryTypeOf<CT extends keyof ContentTypeToEntryType> =
+  ContentTypeToEntryType[CT]
