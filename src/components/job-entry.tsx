@@ -11,7 +11,6 @@ interface JobEntryProps {
 }
 
 export const JobEntry: FC<JobEntryProps> = ({
-  children,
   jobEntry: {
     fields: { title, startDate, finishDate, body, relatedWorks },
   },
@@ -25,7 +24,6 @@ export const JobEntry: FC<JobEntryProps> = ({
     {body !== undefined ? (
       <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(body) }} />
     ) : undefined}
-    {children}
     {relatedWorks !== undefined && relatedWorks.length > 0 ? (
       <RelatedWorksList relatedWorks={relatedWorks} />
     ) : null}
