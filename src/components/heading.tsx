@@ -19,7 +19,7 @@ const H = styled.h1<{ readonly level: number }>`
 export const Heading: FC = ({ children }) => {
   const level = useHeadingLevel()
   return (
-    <H as={`h${level}` as any} level={level}>
+    <H as={`h${level}` as "h1"} level={level}>
       {children}
     </H>
   )
