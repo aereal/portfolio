@@ -1,7 +1,7 @@
-import React, { FC } from "react"
-import { List, ListItem } from "./list"
-import { Heading } from "./heading"
+import { FC } from "react"
 import { Work } from "../model"
+import { Heading } from "./heading"
+import { List, ListItem } from "./list"
 
 interface RelatedWorksListProps {
   readonly relatedWorks: Work[]

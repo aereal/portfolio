@@ -1,5 +1,5 @@
 import Head from "next/head"
-import React, { FC, useEffect } from "react"
+import { FC, useEffect } from "react"
 import { createGlobalStyle } from "styled-components"
 
 const GA_PROP = "UA-36542486-1"

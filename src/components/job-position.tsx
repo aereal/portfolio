@@ -1,7 +1,7 @@
-import React, { FC } from "react"
-import { JobPosition as JobPositionModel } from "../model"
-import { Section } from "../components/section"
+import { FC } from "react"
 import { Heading } from "../components/heading"
+import { Section } from "../components/section"
+import { JobPosition as JobPositionModel } from "../model"
 import { JobAssignment } from "./job-assignment"
 
 interface JobPositionProps {

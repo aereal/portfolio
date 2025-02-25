@@ -1,10 +1,10 @@
-import React, { FC } from "react"
-import styled from "styled-components"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
-import { Section } from "./section"
+import { FC } from "react"
+import styled from "styled-components"
+import { JobEntry as JobEntryModel } from "../model"
 import { Heading } from "./heading"
 import { RelatedWorksList } from "./related-works-list"
-import { Work, JobEntry as JobEntryModel } from "../model"
+import { Section } from "./section"
 
 interface JobEntryProps {
   readonly jobEntry: JobEntryModel

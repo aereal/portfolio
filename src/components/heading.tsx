@@ -1,7 +1,7 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import styled from "styled-components"
-import { SectionEl } from "./section"
 import { useHeadingLevel } from "../contexts/heading-level"
+import { SectionEl } from "./section"
 
 const H = styled.h1<{ readonly level: number }>`
   line-height: 1.25;
