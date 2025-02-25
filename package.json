@@ -146,6 +146,12 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx"]
-  }
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  },
+  "packageManager": "pnpm@9.4.0"
 }
