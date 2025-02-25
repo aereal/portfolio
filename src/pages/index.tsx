@@ -43,7 +43,7 @@ const RootPage: FC<RootPageProps> = (props) => {
       }
       setSite(accum.site)
     }
-    doFetch()
+    void doFetch()
   }, [])
 
   return (
