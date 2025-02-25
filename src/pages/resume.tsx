@@ -59,7 +59,12 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
             </ListItem>
             <ListItem>
               <time dateTime="2020-08">2020年8月</time> 同社を退職。
-              フリーランスとして独立
+              フリーランスとして独立、
+              <a href="https://corp.classi.jp">Classi株式会社</a>に参画
+            </ListItem>
+            <ListItem>
+              <time dateTime="2021-04">2021年4月</time>{" "}
+              Classi株式会社に正社員として入社
             </ListItem>
           </List>
         </Section>
@@ -71,6 +76,67 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
         </Section>
         <Section>
           <Heading>スキル</Heading>
+          <Section>
+            <Heading>Go</Heading>
+            <p>
+              複数のWebアプリケーションをスクラッチから設計・実装する経験あり。
+            </p>
+            <p>
+              独自ドメインのTLS証明書自動プロビジョニングシステムの開発では、TLS終端プロキシに同居し低レイテンシ・低リソース消費が求められるデーモンを開発した。
+            </p>
+            <p>
+              <a href="https://github.com/kayac/ecspresso">ecspresso</a>
+              などのOSSへ貢献するほか、自作のツールやライブラリを開発、所属企業への導入実績あり。
+            </p>
+            <List>
+              <ListItem>
+                <a href="https://github.com/aereal/otelgqlgen">otelgqlgen</a> -{" "}
+                <a href="https://github.com/99designs/gqlgen">gqlgen</a>
+                の拡張として働き
+                <a href="https://opentelemetry.io">OpenTelemetry</a>
+                のトレースを収集・送信する
+              </ListItem>
+              <ListItem>
+                <a href="https://github.com/aereal/nagaya">nagaya</a> -
+                マルチテナントDBに対しRubyのapartmentのようにリクエストごとに接続するテナントDBを切り替えるライブラリ
+              </ListItem>
+            </List>
+          </Section>
+          <Section>
+            <Heading>
+              <a href="https://opentelemetry.io">OpenTelemetry</a>
+            </Heading>
+            <p>
+              担当サービスの監視フレームワークをDatadog
+              APMから移行し本番導入したほか、CollectorをカスタムビルドしてAWS
+              Lambdaの拡張として動作する方法について発信している。
+            </p>
+            <List>
+              <ListItem>
+                <a href="https://tech.classi.jp/entry/own-built-otel-collector-lambda-extension">
+                  Lambda Extensionと自家版OpenTelemetry Collector -
+                  Classi開発者ブログ
+                </a>
+              </ListItem>
+              <ListItem>
+                <a href="https://tech.classi.jp/entry/opentelemetry-migration">
+                  実践OpenTelemetry - Classi開発者ブログ
+                </a>
+              </ListItem>
+            </List>
+            <p>
+              またコミュニティイベントであるOpenTelemetry Meetup
+              2024-06にて登壇経験あり。
+            </p>
+            <List>
+              <ListItem>
+                <a href="https://speakerdeck.com/aereal/how-to-send-distibuted-traces-to-datadog-using-build-own-opentelemetry-lambda-distribution">
+                  How to send distibuted traces to Datadog using build own
+                  OpenTelemetry-Lambda distribution - Speaker Deck
+                </a>
+              </ListItem>
+            </List>
+          </Section>
           <Section>
             <Heading>TypeScript</Heading>
             <p>
@@ -102,15 +168,6 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
                 </a>
               </ListItem>
             </List>
-          </Section>
-          <Section>
-            <Heading>Go</Heading>
-            <p>
-              複数のWebアプリケーションをスクラッチから設計・実装する経験あり。
-            </p>
-            <p>
-              独自ドメインのTLS証明書自動プロビジョニングシステムの開発では、TLS終端プロキシに同居し低レイテンシ・低リソース消費が求められるデーモンを開発した。
-            </p>
           </Section>
           <Section>
             <Heading>
