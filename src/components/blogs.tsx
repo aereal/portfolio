@@ -13,7 +13,7 @@ const List = styled.ul`
 
 const ListItem = styled.li``
 
-export const BlogsSection: React.SFC<Props> = ({ blogs }) => (
+export const BlogsSection: React.FC<Props> = ({ blogs }) => (
   <Section id="blogs">
     <h2>Blogs</h2>
     <List>

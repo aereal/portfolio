@@ -29,7 +29,7 @@ interface Props {
   readonly work: Work
 }
 
-export const Activity: React.SFC<Props> = ({ work }) => (
+export const Activity: React.FC<Props> = ({ work }) => (
   <TableListItem>
     <ActivityLink as="a" href={work.fields.url}>
       {work.fields.name}

@@ -19,7 +19,7 @@ const H1 = styled.h1`
   }
 `
 
-export const SelfSection: React.SFC<{}> = () => (
+export const SelfSection: React.FC<{}> = () => (
   <>
     <H1 itemProp="name">aereal</H1>
     <Section id="self">

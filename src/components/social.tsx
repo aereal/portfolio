@@ -16,7 +16,7 @@ interface Props {
   readonly socialAccounts: readonly SocialAccount[]
 }
 
-export const SocialSection: React.SFC<Props> = ({ socialAccounts }) => (
+export const SocialSection: React.FC<Props> = ({ socialAccounts }) => (
   <Section id="social">
     <HorizontalList>
       {socialAccounts.map(
