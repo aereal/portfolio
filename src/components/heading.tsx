@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 import styled from "styled-components"
 import { useHeadingLevel } from "../contexts/heading-level"
 import { SectionEl } from "./section"
@@ -16,7 +16,7 @@ const H = styled.h1<{ readonly level: number }>`
   }
 `
 
-export const Heading: FC = ({ children }) => {
+export const Heading: FC<{ children: ReactNode }> = ({ children }) => {
   const level = useHeadingLevel()
   return (
     <H as={`h${level}` as "h1"} level={level}>

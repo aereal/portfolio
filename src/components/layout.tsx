@@ -1,10 +1,10 @@
 import Head from "next/head"
-import { FC, useEffect } from "react"
+import { FC, ReactNode, useEffect } from "react"
 import { createGlobalStyle } from "styled-components"
 
 const GA_PROP = "UA-36542486-1"
 
-export const Layout: FC = ({ children }) => {
+export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
     window.dataLayer = window.dataLayer || []
     window.dataLayer.push("js", new Date())
