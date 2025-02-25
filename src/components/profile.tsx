@@ -35,7 +35,7 @@ export const Profile: FC<ProfileProps> = ({ profile }) => (
         <p>aerealという名前で活動している。本名は中澤亮太 (RYOTA,Nakazawa)。</p>
         <p>
           <time dateTime="1990-08-27">1990年8月27日</time>
-          生まれ。北海道旭川市出身、京都府京都市在住。
+          生まれ。北海道旭川市出身、石川県金沢市在住。
         </p>
       </Description>
     </Container>
