@@ -33,11 +33,22 @@ jobs:
           CONTENTFUL_DELIVERY_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_ACCESS_TOKEN }}
           CONTENTFUL_MANAGEMENT_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_ACCESS_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+      - id: hosting-channel
+        env:
+          github_ref: ${{ github.ref }}
+        run: |
+          case "$github_ref" in
+          'refs/heads/main')
+            echo 'channel=live' >> "$GITHUB_OUTPUT"
+            ;;
+          *)
+            echo 'channel=' >> "$GITHUB_OUTPUT"
+            ;;
+          esac
       - name: deploy
-        if: github.ref == 'refs/heads/main'
         uses: FirebaseExtended/action-hosting-deploy@0cbcac4740c2bfb00d632f0b863b57713124eb5a # v0.9.0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AEREAL_ORG }}'
-          channelId: live
+          channelId: ${{ steps.hosting-channel.outputs.channel }}
           projectId: aereal-org
