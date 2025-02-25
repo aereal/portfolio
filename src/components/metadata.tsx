@@ -1,8 +1,8 @@
-import React from "react"
 import Head from "next/head"
+import React from "react"
 import { Site } from "../model"
 
-export const Metadata: React.SFC<{
+export const Metadata: React.FC<{
   readonly site: Site
 }> = ({
   site: {

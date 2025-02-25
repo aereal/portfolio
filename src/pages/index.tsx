@@ -1,14 +1,14 @@
-import React, { FC, useState, useEffect } from "react"
 import { GetStaticProps } from "next"
-import { WholeContainer } from "../components/whole-container"
-import { SelfSection } from "../components/self"
-import { BlogsSection } from "../components/blogs"
+import { FC, useEffect, useState } from "react"
 import { ActivitiesSection } from "../components/activities-section"
-import { SocialSection } from "../components/social"
-import { Metadata } from "../components/metadata"
+import { BlogsSection } from "../components/blogs"
 import { Layout } from "../components/layout"
+import { Metadata } from "../components/metadata"
+import { SelfSection } from "../components/self"
+import { SocialSection } from "../components/social"
+import { WholeContainer } from "../components/whole-container"
 import { fetchEntries } from "../fetch-entries"
-import { Work, Blog, SocialAccount, Site } from "../model"
+import { Blog, Site, SocialAccount, Work } from "../model"
 
 export const getStaticProps: GetStaticProps = async () => {
   const { works, blogs, socialAccounts, site } = await fetchEntries()
@@ -43,7 +43,7 @@ const RootPage: FC<RootPageProps> = (props) => {
       }
       setSite(accum.site)
     }
-    doFetch()
+    void doFetch()
   }, [])
 
   return (

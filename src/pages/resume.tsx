@@ -1,14 +1,14 @@
-import React, { FC } from "react"
-import Head from "next/head"
 import { GetStaticProps } from "next"
-import { fetchEntries } from "../fetch-entries"
-import { Layout } from "../components/layout"
-import { WholeContainer } from "../components/whole-container"
-import { Section } from "../components/section"
+import Head from "next/head"
+import { FC } from "react"
 import { Heading } from "../components/heading"
-import { Profile } from "../components/profile"
-import { ListItem, List } from "../components/list"
 import { JobPosition } from "../components/job-position"
+import { Layout } from "../components/layout"
+import { List, ListItem } from "../components/list"
+import { Profile } from "../components/profile"
+import { Section } from "../components/section"
+import { WholeContainer } from "../components/whole-container"
+import { fetchEntries } from "../fetch-entries"
 import {
   JobPosition as JobPositionModel,
   Profile as ProfileModel,

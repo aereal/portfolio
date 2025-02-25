@@ -81,6 +81,14 @@ export default [
 
       "@typescript-eslint/no-unused-vars": 0,
       "react/prop-types": 0,
+      "react/react-in-jsx-scope": 0,
+      "@typescript-eslint/no-deprecated": 2,
+      "react/no-unknown-property": [
+        "error",
+        {
+          ignore: ["prefix"],
+        },
+      ],
     },
   },
 ]

@@ -1,7 +1,7 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import styled from "styled-components"
-import { Section } from "../components/section"
 import { Heading } from "../components/heading"
+import { Section } from "../components/section"
 import { Profile as ProfileModel } from "../model"
 
 interface ProfileProps {

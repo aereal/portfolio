@@ -15,7 +15,7 @@ interface Props {
   readonly works: readonly Work[]
 }
 
-export const ActivitiesSection: React.SFC<Props> = ({ works }) => (
+export const ActivitiesSection: React.FC<Props> = ({ works }) => (
   <Section id="activities">
     <h2>Activities</h2>
     <WidenList>
