@@ -90,7 +90,7 @@
       "jsx"
     ]
   },
-  "packageManager": "pnpm@9.15.6",
+  "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": "22.14.0"
   }
