@@ -88,8 +88,16 @@
       "jsx"
     ]
   },
-  "packageManager": "pnpm@9.15.6",
-  "engines": {
-    "node": "22.14.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.13.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
   }
 }
