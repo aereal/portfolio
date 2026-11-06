@@ -8,7 +8,7 @@ import { List, ListItem } from "../components/list"
 import { Profile } from "../components/profile"
 import { Section } from "../components/section"
 import { WholeContainer } from "../components/whole-container"
-import { fetchEntries } from "../fetch-entries"
+import { loadContent } from "../content"
 import {
   JobPosition as JobPositionModel,
   Profile as ProfileModel,
@@ -19,11 +19,8 @@ interface ResumePageProps {
   readonly profile: ProfileModel
 }
 
-export const getStaticProps: GetStaticProps<ResumePageProps> = async () => {
-  const { jobPositions, profile } = await fetchEntries()
-  if (!profile) {
-    throw new Error("profile not found")
-  }
+export const getStaticProps: GetStaticProps<ResumePageProps> = () => {
+  const { jobPositions, profile } = loadContent()
   return {
     props: { jobPositions, profile },
   }
@@ -71,7 +68,7 @@ const ResumePage: FC<ResumePageProps> = ({ jobPositions, profile }) => (
         <Section>
           <Heading>職務経験</Heading>
           {jobPositions.map((jobPosition) => (
-            <JobPosition jobPosition={jobPosition} key={jobPosition.sys.id} />
+            <JobPosition jobPosition={jobPosition} key={jobPosition.name} />
           ))}
         </Section>
         <Section>

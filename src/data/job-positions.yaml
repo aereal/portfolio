@@ -1,0 +1,46 @@
+# 職務経歴ページの職務経験 (記載順に表示)。body/description はHTML
+- name: マネージャー
+  assignments:
+    - name: 株式会社はてな シニアエンジニア
+      description: <p>職能組織所属のマネージャーとして、3人程度のメンバーの人事評価やメンタリングを行う。</p>
+- name: ソフトウェアエンジニア
+  assignments:
+    - name: 株式会社はてな ブログチーム
+      description: |-
+        <p>2012年3月〜2013年2月、2015年12月〜2020年8月</p>
+        <p>国内のブログサービスである<a href="https://hatenablog.com/">はてなブログ</a>の開発チームに所属。</p>
+        <p>2017年8月からテックリードとして、ミドルウェアのアップデート戦略やシステムのリアーキテクチャリングの提案と遂行など 中長期的な視野に立ったエンジニアリングの牽引を務める。</p>
+      activities:
+        - title: 課金システムのAWS移設およびコンテナワークロードへの移行
+          startDate: 2019-12-01
+          finishDate: 2020-01-31
+          body: |-
+            <p>立ち上げに携わった課金システムをオンプレミスからAWSに移設した。</p>
+            <p>また、コンテナワークロード (AWS ECS) へ移行した。</p>
+        - title: 課金システムとサブスクリプションサービスのリニューアル
+          startDate: 2016-08-01
+          finishDate: 2017-07-13
+          body: <p>自社サービスと決済代行業者の間に立つ課金システムの新規開発と、既存のサブスクリプションメニューを移設・リニューアルするプロジェクトのリーダーを務めた。</p>
+          relatedWorks:
+            - https://speakerdeck.com/aereal/microservices-and-scala-at-hatena
+            - https://speakerdeck.com/aereal/building-microservices-with-perl-and-scala-in-production
+        - title: 独自ドメインのTLS証明書自動プロビジョニングシステムの開発
+          startDate: 2018-01-01
+          finishDate: 2018-06-14
+          body: |-
+            <p>独自ドメインを持ち込み可能なブログサービスで常時HTTPS接続するため、TLS証明書のオンデマンド発行とTLS終端プロキシ上で動的読み込みするシステムの設計と開発を担当した。</p>
+            <p>インタビュー: <a href="https://geek-out.jp/column/entry/2018/10/02/110000/">大規模なユーザーコンテンツのHTTPS化　Let&amp;#39;s Encryptも活用した「はてなブログ」のこだわり - GeekOutコラム</a></p>
+            <p></p>
+          relatedWorks:
+            - https://speakerdeck.com/aereal/the-construction-of-large-scale-tls-certificates-management-system-with-aws
+            - https://speakerdeck.com/aereal/the-epic-of-migration-from-http-to-https-on-hatena-blog-with-aws
+        - title: UGCサービスのリニューアル
+          startDate: 2018-09-01
+          finishDate: 2019-11-07
+          body: |-
+            <p>ユーザーが言葉の意味を投稿できるサービス「はてなキーワード」の後継である「はてなブログ タグ」を開発した。</p>
+            <p>テックリードとしてインフラからフロントエンドまでの技術選定を行う。</p>
+            <p>IaCツールとしてAWS CDKの導入を決め、AWS CDK Meetupでも依頼を受け登壇する。</p>
+          relatedWorks:
+            - https://speakerdeck.com/aereal/the-epic-of-aws-cdk-and-hatena-blog-tag
+            - https://speakerdeck.com/aereal/the-technical-details-of-hatena-blog-tag

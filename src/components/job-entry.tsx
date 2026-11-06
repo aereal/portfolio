@@ -1,4 +1,3 @@
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { FC } from "react"
 import styled from "styled-components"
 import { JobEntry as JobEntryModel } from "../model"
@@ -11,9 +10,7 @@ interface JobEntryProps {
 }
 
 export const JobEntry: FC<JobEntryProps> = ({
-  jobEntry: {
-    fields: { title, startDate, finishDate, body, relatedWorks },
-  },
+  jobEntry: { title, startDate, finishDate, body, relatedWorks },
 }) => (
   <EntrySection>
     <Heading>{title}</Heading>
@@ -22,7 +19,7 @@ export const JobEntry: FC<JobEntryProps> = ({
       {finishDate ? <DateMonth dateTime={finishDate} /> : "現在"}
     </Aside>
     {body !== undefined ? (
-      <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(body) }} />
+      <div dangerouslySetInnerHTML={{ __html: body }} />
     ) : undefined}
     {relatedWorks !== undefined && relatedWorks.length > 0 ? (
       <RelatedWorksList relatedWorks={relatedWorks} />

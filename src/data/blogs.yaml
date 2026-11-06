@@ -1,10 +1,7 @@
----
-
--
-  summary: "Technical writing in Japanese"
-  title: "Sexually Knowing"
-  url: "https://this.aereal.org/"
--
-  summary: "diary with words or not"
-  title: "『言葉を吐く』"
-  url: "https://d.aereal.org/"
+# トップページの Blogs (記載順に表示)
+- title: 『言葉を吐く』
+  url: https://d.aereal.org/
+  summary: diary with words or not
+- title: Sexually Knowing
+  url: https://this.aereal.org/
+  summary: Technical writing in Japanese

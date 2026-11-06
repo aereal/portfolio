@@ -1,0 +1,49 @@
+{
+  "title": "aereal.org",
+  "meta": [
+    {
+      "key": "article:publisher",
+      "content": "https://www.facebook.com/ryota.nkzw"
+    },
+    {
+      "key": "fb:app_id",
+      "content": "588890224485471"
+    },
+    {
+      "key": "og:description",
+      "content": "aereal's portfolio"
+    },
+    {
+      "key": "og:image",
+      "content": "https://aereal.org/images/og-image.jpg"
+    },
+    {
+      "key": "og:site_name",
+      "content": "aereal.org"
+    },
+    {
+      "key": "og:title",
+      "content": "aereal.org"
+    },
+    {
+      "key": "og:type",
+      "content": "article"
+    },
+    {
+      "key": "og:url",
+      "content": "https://aereal.org/"
+    },
+    {
+      "key": "twitter:card",
+      "content": "summary"
+    },
+    {
+      "key": "twitter:site",
+      "content": "@aereal"
+    },
+    {
+      "key": "viewport",
+      "content": "width=device-width"
+    }
+  ]
+}

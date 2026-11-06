@@ -19,19 +19,17 @@ interface Props {
 export const SocialSection: React.FC<Props> = ({ socialAccounts }) => (
   <Section id="social">
     <HorizontalList>
-      {socialAccounts.map(
-        ({ fields: { url, alternativeText, service, color } }, i) => (
-          <li key={i}>
-            <a href={url}>
-              <Icon
-                color={color}
-                src={`/images/vendor/drawic/${service}.svg`}
-                alt={alternativeText}
-              />
-            </a>
-          </li>
-        )
-      )}
+      {socialAccounts.map(({ url, alternativeText, service, color }, i) => (
+        <li key={i}>
+          <a href={url}>
+            <Icon
+              color={color}
+              src={`/images/vendor/drawic/${service}.svg`}
+              alt={alternativeText}
+            />
+          </a>
+        </li>
+      ))}
     </HorizontalList>
   </Section>
 )

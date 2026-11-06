@@ -29,7 +29,8 @@ export const SelfSection: React.FC = () => (
           <span
             itemProp="address"
             itemType="http://schema.org/PostalAddress"
-            itemScope={true}>
+            itemScope={true}
+          >
             <span itemProp="addressRegion">Kyoto</span>
           </span>
           .

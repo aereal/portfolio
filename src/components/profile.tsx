@@ -13,10 +13,7 @@ export const Profile: FC<ProfileProps> = ({ profile }) => (
     <Heading>基本情報</Heading>
     <Container>
       <Figure>
-        <Img
-          src={profile.fields.profileImage.fields.file.url}
-          alt={profile.fields.profileImage.fields.title}
-        />
+        <Img src={profile.profileImage.url} alt={profile.profileImage.title} />
         <Caption>近影</Caption>
         <LicenseFooter>
           Original archived in{" "}
@@ -26,7 +23,8 @@ export const Profile: FC<ProfileProps> = ({ profile }) => (
           by builderscon licensed under{" "}
           <a
             rel="license"
-            href="https://creativecommons.org/licenses/by-nc/4.0/deed">
+            href="https://creativecommons.org/licenses/by-nc/4.0/deed"
+          >
             CC-BY-NC 4.0
           </a>
         </LicenseFooter>

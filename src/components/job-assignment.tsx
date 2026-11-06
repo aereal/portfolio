@@ -1,4 +1,3 @@
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import { FC } from "react"
 import { JobAssignment as JobAssignmentModel } from "../model"
 import { Heading } from "./heading"
@@ -10,18 +9,17 @@ interface JobAssignmentProps {
 }
 
 export const JobAssignment: FC<JobAssignmentProps> = ({
-  jobAssignment: {
-    fields: { name, activities, description },
-  },
+  jobAssignment: { name, activities, description },
 }) => (
   <Section>
     <Heading>{name}</Heading>
     <div
       dangerouslySetInnerHTML={{
-        __html: documentToHtmlString(description),
-      }}></div>
+        __html: description,
+      }}
+    ></div>
     {(activities ?? []).map((jobEntry) => (
-      <JobEntry key={jobEntry.sys.id} jobEntry={jobEntry} />
+      <JobEntry key={jobEntry.title} jobEntry={jobEntry} />
     ))}
   </Section>
 )

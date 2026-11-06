@@ -1,0 +1,12 @@
+# どの職務にも紐付いておらずページに表示されない職務経歴エントリ (Contentfulから移行時点で未使用だったもの)。表示するには job-positions.yaml の activities に移す
+- title: 大規模Webサービスのデプロイ高速化
+  startDate: 2015-06-01
+  finishDate: 2015-08-31
+  body: |-
+    <p>世界展開するWebサービスで長らく課題だったデプロイを高速化するプロジェクトの設計と実装を担当した。</p>
+    <p>従来git pullするアーキテクチャをとっていたため、シングルコアしか使えずスケールしないGitサーバがボトルネックだったため、成果物をtarballにまとめてAmazon S3から配布・取得するよう変更し、</p>
+    <p>またこの経験を活かしCapistrano 2のライブラリとして抽象化することで社内の複数サービスへ導入、同様の問題を解決した。</p>
+    <p><a href="https://this.aereal.org/entry/2016/12/16/170000">はてなブログのデプロイを約6倍高速化したはなし</a><a href="https://this.aereal.org/entry/2016/12/16/170000"></a></p>
+    <p><a href="https://github.com/aereal/capistrano-strategy-jenkins_artifact">capistrano-strategy-jenkins_artifact</a></p>
+  relatedWorks:
+    - https://speakerdeck.com/hatena/yapc-asia-tokyo-2015

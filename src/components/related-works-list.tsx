@@ -4,7 +4,7 @@ import { Heading } from "./heading"
 import { List, ListItem } from "./list"
 
 interface RelatedWorksListProps {
-  readonly relatedWorks: Work[]
+  readonly relatedWorks: readonly Work[]
 }
 
 export const RelatedWorksList: FC<RelatedWorksListProps> = ({
@@ -14,8 +14,8 @@ export const RelatedWorksList: FC<RelatedWorksListProps> = ({
     <Heading>関連</Heading>
     <List>
       {relatedWorks.map((relatedWork) => (
-        <ListItem key={relatedWork.sys.id}>
-          <a href={relatedWork.fields.url}>{relatedWork.fields.name}</a>
+        <ListItem key={relatedWork.url}>
+          <a href={relatedWork.url}>{relatedWork.name}</a>
         </ListItem>
       ))}
     </List>

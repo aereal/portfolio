@@ -9,14 +9,12 @@ interface JobPositionProps {
 }
 
 export const JobPosition: FC<JobPositionProps> = ({
-  jobPosition: {
-    fields: { name, assignments },
-  },
+  jobPosition: { name, assignments },
 }) => (
   <Section>
     <Heading>{name}</Heading>
     {(assignments ?? []).map((jobAssignment) => (
-      <JobAssignment key={jobAssignment.sys.id} jobAssignment={jobAssignment} />
+      <JobAssignment key={jobAssignment.name} jobAssignment={jobAssignment} />
     ))}
   </Section>
 )
