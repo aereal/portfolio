@@ -3,9 +3,6 @@
 name: ci
 on:
   pull_request:
-  push:
-    branches:
-      - main
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,22 +26,83 @@ jobs:
         run: pnpm exec playwright install --with-deps chromium
       - name: e2e
         run: pnpm e2e
-      - id: hosting-channel
-        env:
-          github_ref: ${{ github.ref }}
-        run: |
-          case "$github_ref" in
-          'refs/heads/main')
-            echo 'channel=live' >> "$GITHUB_OUTPUT"
-            ;;
-          *)
-            echo 'channel=' >> "$GITHUB_OUTPUT"
-            ;;
-          esac
-      - name: deploy
-        uses: FirebaseExtended/action-hosting-deploy@500ac625ca2dd40cbd15f7659af953801858032a # v0.11.0
+  deploy-live:
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: read
+    needs:
+      - test
+    concurrency:
+      group: deploy-live
+      cancel-in-progress: true
+    environment:
+      name: live
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      -
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AEREAL_ORG }}'
-          channelId: ${{ steps.hosting-channel.outputs.channel }}
-          projectId: aereal-org
+          node-version-file: package.json
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          run_install: false
+          cache: true
+      - name: install
+        run: pnpm i --frozen-lockfile
+      - name: build
+        run: pnpm build
+      - name: setup firebase credentials
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AEREAL_ORG }}
+        run: |
+          creds="${RUNNER_TEMP}/firebase-service-account.json"
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$creds"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=${creds}" >> "$GITHUB_ENV"
+      - name: deploy
+        run: pnpm exec firebase deploy --only hosting --project aereal-org --non-interactive
+  deploy-preview:
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: read
+      pull-requests: write
+    needs:
+      - test
+    concurrency:
+      group: deploy-${{ github.ref }}
+      cancel-in-progress: true
+    environment:
+      name: preview
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      -
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: package.json
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          run_install: false
+          cache: true
+      - name: install
+        run: pnpm i --frozen-lockfile
+      - name: build
+        run: pnpm build
+      - name: setup firebase credentials
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AEREAL_ORG }}
+        run: |
+          creds="${RUNNER_TEMP}/firebase-service-account.json"
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$creds"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=${creds}" >> "$GITHUB_ENV"
+      - id: deploy
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          channel="$(printf 'pr%s' "$PR_NUMBER")"
+          echo "channel: ${channel}"
+          result="$(pnpm exec firebase hosting:channel:deploy "$channel" --project aereal-org --expires 7d --json --non-interactive)"
+          echo 'deploy success'
+          url="$(echo "$result" | jq --exit-status -r '.result[].url')"
+          echo "url: ${url}"
+          echo "url=${url}" >> "$GITHUB_OUTPUT"
