@@ -6,14 +6,12 @@ export const Metadata: React.FC<{
   readonly site: Site
 }> = ({
   site: {
-    fields: {
-      title,
-      description,
-      facebookAppId,
-      facebookAppPublisher,
-      twitterCardOwner,
-      twitterCardType,
-    },
+    title,
+    description,
+    facebookAppId,
+    facebookAppPublisher,
+    twitterCardOwner,
+    twitterCardType,
   },
 }) => (
   <Head>

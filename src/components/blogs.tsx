@@ -17,7 +17,7 @@ export const BlogsSection: React.FC<Props> = ({ blogs }) => (
   <Section id="blogs">
     <h2>Blogs</h2>
     <List>
-      {blogs.map(({ fields: { url, title, summary } }, i) => (
+      {blogs.map(({ url, title, summary }, i) => (
         <ListItem key={i}>
           <a href={url}>{title}</a> - {summary}
         </ListItem>

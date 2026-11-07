@@ -1,55 +1,55 @@
-import {
-  IBlog,
-  IBlogFields,
-  IJobAssignment,
-  IJobAssignmentFields,
-  IJobEntry,
-  IJobEntryFields,
-  IJobPosition,
-  IJobPositionFields,
-  IProfile,
-  IProfileFields,
-  ISite,
-  ISiteFields,
-  ISocialAccount,
-  ISocialAccountFields,
-  IWork,
-  IWorkFields,
-} from "./@types/@aereal/portfolio"
-
-export type Work = IWork
-export type Blog = IBlog
-export type SocialAccount = ISocialAccount
-export type Site = ISite
-export type JobEntry = IJobEntry
-export type JobPosition = IJobPosition
-export type JobAssignment = IJobAssignment
-export type Profile = IProfile
-
-interface ContentTypeToEntryType {
-  blog: Blog
-  site: Site
-  socialAccount: SocialAccount
-  work: Work
-  jobEntry: JobEntry
-  jobPosition: JobPosition
-  jobAssignment: JobAssignment
-  profile: Profile
+export interface Work {
+  readonly name: string
+  readonly url: string
+  readonly eventName: string
+  readonly eventUrl?: string
+  readonly performedDate: string
+  readonly performedAt: { readonly lat: number; readonly lon: number }
 }
 
-interface ContentTypeToFieldType {
-  blog: IBlogFields
-  site: ISiteFields
-  socialAccount: ISocialAccountFields
-  work: IWorkFields
-  jobEntry: IJobEntryFields
-  jobPosition: IJobPositionFields
-  jobAssignment: IJobAssignmentFields
-  profile: IProfileFields
+export interface Blog {
+  readonly title: string
+  readonly url: string
+  readonly summary: string
 }
 
-export type FieldTypeOf<CT extends keyof ContentTypeToFieldType> =
-  ContentTypeToFieldType[CT]
+export interface SocialAccount {
+  readonly service: string
+  readonly url: string
+  readonly alternativeText: string
+  readonly color: string
+}
 
-export type EntryTypeOf<CT extends keyof ContentTypeToEntryType> =
-  ContentTypeToEntryType[CT]
+export interface Site {
+  readonly title: string
+  readonly description: string
+  readonly facebookAppId: string
+  readonly facebookAppPublisher: string
+  readonly twitterCardType: string
+  readonly twitterCardOwner: string
+}
+
+export interface JobEntry {
+  readonly title: string
+  readonly startDate: string
+  readonly finishDate?: string
+  /** HTML */
+  readonly body?: string
+  readonly relatedWorks?: readonly Work[]
+}
+
+export interface JobAssignment {
+  readonly name: string
+  /** HTML */
+  readonly description: string
+  readonly activities?: readonly JobEntry[]
+}
+
+export interface JobPosition {
+  readonly name: string
+  readonly assignments?: readonly JobAssignment[]
+}
+
+export interface Profile {
+  readonly profileImage: { readonly url: string; readonly title: string }
+}

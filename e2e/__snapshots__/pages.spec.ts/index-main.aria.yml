@@ -1,0 +1,94 @@
+- /children: deep-equal
+- main:
+  - heading "aereal" [level=1]
+  - paragraph: Developer of music, photography, or web app based on Kyoto.
+  - img "aereal"
+  - heading "Blogs" [level=2]
+  - list:
+    - listitem:
+      - link "『言葉を吐く』":
+        - /url: https://d.aereal.org/
+      - text: "- diary with words or not"
+    - listitem:
+      - link "Sexually Knowing":
+        - /url: https://this.aereal.org/
+      - text: "- Technical writing in Japanese"
+  - heading "Activities" [level=2]
+  - list:
+    - listitem:
+      - link "自動作曲入門":
+        - /url: https://speakerdeck.com/aereal/introduction-to-programatic-music-composition
+      - text: "builderscon tokyo 2019 2019-08-31"
+    - listitem:
+      - link "はてなブログ タグとCDK":
+        - /url: https://speakerdeck.com/aereal/the-epic-of-aws-cdk-and-hatena-blog-tag
+      - text: "AWS Cloud Development Kit -CDK- Meetup 2019-07-18"
+    - listitem:
+      - link "はてなブログ タグの技術選択":
+        - /url: https://speakerdeck.com/aereal/the-technical-details-of-hatena-blog-tag
+      - text: "Hatena Engineer Seminar #12 2019-06-26"
+    - listitem:
+      - link "ブログサービスのHTTPS化を支えたAWSで作るピタゴラスイッチ":
+        - /url: https://speakerdeck.com/aereal/the-construction-of-large-scale-tls-certificates-management-system-with-aws
+      - text: "builderscon tokyo 2018 2018-09-06"
+    - listitem:
+      - link "AWSではてなブログの常時HTTPS配信をバーンとやる話":
+        - /url: https://speakerdeck.com/aereal/the-epic-of-migration-from-http-to-https-on-hatena-blog-with-aws
+      - text: "Hatena Engineer Seminar #10 2018-05-23"
+    - listitem:
+      - link "ScalaとPerlでMicroservices in production":
+        - /url: https://speakerdeck.com/aereal/building-microservices-with-perl-and-scala-in-production
+      - text: "Cookpad Tech Kitchen #11 2017-09-28"
+    - listitem:
+      - link "Scalaで自動作曲の練習":
+        - /url: https://this.aereal.org/entry/2017/09/15/113346
+      - text: "はてな技術勉強会 2017-09-14"
+    - listitem:
+      - link "Goで実装する軽量マークアップ言語パーサー":
+        - /url: https://this.aereal.org/entry/2017/08/05/215059
+      - text: "builderscon tokyo 2017 2017-08-04"
+    - listitem:
+      - link "Goで軽量マークアップ言語のパーサーを書く":
+        - /url: https://speakerdeck.com/aereal/writing-a-parser-with-go
+      - text: "そうだGo、京都 2017-04-29"
+    - listitem:
+      - link "はてなにおけるマイクロサービスとScala":
+        - /url: https://speakerdeck.com/aereal/microservices-and-scala-at-hatena
+      - text: "Scala関西Summit 2016 2016-10-08"
+    - listitem:
+      - link "世界展開する大規模ウェブサービスのデプロイを支える技術":
+        - /url: https://speakerdeck.com/hatena/yapc-asia-tokyo-2015
+      - text: "YAPC::Asia Tokyo 2015 2015-08-21"
+    - listitem:
+      - link "Build CI for Smartphone apps dev. at Hatena":
+        - /url: http://developer.hatenastaff.com/entry/2015/04/01/120317
+      - text: "【DeployGate x はてな】スマートフォンアプリ開発最前線 2015-04-13"
+    - listitem:
+      - link "テンプレートの静的解析とリファクタリング":
+        - /url: https://this.aereal.org/entry/2014/10/20/100301
+      - text: "テンプレートエンジンNight 2014-10-17"
+    - listitem:
+      - link "Introduce Browserify":
+        - /url: https://this.aereal.org/entry/2014/05/04/000139
+      - text: "Kyoto.なんか 2014-05-03"
+    - listitem:
+      - link "Vagrant と Chef でつくるはてなブックマークの開発環境":
+        - /url: http://developer.hatenastaff.com/entry/2013/11/27/143648
+      - text: "Hatena Engineer Seminar #2 2013-11-25"
+    - listitem:
+      - link "Vagrant と Chef でプログラマブルな開発環境をつくる":
+        - /url: http://yapcasia.org/2013/talk/show/6d9a81f8-ea36-11e2-ba88-5f716aeab6a4
+      - text: "YAPC::Asia Tokyo 2013 2013-09-21"
+  - list:
+    - listitem:
+      - link "Twitter @aereal":
+        - /url: https://twitter.com/aereal
+        - img "Twitter @aereal"
+    - listitem:
+      - link "GitHub @aereal":
+        - /url: https://github.com/aereal
+        - img "GitHub @aereal"
+    - listitem:
+      - link "Hatena id:aereal":
+        - /url: https://profile.hatena.ne.jp/aereal/
+        - img "Hatena id:aereal"

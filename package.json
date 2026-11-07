@@ -9,10 +9,10 @@
     "dev": "next dev",
     "start": "next start",
     "predeploy": "next build",
-    "generate-content-model-defs": "contentful-typescript-codegen --output src/@types/@aereal/portfolio.d.ts",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "tsc -p . --noEmit -w",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "playwright test"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,7 @@
   },
   "homepage": "https://github.com/aereal/aereal.github.com#readme",
   "devDependencies": {
-    "@contentful/rich-text-html-renderer": "17.0.0",
-    "@contentful/rich-text-types": "17.0.0",
+    "@playwright/test": "1.64.1",
     "@types/jest": "29.5.14",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
@@ -35,16 +34,13 @@
     "@typescript-eslint/eslint-plugin": "8.25.0",
     "@typescript-eslint/parser": "8.25.0",
     "babel-plugin-styled-components": "2.1.4",
-    "contentful": "8.4.0",
-    "contentful-management": "9.4.0",
-    "contentful-typescript-codegen": "3.4.0",
     "eslint": "9.21.0",
     "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.3",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.1.0",
-    "firebase-tools": "10.9.2",
+    "firebase-tools": "15.35.0",
     "globals": "16.0.0",
     "jest": "29.7.0",
     "next": "15.1.7",
@@ -53,9 +49,11 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-is": "18.2.0",
+    "serve-handler": "6.1.6",
     "styled-components": "6.1.15",
     "ts-jest": "29.2.6",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yaml": "2.9.1"
   },
   "prettier": {
     "semi": false,
@@ -90,8 +88,16 @@
       "jsx"
     ]
   },
-  "packageManager": "pnpm@9.15.6",
-  "engines": {
-    "node": "22.14.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.22.2",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
   }
 }

@@ -1,0 +1,120 @@
+# 登壇・発表など。トップページの Activities には performedDate の新しい順に表示される。職務経歴の relatedWorks からは url で参照する
+- name: 自動作曲入門
+  url: https://speakerdeck.com/aereal/introduction-to-programatic-music-composition
+  eventName: builderscon tokyo 2019
+  eventUrl: https://builderscon.io/builderscon/tokyo/2019/
+  performedDate: 2019-08-31
+  performedAt:
+    lat: 35.74813
+    lon: 139.8061
+- name: はてなブログ タグとCDK
+  url: https://speakerdeck.com/aereal/the-epic-of-aws-cdk-and-hatena-blog-tag
+  eventName: AWS Cloud Development Kit -CDK- Meetup
+  eventUrl: https://awsclouddevelopmentkitcdkmeetu.splashthat.com/
+  performedDate: 2019-07-18
+  performedAt:
+    lat: 35.63334
+    lon: 139.7165
+- name: はてなブログ タグの技術選択
+  url: https://speakerdeck.com/aereal/the-technical-details-of-hatena-blog-tag
+  eventName: "Hatena Engineer Seminar #12"
+  eventUrl: https://developer.hatenastaff.com/entry/2019/06/03/191500
+  performedDate: 2019-06-26
+  performedAt:
+    lat: 35.6619
+    lon: 139.7167
+- name: ブログサービスのHTTPS化を支えたAWSで作るピタゴラスイッチ
+  url: https://speakerdeck.com/aereal/the-construction-of-large-scale-tls-certificates-management-system-with-aws
+  eventName: builderscon tokyo 2018
+  eventUrl: https://builderscon.io/tokyo/2018
+  performedDate: 2018-09-06
+  performedAt:
+    lat: 35.55205
+    lon: 139.6472
+- name: AWSではてなブログの常時HTTPS配信をバーンとやる話
+  url: https://speakerdeck.com/aereal/the-epic-of-migration-from-http-to-https-on-hatena-blog-with-aws
+  eventName: "Hatena Engineer Seminar #10"
+  eventUrl: http://developer.hatenastaff.com/entry/2018/06/08/190000
+  performedDate: 2018-05-23
+  performedAt:
+    lat: 35.65639
+    lon: 139.6965
+- name: ScalaとPerlでMicroservices in production
+  url: https://speakerdeck.com/aereal/building-microservices-with-perl-and-scala-in-production
+  eventName: "Cookpad Tech Kitchen #11"
+  eventUrl: https://cookpad.connpass.com/event/64837/
+  performedDate: 2017-09-28
+  performedAt:
+    lat: 35.01107
+    lon: 135.762
+- name: Scalaで自動作曲の練習
+  url: https://this.aereal.org/entry/2017/09/15/113346
+  eventName: はてな技術勉強会
+  performedDate: 2017-09-14
+  performedAt:
+    lat: 35.01115
+    lon: 135.7619
+- name: Goで実装する軽量マークアップ言語パーサー
+  url: https://this.aereal.org/entry/2017/08/05/215059
+  eventName: builderscon tokyo 2017
+  eventUrl: https://builderscon.io/tokyo/2017
+  performedDate: 2017-08-04
+  performedAt:
+    lat: 35.55205
+    lon: 139.6472
+- name: Goで軽量マークアップ言語のパーサーを書く
+  url: https://speakerdeck.com/aereal/writing-a-parser-with-go
+  eventName: そうだGo、京都
+  performedDate: 2017-04-29
+  performedAt:
+    lat: 35.01115
+    lon: 135.7619
+- name: はてなにおけるマイクロサービスとScala
+  url: https://speakerdeck.com/aereal/microservices-and-scala-at-hatena
+  eventName: Scala関西Summit 2016
+  performedDate: 2016-10-08
+  performedAt:
+    lat: 34.69032
+    lon: 135.5165
+- name: 世界展開する大規模ウェブサービスのデプロイを支える技術
+  url: https://speakerdeck.com/hatena/yapc-asia-tokyo-2015
+  eventName: YAPC::Asia Tokyo 2015
+  performedDate: 2015-08-21
+  performedAt:
+    lat: 35.62981
+    lon: 139.7942
+- name: Build CI for Smartphone apps dev. at Hatena
+  url: http://developer.hatenastaff.com/entry/2015/04/01/120317
+  eventName: 【DeployGate x はてな】スマートフォンアプリ開発最前線
+  performedDate: 2015-04-13
+  performedAt:
+    lat: 35.65831
+    lon: 139.7022
+- name: テンプレートの静的解析とリファクタリング
+  url: https://this.aereal.org/entry/2014/10/20/100301
+  eventName: テンプレートエンジンNight
+  performedDate: 2014-10-17
+  performedAt:
+    lat: 35.68572
+    lon: 139.6978
+- name: Introduce Browserify
+  url: https://this.aereal.org/entry/2014/05/04/000139
+  eventName: Kyoto.なんか
+  performedDate: 2014-05-03
+  performedAt:
+    lat: 35.01115
+    lon: 135.7619
+- name: Vagrant と Chef でつくるはてなブックマークの開発環境
+  url: http://developer.hatenastaff.com/entry/2013/11/27/143648
+  eventName: "Hatena Engineer Seminar #2"
+  performedDate: 2013-11-25
+  performedAt:
+    lat: 35.66271
+    lon: 139.7005
+- name: Vagrant と Chef でプログラマブルな開発環境をつくる
+  url: http://yapcasia.org/2013/talk/show/6d9a81f8-ea36-11e2-ba88-5f716aeab6a4
+  eventName: YAPC::Asia Tokyo 2013
+  performedDate: 2013-09-21
+  performedAt:
+    lat: 35.54664
+    lon: 139.6502

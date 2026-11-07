@@ -1,0 +1,13 @@
+# トップページのソーシャルアカウント (記載順に表示)。service は public/images/vendor/drawic/{service}.svg に対応
+- service: twitter
+  url: https://twitter.com/aereal
+  alternativeText: Twitter @aereal
+  color: "#55acff"
+- service: github
+  url: https://github.com/aereal
+  alternativeText: GitHub @aereal
+  color: "#333333"
+- service: hatena
+  url: https://profile.hatena.ne.jp/aereal/
+  alternativeText: Hatena id:aereal
+  color: "#0071c5"

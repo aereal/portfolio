@@ -31,12 +31,10 @@ interface Props {
 
 export const Activity: React.FC<Props> = ({ work }) => (
   <TableListItem>
-    <ActivityLink as="a" href={work.fields.url}>
-      {work.fields.name}
+    <ActivityLink as="a" href={work.url}>
+      {work.name}
     </ActivityLink>
-    <EventName>{work.fields.eventName}</EventName>
-    <EventDate dateTime={work.fields.performedDate}>
-      {work.fields.performedDate}
-    </EventDate>
+    <EventName>{work.eventName}</EventName>
+    <EventDate dateTime={work.performedDate}>{work.performedDate}</EventDate>
   </TableListItem>
 )
