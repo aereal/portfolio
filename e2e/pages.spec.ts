@@ -58,9 +58,7 @@ test.describe("/", () => {
 test.describe("/resume", () => {
   test("head", async ({ page }) => {
     await visit(page, "/resume")
-    expect(toJSON(await headMetadata(page))).toMatchSnapshot(
-      "resume.head.json"
-    )
+    expect(toJSON(await headMetadata(page))).toMatchSnapshot("resume.head.json")
   })
 
   test("body", async ({ page }) => {
@@ -81,8 +79,8 @@ test.describe("not found", () => {
   test("body", async ({ page }) => {
     const res = await visit(page, "/no-such-page")
     expect(res?.status()).toBe(404)
-    await expect(page.locator("body")).toMatchAriaSnapshot({
-      name: "404.body.aria.yml",
+    await expect(page.locator("main")).toMatchAriaSnapshot({
+      name: "404.main.aria.yml",
     })
   })
 })

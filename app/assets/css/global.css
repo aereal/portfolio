@@ -1,0 +1,58 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source not "../../../docs";
+
+@theme {
+  --spacing: 0.1rem;
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 25rem;
+  --breakpoint-sm: 34.375rem;
+
+  --text-*: initial;
+  --text-sm: 1.4rem;
+  --text-base: 1.6rem;
+  --text-4xl: 4rem;
+  --text-5xl: 5rem;
+  --text-h1: calc(1rem + 3.65rem / 1);
+  --text-h2: calc(1rem + 3.65rem / 2);
+  --text-h3: calc(1rem + 3.65rem / 3);
+  --text-h4: calc(1rem + 3.65rem / 4);
+  --text-h5: calc(1rem + 3.65rem / 5);
+  --text-h6: calc(1rem + 3.65rem / 6);
+
+  --color-*: initial;
+  --color-ink: #222;
+  --color-paper: #fdfafa;
+  --color-link: #1eaedb;
+  --color-link-hover: #0fa0ce;
+  --color-muted: #777;
+  --color-subtle: rgb(130, 130, 130);
+
+  --font-sans: "Lato", "Helvetiva Neue", "YuGothic", sans-serif;
+}
+
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+  }
+
+  a {
+    color: var(--color-link);
+
+    &:hover {
+      color: var(--color-link-hover);
+    }
+  }
+}

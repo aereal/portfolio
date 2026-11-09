@@ -1,67 +1,49 @@
-import { FlatCompat } from "@eslint/eslintrc"
 import js from "@eslint/js"
 import typescriptEslint from "@typescript-eslint/eslint-plugin"
 import tsParser from "@typescript-eslint/parser"
-import react from "eslint-plugin-react"
-import reactHooks from "eslint-plugin-react-hooks"
+import prettierRecommended from "eslint-plugin-prettier/recommended"
+import vue from "eslint-plugin-vue"
 import globals from "globals"
-import path from "node:path"
-import { fileURLToPath } from "node:url"
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
+import vueParser from "vue-eslint-parser"
 
 export default [
-  ...compat.extends(
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "next"
-  ),
   {
-    plugins: {
-      "@typescript-eslint": typescriptEslint,
-      react,
-      "react-hooks": reactHooks,
-    },
-
+    ignores: [
+      ".nuxt/",
+      ".output/",
+      "dist/",
+      "playwright-report/",
+      "test-results/",
+      "public/images/vendor/",
+    ],
+  },
+  js.configs.recommended,
+  ...typescriptEslint.configs["flat/recommended-type-checked"],
+  ...vue.configs["flat/recommended"],
+  {
+    files: ["**/*.ts", "**/*.mts", "**/*.vue"],
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
       },
-
-      parser: tsParser,
-      ecmaVersion: 2018,
-      sourceType: "module",
-
+      parser: vueParser,
       parserOptions: {
-        createDefaultProgram: true,
-        project: "./tsconfig.json",
-
-        ecmaFeatures: {
-          jsx: true,
-        },
+        parser: tsParser,
+        sourceType: "module",
+        extraFileExtensions: [".vue"],
+        project: [
+          "./.nuxt/tsconfig.app.json",
+          "./.nuxt/tsconfig.server.json",
+          "./.nuxt/tsconfig.node.json",
+          "./tests/tsconfig.json",
+        ],
+        tsconfigRootDir: import.meta.dirname,
       },
     },
-
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-
     rules: {
+      "no-undef": "off",
       "no-use-before-define": "off",
-
       "@typescript-eslint/no-use-before-define": [
         "warn",
         {
@@ -71,7 +53,6 @@ export default [
           typedefs: false,
         },
       ],
-
       "@typescript-eslint/array-type": [
         "warn",
         {
@@ -79,17 +60,22 @@ export default [
           readonly: "array-simple",
         },
       ],
-
       "@typescript-eslint/no-unused-vars": 0,
-      "react/prop-types": 0,
-      "react/react-in-jsx-scope": 0,
       "@typescript-eslint/no-deprecated": 2,
-      "react/no-unknown-property": [
-        "error",
-        {
-          ignore: ["prefix"],
-        },
-      ],
+      "vue/multi-word-component-names": "off",
     },
   },
+  {
+    files: ["**/*.js", "**/*.mjs", "e2e/**/*.ts", "playwright.config.ts"],
+    ...typescriptEslint.configs["flat/disable-type-checked"],
+    languageOptions: {
+      parserOptions: {
+        project: false,
+      },
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  prettierRecommended,
 ]
