@@ -64,10 +64,18 @@ node_modules/
 # dotenv environment variables file
 .env
 .cache
-.next
 dist
 
 # Playwright
 test-results/
 playwright-report/
 /.claude/
+
+# TypeScript
+*.tsbuildinfo
+
+# Nuxt
+.nuxt
+.output
+.data
+.nitro
