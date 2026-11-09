@@ -10,7 +10,7 @@
     "predeploy": "nuxt generate",
     "postinstall": "nuxt prepare",
     "type-check": "nuxt typecheck",
-    "test": "jest",
+    "test": "vitest run",
     "e2e": "playwright test",
     "lint": "eslint ."
   },
@@ -29,7 +29,6 @@
     "@eslint/js": "9.21.0",
     "@playwright/test": "1.64.1",
     "@tailwindcss/vite": "4.3.5",
-    "@types/jest": "29.5.14",
     "@types/node": "26.6.6",
     "@typescript-eslint/eslint-plugin": "8.72.1",
     "@typescript-eslint/parser": "8.72.1",
@@ -39,14 +38,13 @@
     "eslint-plugin-vue": "10.12.0",
     "firebase-tools": "15.35.0",
     "globals": "16.0.0",
-    "jest": "29.7.0",
     "npm-run-all2": "5.0.2",
     "nuxt": "4.6.4",
     "prettier": "3.5.2",
     "serve-handler": "6.1.6",
     "tailwindcss": "4.3.5",
-    "ts-jest": "29.2.6",
     "typescript": "5.9.3",
+    "vitest": "5.1.0",
     "vue-eslint-parser": "10.4.2",
     "vue-tsc": "3.3.14",
     "yaml": "2.9.1"
@@ -54,26 +52,6 @@
   "prettier": {
     "semi": false,
     "trailingComma": "es5"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/tests"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": [
-        "ts-jest",
-        {
-          "tsconfig": "tests/tsconfig.json"
-        }
-      ]
-    },
-    "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx"
-    ]
   },
   "devEngines": {
     "runtime": {

@@ -66,7 +66,13 @@ export default [
     },
   },
   {
-    files: ["**/*.js", "**/*.mjs", "e2e/**/*.ts", "playwright.config.ts"],
+    files: [
+      "**/*.js",
+      "**/*.mjs",
+      "e2e/**/*.ts",
+      "playwright.config.ts",
+      "vitest.config.ts",
+    ],
     ...typescriptEslint.configs["flat/disable-type-checked"],
     languageOptions: {
       parserOptions: {
