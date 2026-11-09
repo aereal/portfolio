@@ -25,10 +25,10 @@ const finish = jobEntry.finishDate ? toMonth(jobEntry.finishDate) : undefined
   <Section margin-top="mt-45">
     <Heading>{{ jobEntry.title }}</Heading>
     <div class="-mt-5 text-sm text-muted">
-      <time :datetime="start.dateTime">{{ start.label }}</time
-      >〜<time v-if="finish" :datetime="finish.dateTime">{{
-        finish.label
-      }}</time
+      <time :datetime="start.dateTime">{{ start.label }}</time>〜<time
+        v-if="finish"
+        :datetime="finish.dateTime"
+        >{{ finish.label }}</time
       ><template v-else>現在</template>
     </div>
     <div v-if="jobEntry.body !== undefined" v-html="jobEntry.body" />
